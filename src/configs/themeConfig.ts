@@ -11,6 +11,14 @@ export type Config = {
   mode: Mode;
   layoutPadding: number;
   toastPosition: ToastPosition;
+  compactContentWidth: {
+    xs: string;
+    sm: string;
+    md: string;
+    lg: string;
+    xl: string;
+    xxl: string;
+  };
 };
 
 const themeConfig: Config = {
@@ -24,9 +32,17 @@ const themeConfig: Config = {
     },
   },
   settingsCookieName: 'nextjs-app-mui-base',
-  mode: 'system', // 'system', 'light', 'dark'
-  layoutPadding: 24, // Common padding for header, content, footer layout components (in px)
-  toastPosition: 'top-right', // 'top-right', 'top-center', 'top-left', 'bottom-right', 'bottom-center', 'bottom-left'
+  mode: 'dark', // 'system', 'light', 'dark'
+  layoutPadding: 24,
+  compactContentWidth: {
+    xs: '100%',
+    sm: '540px',
+    md: '720px',
+    lg: '960px',
+    xl: '1140px',
+    xxl: '1320px',
+  },
+  toastPosition: 'top-right',
 };
 
 export default themeConfig;

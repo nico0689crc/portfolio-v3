@@ -1,7 +1,6 @@
 // Third-party Imports
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
-import { Poppins } from 'next/font/google';
 import { headers } from 'next/headers';
 
 // Config Imports
@@ -18,11 +17,6 @@ import type { Metadata } from 'next';
 import type { Locale } from '@/configs/i18n';
 import type { ChildrenType } from '@/@core/types';
 import Providers from '@/components/Providers';
-
-const PopinsSans = Poppins({
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -42,7 +36,7 @@ const RootLayout = async (props: ChildrenType & { params: Promise<{ lang: Locale
   return (
     <TranslationWrapper headersList={headersList} lang={params.lang}>
       <html id="__next" lang={params.lang} dir={direction} suppressHydrationWarning>
-        <body className={PopinsSans.className}>
+        <body>
           <Providers>
             <InitColorSchemeScript attribute="data" defaultMode={systemMode} />
             {children}

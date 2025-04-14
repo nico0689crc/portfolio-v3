@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material';
 
-const DashboardPage = () => <Typography>DashboardPage</Typography>;
+const DashboardPage = () => <Typography>DASHBOARD PAGE</Typography>;
 
 export default DashboardPage;

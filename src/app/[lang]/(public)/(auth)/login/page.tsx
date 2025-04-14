@@ -19,7 +19,7 @@ const LoginPage = () => {
       password: 'password',
       redirect: false,
     });
-
+    console.log(res)
     if (res && res.ok && res.error === null) {
       // Vars
       const redirectURL = searchParams.get('redirectTo') ?? themeConfig.pages.authenticated.root;
@@ -28,8 +28,7 @@ const LoginPage = () => {
     } else {
       if (res?.error) {
         const error = JSON.parse(res.error);
-
-        console.log(error);
+        console.log(error)
       }
     }
   }, [locale, router, searchParams]);
