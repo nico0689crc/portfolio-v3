@@ -27,7 +27,10 @@ const ContainerCommon = ({ children, ...props }: ContainerCommonProps): React.Re
     <Box
       sx={{
         width: '100%',
-        px: '1rem',
+        px: ({
+          xs: "2rem",
+          md: "3rem",
+        }),
         marginInline: 'auto',
         maxWidth: ({
           xs: themeConfig.compactContentWidth.xs,

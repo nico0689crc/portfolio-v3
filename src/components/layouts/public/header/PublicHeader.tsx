@@ -5,7 +5,7 @@ import ContainerCommon from "@/components/layouts/public/common/ContainerCommon"
 import PublicHeaderWrapper from "./PublicHeaderWrapper"
 import Logo from "../common/logo/Logo"
 import PublicNavigation from "./navigation/PublicNavigation"
-import PublicSocial from "./social/PublicSocial"
+import PublicSocial from "../common/social/PublicSocial"
 import PublicActions from "./actions/PublicActions"
 
 // Types
@@ -21,6 +21,7 @@ const PublicHeader = ({ lang }: PublicHeaderProps) => (
       sx={{
         display: "flex",
         alignItems: "center",
+        gap: "1.5rem"
       }}
     >
       <Logo />

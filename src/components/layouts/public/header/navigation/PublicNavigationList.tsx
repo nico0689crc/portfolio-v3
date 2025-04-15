@@ -8,9 +8,11 @@ import type { ChildrenType } from "@/@core/types";
 
 // Components
 import Iconify from "@/components/ui/Icon";
+import IconButton from "@/components/ui/IconButton";
+import themeConfig from "@/configs/themeConfig";
 
 // Material-UI Components
-import { Drawer, IconButton, List, useMediaQuery, useTheme } from "@mui/material";
+import { Drawer, List, useMediaQuery, useTheme } from "@mui/material";
 
 /**
  * PublicNavigationList Component
@@ -21,7 +23,7 @@ import { Drawer, IconButton, List, useMediaQuery, useTheme } from "@mui/material
 const PublicNavigationList = ({ children }: ChildrenType) => {
   const { settings: { navbarOpen }, toggleNavbar } = useSettings();
   const theme = useTheme();
-  const isDownLg = useMediaQuery(theme.breakpoints.down("lg"));
+  const isDownLg = useMediaQuery(theme.breakpoints.down(themeConfig.breakpointToChangeLayout));
 
   const content = isDownLg ? (
     <Drawer 
@@ -50,6 +52,7 @@ const PublicNavigationList = ({ children }: ChildrenType) => {
             zIndex: 20,
           }} 
           onClick={toggleNavbar}
+          title="Close Menu"
         >
           <Iconify icon="ri:close-large-fill" />
         </IconButton>

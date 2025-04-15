@@ -15,12 +15,10 @@ const PublicSocialWrapper = ({ children }: PublicSocialWrapperProps) => (
     sx={(theme) => ({
       flexDirection: "row",
       alignItems: "center",
-      justifyContent: "center",
+      justifyContent: "flex-end",
       flexGrow: 1,
       [theme.breakpoints.up(themeConfig.breakpointToChangeLayout)]: {
-        justifyContent: "flex-end",
         flexGrow: 0,
-        mr: 5,
       },
       gap: 3,
     })}

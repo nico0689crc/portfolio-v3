@@ -8,6 +8,9 @@ const LanguageToggle = () => {
   const pathname = usePathname()
   const lang = pathname.split("/")[1] || "en";
   const path = pathname.split("/").slice(2).join("/");
+  const isCurrentLangEn = lang === "en";
+  const isCurrentLangEs = lang === "es";
+
   
   return (
     <ButtonGroup
@@ -21,8 +24,8 @@ const LanguageToggle = () => {
         }
       }}
     >
-      <ButtonCustomized href={`/en/${path}`} isCurrentLang={lang === "en"} text="EN"/>
-      <ButtonCustomized href={`/es/${path}`} isCurrentLang={lang === "es"} text="ES"/>
+      <ButtonCustomized href={`/en/${path}`} isCurrentLang={isCurrentLangEn} text="EN"/>
+      <ButtonCustomized href={`/es/${path}`} isCurrentLang={isCurrentLangEs} text="ES"/>
     </ButtonGroup>
   )
 }

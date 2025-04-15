@@ -70,18 +70,21 @@ export const SettingsProvider = (props: Props) => {
     JSON.stringify(settingsCookie) !== '{}' ? settingsCookie : updatedInitialSettings
   );
 
-  const updateSettings = (settings: Partial<Settings>, options?: UpdateSettingsOptions) => {
-    const { updateCookie = true } = options || {};
+  const updateSettings = useCallback(
+    (settings: Partial<Settings>, options?: UpdateSettingsOptions) => {
+      const { updateCookie = true } = options || {};
 
-    _updateSettingsState((prev) => {
-      const newSettings = { ...prev, ...settings };
+      _updateSettingsState((prev) => {
+        const newSettings = { ...prev, ...settings };
 
-      // Update cookie if needed
-      if (updateCookie) updateSettingsCookie(newSettings);
+        // Update cookie if needed
+        if (updateCookie) updateSettingsCookie(newSettings);
 
-      return newSettings;
-    });
-  };
+        return newSettings;
+      });
+    },
+    [updateSettingsCookie]
+  );
 
   /**
    * Updates the settings for page with the provided settings object.

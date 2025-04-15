@@ -9,7 +9,7 @@ const PublicMain = (props: ChildrenType) => (
       flexGrow: 1,
       flexShrink: 1,
       flexBasis: 'auto',
-      height: '5000px'
+      p: "1rem",
     }}
   >
     <ContainerCommon>

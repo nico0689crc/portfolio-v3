@@ -35,6 +35,7 @@ import timeline from './timeline';
 import toggleButton from './toggle-button';
 import tooltip from './tooltip';
 import typography from './typography';
+import link from './link';
 
 const overrides = () => Object.assign(
     {},
@@ -57,6 +58,7 @@ const overrides = () => Object.assign(
     iconButton,
     input,
     list,
+    link,
     menu,
     pagination,
     paper,

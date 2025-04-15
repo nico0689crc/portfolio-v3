@@ -18,5 +18,11 @@
   },
   "actions": {
     "change_mode": "Change mode"
+  },
+  "footer": {
+    "right_reserved": "All rights reserved.",
+    "site": "Site",
+    "socials": "Socials",
+    "description": "I am <mark>Nicolas Fernandez</mark>, a Fullstack Developer with 4+ years of experience in Web and Software Development. Specializing in <mark>JavaScript</mark>, <mark>React.js</mark>, <mark>Next.js</mark>, <mark>TypeScript</mark>, <mark>Node.js</mark>, and <mark>DevOps</mark> practices. Currently based in Neuquén, Argentina, and open to remote projects. I invite you to learn more about my skills, experience, and professional journey."
   }
 }

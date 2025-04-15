@@ -20,7 +20,7 @@ const Layout = async (props: Props) => {
     <PublicLayout
       header={<PublicHeader lang={lang} />}
       main={<PublicMain>{props.children}</PublicMain>}
-      footer={<PublicFooter />}
+      footer={<PublicFooter lang={lang}/>}
     />
   );
 };

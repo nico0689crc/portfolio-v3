@@ -1,30 +1,37 @@
-import { Button, ButtonGroup, Stack } from "@mui/material";
+// External imports
+import { Stack } from "@mui/material";
+
+// Internal imports - Components
 import ThemeModeToggle from "./ThemeModeToggle";
-import type { Locale } from "@/configs/i18n";
-import { getDictionary } from "@/utils/getDictionary";
 import NavbarToggle from "./NavbarToggle";
 import LanguageToggle from "./LanguageToggle";
 
-type PublicActionsProps = {
-  lang: Locale
-}
+// Internal imports - Types
+import type { Locale } from "@/configs/i18n";
 
-const PublicActions = async ({lang}: PublicActionsProps) => {
+// Internal imports - Utilities
+import { getDictionary } from "@/utils/getDictionary";
+
+type PublicActionsProps = {
+  lang: Locale;
+};
+
+const PublicActions = async ({ lang }: PublicActionsProps) => {
   const dictionary = await getDictionary(lang);
 
   return (
-    <Stack 
+    <Stack
       sx={{
         flexDirection: "row",
         gap: 3,
-        alignItems: "center"
+        alignItems: "center",
       }}
     >
-      <ThemeModeToggle title={dictionary.actions.change_mode}/>
+      <ThemeModeToggle title={dictionary.actions.change_mode} />
       <LanguageToggle />
-      <NavbarToggle title="Menu"/>
+      <NavbarToggle title="Menu" />
     </Stack>
-  )
-}
+  );
+};
 
 export default PublicActions;

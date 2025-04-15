@@ -18,5 +18,11 @@
   },
   "actions": {
     "change_mode": "Cambiar modo"
+  },
+  "footer": {
+    "right_reserved": "Todos los derechos reservados.",
+    "site": "Sitio",
+    "socials": "Redes sociales",
+    "description": "Soy <mark>Nicolas Fernandez</mark>, un Desarrollador Fullstack con más de 4 años de experiencia en Desarrollo Web y de Software. Especializándome en <mark>JavaScript</mark>, <mark>React.js</mark>, <mark>Next.js</mark>, <mark>TypeScript</mark>, <mark>Node.js</mark>, y prácticas de <mark>DevOps</mark>. Actualmente radicado en Neuquén, Argentina, y abierto a proyectos remotos. Te invito a conocer más sobre mis habilidades, experiencia y trayectoria profesional."
   }
 }

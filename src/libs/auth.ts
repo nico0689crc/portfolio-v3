@@ -1,7 +1,7 @@
 // Third-party Imports
 import CredentialProvider from 'next-auth/providers/credentials';
 import GoogleProvider from 'next-auth/providers/google';
-import type { NextAuthOptions, User } from 'next-auth';
+import type { NextAuthOptions } from 'next-auth';
 
 export const authOptions: NextAuthOptions = {
   // ** Configure one or more authentication providers

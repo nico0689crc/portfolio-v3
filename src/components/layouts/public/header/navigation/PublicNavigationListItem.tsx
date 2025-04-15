@@ -42,7 +42,7 @@ const PublicNavigationListItem = async ({ text, href, lang }: PublicNavigationLi
             color: "#fff",
             borderWidth: "0px 0px 3px 0px",
             borderStyle: "solid",
-            borderColor: "#f5df4e",
+            borderColor: "primary.main",
             transition: "all 0.3s ease-in-out",
             transform: "translate(-50%, 0) translateZ(0)",
           },
