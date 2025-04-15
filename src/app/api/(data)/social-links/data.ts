@@ -1,13 +1,4 @@
-export type PublicSocialLinkType = {
-  icon: string;
-  titleTooltip: string;
-  href: string;
-  ariaLabel: {
-    es: string;
-    en: string;
-  };
-  blank?: boolean;
-};
+import type { PublicSocialLinkType } from "@/types";
 
 export const socialLinks: PublicSocialLinkType[] = [
   {

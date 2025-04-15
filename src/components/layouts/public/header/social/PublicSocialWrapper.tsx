@@ -3,6 +3,8 @@
 // External imports
 import { Stack } from "@mui/material";
 
+import themeConfig from "@/configs/themeConfig";
+
 // Types
 import type { ChildrenType } from "@/@core/types";
 
@@ -13,10 +15,12 @@ const PublicSocialWrapper = ({ children }: PublicSocialWrapperProps) => (
     sx={(theme) => ({
       flexDirection: "row",
       alignItems: "center",
-      justifyContent: "flex-end",
+      justifyContent: "center",
       flexGrow: 1,
-      [theme.breakpoints.up("lg")]: {
+      [theme.breakpoints.up(themeConfig.breakpointToChangeLayout)]: {
+        justifyContent: "flex-end",
         flexGrow: 0,
+        mr: 5,
       },
       gap: 3,
     })}

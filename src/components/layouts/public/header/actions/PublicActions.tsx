@@ -14,9 +14,8 @@ const PublicActions = async ({lang}: PublicActionsProps) => {
   return (
     <Stack 
       sx={{
-        ml: 5,
         flexDirection: "row",
-        gap: 2,
+        gap: 3,
         alignItems: "center"
       }}
     >

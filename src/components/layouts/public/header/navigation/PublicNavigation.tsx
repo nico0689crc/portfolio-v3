@@ -1,11 +1,11 @@
 // Component imports
 import type { Locale } from "@/configs/i18n";
+import type { PageKeys } from "@/types";
 
 import PublicNavigationList from "./PublicNavigationList";
 import PublicNavigationListItem from "./PublicNavigationListItem";
 import { getDictionary } from "@/utils/getDictionary";
-
-export type PageKeys = "home" | "about_me" | "resume" | "portfolio" | "contact";
+import routes from "@/configs/routes";
 
 type navigationItemsType = {
   name: PageKeys;
@@ -18,11 +18,11 @@ type PublicNavigationProps = {
 
 // Data for navigation items
 const navigationItems: navigationItemsType[] = [
-  { name: "home", href: "/" },
-  { name: "about_me", href: "/about" },
-  { name: "resume", href: "/resume" },
-  { name: "portfolio", href: "/portfolio" },
-  { name: "contact", href: "/contact" },
+  { name: "home", href: routes.pages.public.home },
+  { name: "about_me", href: routes.pages.public.aboutMe },
+  { name: "resume", href: routes.pages.public.resume },
+  { name: "portfolio", href: routes.pages.public.portfolio },
+  { name: "contact", href: routes.pages.public.contact },
 ];
 
 const PublicNavigation = async (props: PublicNavigationProps) => {

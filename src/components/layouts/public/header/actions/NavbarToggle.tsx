@@ -10,6 +10,7 @@ import { useSettings } from "@/@core/hooks/useSettings";
 // UI components
 import Iconify from "@/components/ui/Icon";
 import IconButton from "@/components/ui/IconButton";
+import themeConfig from "@/configs/themeConfig";
 
 type NavbarToggleProps = {
   title: string;
@@ -18,7 +19,7 @@ type NavbarToggleProps = {
 const NavbarToggle = ({ title }: NavbarToggleProps) => {
   const { toggleNavbar } = useSettings();
   const theme = useTheme();
-  const isDownLg = useMediaQuery(theme.breakpoints.down("lg"));
+  const isDownLg = useMediaQuery(theme.breakpoints.down(themeConfig.breakpointToChangeLayout));
 
   const handleNavbarToggle = useCallback(() => {
     toggleNavbar();
