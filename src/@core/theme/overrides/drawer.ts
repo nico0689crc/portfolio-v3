@@ -6,6 +6,7 @@ const drawer: Theme['components'] = {
     defaultProps: {},
     styleOverrides: {
       paper: {
+        backgroundColor: 'var(--mui-palette-background-default)',
         boxShadow: 'var(--mui-customShadows-lg)',
       },
     },

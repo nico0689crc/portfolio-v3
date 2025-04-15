@@ -1,58 +1,44 @@
-import { Box, List, ListItem, Typography } from "@mui/material";
+// Component imports
+import type { Locale } from "@/configs/i18n";
 
-const PublicNavigation = () => (
-  <Box
-    sx={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      flexGrow: 1,
-      flexShrink: 1,
-      flexBasis: 'auto'
-    }}
-  >
-    <List
-      component="nav"
-      sx={{ 
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
-      <ListItem
-        sx={{
-          padding: 0,
-          margin: 0,
-        }}
-      >
-        <Typography
-          variant="h6"
-          noWrap
-          sx={{
-            fontWeight: 600,
-            color: "primary.main",
-          }}
-        >
-          My Website
-        </Typography>
-      </ListItem>
-      <ListItem
-        sx={{
-          padding: 0,
-          margin: 0,
-        }}
-      >
-      <Typography
-          variant="h6"
-          noWrap
-          sx={{
-            fontWeight: 600,
-            color: "primary.main",
-          }}
-        >
-          My Website 2
-        </Typography>
-      </ListItem>
-    </List>
-  </Box>
-)
+import PublicNavigationList from "./PublicNavigationList";
+import PublicNavigationListItem from "./PublicNavigationListItem";
+import { getDictionary } from "@/utils/getDictionary";
+
+export type PageKeys = "home" | "about_me" | "resume" | "portfolio" | "contact";
+
+type navigationItemsType = {
+  name: PageKeys;
+  href: string;
+};
+
+type PublicNavigationProps = {
+  lang: Locale
+}
+
+// Data for navigation items
+const navigationItems: navigationItemsType[] = [
+  { name: "home", href: "/" },
+  { name: "about_me", href: "/about" },
+  { name: "resume", href: "/resume" },
+  { name: "portfolio", href: "/portfolio" },
+  { name: "contact", href: "/contact" },
+];
+
+const PublicNavigation = async (props: PublicNavigationProps) => {
+  const dictionary = await getDictionary(props.lang);
+
+  return (
+    <PublicNavigationList>
+      {navigationItems.map((item) => (
+        <PublicNavigationListItem
+          key={item.name}
+          text={dictionary.pages[item.name].title}
+          href={item.href}
+        />
+      ))}
+    </PublicNavigationList>
+  )
+};
+
 export default PublicNavigation;

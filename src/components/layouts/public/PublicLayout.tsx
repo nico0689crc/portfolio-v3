@@ -1,5 +1,7 @@
+// Types
 import type { ReactNode } from "react";
 
+// External Libraries
 import { Stack } from "@mui/material";
 
 type PublicLayoutProps = {
@@ -8,16 +10,12 @@ type PublicLayoutProps = {
   footer: ReactNode;
 };
 
-const PublicLayout = (props: PublicLayoutProps) => {
-  const { header, main, footer } = props
-
-  return (
-    <Stack sx={{ minHeight: "100vh" }}>
-      {header}
-      {main}
-      {footer}
-    </Stack>
-  )
-}
+const PublicLayout = ({ header, main, footer }: PublicLayoutProps) => (
+  <Stack sx={{ minHeight: "100vh" }}>
+    {header}
+    {main}
+    {footer}
+  </Stack>
+);
 
 export default PublicLayout;

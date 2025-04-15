@@ -27,11 +27,11 @@ const themeConfig: Config = {
   layoutPadding: 24,
   compactContentWidth: {
     xs: '100%',
-    sm: '540px',
-    md: '720px',
-    lg: '960px',
-    xl: '1140px',
-    xxl: '1320px',
+    sm: '640px',
+    md: '820px',
+    lg: '1060px',
+    xl: '1240px',
+    xxl: '1420px',
   },
   toastPosition: 'top-right',
 };

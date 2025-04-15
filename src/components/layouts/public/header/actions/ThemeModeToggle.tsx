@@ -5,7 +5,11 @@ import Iconify from "@/components/ui/Icon";
 import IconButton from "@/components/ui/IconButton";
 import { useCallback } from "react";
 
-const ThemeModeToggle = () => {
+type ThemeModeToggleProps = {
+  title: string;
+}
+
+const ThemeModeToggle = ({title}: ThemeModeToggleProps) => {
   const { settings, updateSettings } = useSettings()
 
   const handleThemeModeToggle = useCallback(() => {
@@ -16,7 +20,7 @@ const ThemeModeToggle = () => {
 
   return (
     <IconButton 
-      title="Change Mode" 
+      title={title}
       onClick={handleThemeModeToggle}
     >
       <Iconify icon={settings.mode === "dark" ? "radix-icons:sun" : "radix-icons:moon"} />

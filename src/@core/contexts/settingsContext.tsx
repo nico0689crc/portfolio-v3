@@ -2,7 +2,7 @@
 
 // React Imports
 import type { ReactNode } from 'react';
-import { createContext, useMemo, useState } from 'react';
+import { createContext, useCallback, useMemo, useState } from 'react';
 
 // Type Imports
 import type { Mode } from '@core/types';
@@ -18,6 +18,7 @@ import { useObjectCookie } from '@/@core/hooks/useObjectCookie';
 export type Settings = {
   mode?: Mode;
   primaryColor?: string;
+  navbarOpen: boolean;
 };
 
 // UpdateSettingsOptions type
@@ -32,6 +33,7 @@ type SettingsContextProps = {
   isSettingsChanged: boolean;
   resetSettings: () => void;
   updatePageSettings: (settings: Partial<Settings>) => () => void;
+  toggleNavbar: () => void;
 };
 
 type Props = {
@@ -49,6 +51,7 @@ export const SettingsProvider = (props: Props) => {
   const initialSettings: Settings = {
     mode: themeConfig.mode,
     primaryColor: primaryColorConfig[0].main,
+    navbarOpen: false,
   };
 
   const updatedInitialSettings = {
@@ -103,6 +106,10 @@ export const SettingsProvider = (props: Props) => {
     updateSettings(initialSettings);
   };
 
+  const toggleNavbar = useCallback(() => {
+    updateSettings({ navbarOpen: !_settingsState.navbarOpen });
+  }, [_settingsState.navbarOpen, updateSettings]);
+
   const isSettingsChanged = useMemo(
     () => JSON.stringify(initialSettings) !== JSON.stringify(_settingsState),
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -117,6 +124,7 @@ export const SettingsProvider = (props: Props) => {
         isSettingsChanged,
         resetSettings,
         updatePageSettings,
+        toggleNavbar
       }}
     >
       {props.children}

@@ -1,3 +1,5 @@
+'use client'
+
 import { Stack } from "@mui/material";
 import PublicSocialLink from "./PublicSocialLink";
 
@@ -30,9 +32,19 @@ const socialLinks: PublicSocialLinkProps[] = [
   },
 ]
 
-
 const PublicSocial = () => (
-  <Stack direction="row" gap={3} alignItems="center">
+  <Stack 
+    sx={(theme) => ({
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "flex-end",
+      flexGrow: 1,
+      [theme.breakpoints.up("lg")]: {
+        flexGrow: 0,
+      },
+      gap: 3,
+    })}
+  >
     {socialLinks.map((link, index) => (
       <PublicSocialLink
         key={index}

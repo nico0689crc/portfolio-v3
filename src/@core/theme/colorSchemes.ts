@@ -315,7 +315,7 @@ const colorSchemes = (): Theme['colorSchemes'] => ({
           greyLightBg: '#373350',
           inputBorder: `rgb(var(--mui-mainColorChannels-dark) / 0.22)`,
           tableHeaderBg: '#3D3759',
-          tooltipText: '#312D4B',
+          tooltipText: '#000000',
           trackBg: '#474360',
         },
       },

@@ -1,20 +1,28 @@
-import type { ChildrenType } from "@/@core/types"
-import PublicFooter from "@/components/layouts/public/footer/PublicFooter"
-import PublicHeader from "@/components/layouts/public/header/PublicHeader"
-import PublicMain from "@/components/layouts/public/main/PublicMain"
-import PublicLayout from "@/components/layouts/public/PublicLayout"
+// Types
+import type { Locale } from "@/configs/i18n";
+import type { ChildrenType } from "@/@core/types";
 
+// Layout Components
+import PublicLayout from "@/components/layouts/public/PublicLayout";
+import PublicFooter from "@/components/layouts/public/footer/PublicFooter";
+import PublicHeader from "@/components/layouts/public/header/PublicHeader";
+import PublicMain from "@/components/layouts/public/main/PublicMain";
 
-const Layout = (props: ChildrenType) => (
-  <PublicLayout
-    header={<PublicHeader />} 
-    main={
-      <PublicMain>
-        {props.children}
-      </PublicMain>
-    }
-    footer={<PublicFooter />}
-  />
-)
+type Props = ChildrenType & {
+  params: Promise<{ lang: Locale }>;
+};
 
-export default Layout
+// Layout Component
+const Layout = async (props: Props) => {
+  const { lang } = await props.params;
+
+  return (
+    <PublicLayout
+      header={<PublicHeader lang={lang} />}
+      main={<PublicMain>{props.children}</PublicMain>}
+      footer={<PublicFooter />}
+    />
+  );
+};
+
+export default Layout;

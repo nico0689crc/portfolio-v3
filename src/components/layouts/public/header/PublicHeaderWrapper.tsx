@@ -1,15 +1,19 @@
 'use client'
 
+// React imports
 import { useState } from "react";
 
+// Third-party library imports
 import { Box } from "@mui/material";
-import { useMotionValueEvent, useScroll } from "motion/react"
+import { useMotionValueEvent, useScroll } from "motion/react";
 
+// Types imports
 import type { ChildrenType } from "@/@core/types";
+import { useSettings } from "@/@core/hooks/useSettings";
 
 const PublicHeaderWrapper = ({ children }: ChildrenType) => {
-
-  const [isSticky, setIsSticky] = useState<boolean>(false)
+  const { settings: { navbarOpen } } = useSettings();
+  const [isSticky, setIsSticky] = useState<boolean>(false);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -26,15 +30,12 @@ const PublicHeaderWrapper = ({ children }: ChildrenType) => {
       sx={(theme) => ({
         display: "flex",
         alignItems: "center",
+        height: "70px",
         width: "100%",
-        color: "white",
-        padding: "20px",
-        zIndex: 1000,
-        borderBottom: "1px solid",
-        borderBottomColor: theme.palette.mode === "dark" ? theme.palette.grey[800] : theme.palette.grey[300],
-        backgroundColor: "var(--mui-palette-background-default)",
+        borderBottom: `1px solid ${theme.palette.grey[100]}`,
+        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.05)",
         transition: "all 0.3s ease-in-out",
-        ...(isSticky && {
+        ...(isSticky && !navbarOpen && {
           position: "sticky",
           inset: "0 0 0 0",
           animation: "stickHeader 0.5s forwards",
@@ -42,11 +43,11 @@ const PublicHeaderWrapper = ({ children }: ChildrenType) => {
         "@keyframes stickHeader": {
           "0%": {
             transform: "translateY(-100%)",
-            opacity: 0
+            opacity: 0,
           },
           "100%": {
             transform: "translateY(0)",
-            opacity: 1
+            opacity: 1,
           },
         },
       })}
@@ -54,7 +55,7 @@ const PublicHeaderWrapper = ({ children }: ChildrenType) => {
     >
       {children}
     </Box>
-  )
-}
+  );
+};
 
 export default PublicHeaderWrapper;

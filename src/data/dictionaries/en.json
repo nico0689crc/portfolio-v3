@@ -1,7 +1,22 @@
 {
   "pages": {
     "home": {
-      "title": "Tittle"
+      "title": "Home"
+    }, 
+    "about_me": {
+      "title": "About me"
+    },
+    "resume": {
+      "title": "Resume"
+    },
+    "portfolio": {
+      "title": "Portfolio"
+    },
+    "contact": {
+      "title": "Contact"
     }
+  },
+  "actions": {
+    "change_mode": "Change mode"
   }
 }
