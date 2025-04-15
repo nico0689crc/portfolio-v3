@@ -1,7 +1,7 @@
 'use client';
 
 import type { Locale } from '@/configs/i18n';
-import themeConfig from '@/configs/themeConfig';
+import routes from '@/configs/routes';
 import { getLocalizedUrl } from '@/utils/i18n';
 import { Button, Stack, Typography } from '@mui/material';
 import { signIn } from 'next-auth/react';
@@ -19,16 +19,16 @@ const LoginPage = () => {
       password: 'password',
       redirect: false,
     });
-    console.log(res)
+
     if (res && res.ok && res.error === null) {
       // Vars
-      const redirectURL = searchParams.get('redirectTo') ?? themeConfig.pages.authenticated.root;
+      const redirectURL = searchParams.get('redirectTo') ?? routes.pages.authenticated.dashboard;
 
       router.replace(getLocalizedUrl(redirectURL, locale as Locale));
     } else {
       if (res?.error) {
         const error = JSON.parse(res.error);
-        console.log(error)
+        throw new Error(error.message || 'An unknown error occurred');
       }
     }
   }, [locale, router, searchParams]);

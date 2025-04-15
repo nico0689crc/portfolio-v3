@@ -1,9 +1,6 @@
 // MUI Imports
 import type { Theme } from '@mui/material/styles';
 
-// Config Imports
-import themeConfig from '@/configs/themeConfig';
-
 const iconStyles = (size?: string) => ({
   '& > *:nth-of-type(1)': {
     ...(size === 'small'
@@ -24,9 +21,7 @@ const iconStyles = (size?: string) => ({
 
 const button: Theme['components'] = {
   MuiButtonBase: {
-    defaultProps: {
-      disableRipple: themeConfig.disableRipple,
-    },
+    defaultProps: {},
   },
   MuiButton: {
     styleOverrides: {

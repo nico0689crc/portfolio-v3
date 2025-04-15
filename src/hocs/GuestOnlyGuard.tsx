@@ -9,7 +9,7 @@ import type { ChildrenType } from '@core/types';
 import type { Locale } from '@/configs/i18n';
 
 // Config Imports
-import themeConfig from '@/configs/themeConfig';
+import routes from '@/configs/routes';
 
 // Util Imports
 import { getLocalizedUrl } from '@/utils/i18n';
@@ -18,7 +18,7 @@ const GuestOnlyGuard = async ({ children, lang }: ChildrenType & { lang: Locale 
   const session = await getServerSession();
 
   if (session) {
-    redirect(getLocalizedUrl(themeConfig.pages.authenticated.root, lang));
+    redirect(getLocalizedUrl(routes.pages.authenticated.dashboard, lang));
   }
 
   return <>{children}</>;

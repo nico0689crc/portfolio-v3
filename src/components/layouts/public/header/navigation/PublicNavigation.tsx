@@ -11,8 +11,6 @@ const PublicNavigation = () => (
       flexBasis: 'auto'
     }}
   >
-
-
     <List
       component="nav"
       sx={{ 

@@ -2,11 +2,10 @@
 import type { ToastPosition } from 'react-toastify';
 
 // Type Imports
-import type { Mode, PagesTypes } from '@core/types';
+import type { Mode } from '@core/types';
 
 export type Config = {
   templateName: string;
-  pages: PagesTypes;
   settingsCookieName: string;
   mode: Mode;
   layoutPadding: number;
@@ -23,14 +22,6 @@ export type Config = {
 
 const themeConfig: Config = {
   templateName: 'NextJs App MUI Base',
-  pages: {
-    public: {
-      root: '/',
-    },
-    authenticated: {
-      root: '/dashboard',
-    },
-  },
   settingsCookieName: 'nextjs-app-mui-base',
   mode: 'dark', // 'system', 'light', 'dark'
   layoutPadding: 24,

@@ -7,7 +7,7 @@ import { redirect, usePathname } from 'next/navigation';
 import type { Locale } from '@/configs/i18n';
 
 // Config Imports
-import themeConfig from '@/configs/themeConfig';
+import routes from '@/configs/routes';
 
 // Util Imports
 import { getLocalizedUrl } from '@/utils/i18n';
@@ -18,7 +18,7 @@ const AuthRedirect = ({ lang }: { lang: Locale }) => {
   // ℹ️ Bring me `lang`
   const redirectUrl = `/${lang}/login?redirectTo=${pathname}`;
   const login = `/${lang}/login`;
-  const homePage = getLocalizedUrl(themeConfig.pages.authenticated.root, lang);
+  const homePage = getLocalizedUrl(routes.pages.authenticated.dashboard, lang);
 
   return redirect(pathname === login ? login : pathname === homePage ? login : redirectUrl);
 };

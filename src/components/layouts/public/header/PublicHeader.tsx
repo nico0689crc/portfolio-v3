@@ -1,12 +1,12 @@
 import ContainerCommon from "@/components/layouts/public/common/ContainerCommon"
-import PublicHeaderStyled from "./PublicHeaderStyled"
+import PublicHeaderWrapper from "./PublicHeaderWrapper"
 import Logo from "../common/logo/Logo"
 import PublicNavigation from "./navigation/PublicNavigation"
 import PublicSocial from "./social/PublicSocial"
 import PublicActions from "./actions/PublicActions"
 
 const PublicHeader = () => (
-  <PublicHeaderStyled>
+  <PublicHeaderWrapper>
     <ContainerCommon
       sx={{
         display: "flex",
@@ -19,7 +19,7 @@ const PublicHeader = () => (
       <PublicSocial />
       <PublicActions />
     </ContainerCommon>
-  </PublicHeaderStyled>
+  </PublicHeaderWrapper>
 )
 
 export default PublicHeader
