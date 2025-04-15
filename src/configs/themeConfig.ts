@@ -3,6 +3,7 @@ import type { ToastPosition } from 'react-toastify';
 
 // Type Imports
 import type { Mode } from '@core/types';
+import type { Breakpoint } from '@mui/material';
 
 export type Config = {
   templateName: string;
@@ -10,6 +11,7 @@ export type Config = {
   mode: Mode;
   layoutPadding: number;
   toastPosition: ToastPosition;
+  breakpointToChangeLayout: Breakpoint,
   compactContentWidth: {
     xs: string;
     sm: string;
@@ -25,13 +27,14 @@ const themeConfig: Config = {
   settingsCookieName: 'nextjs-app-mui-base',
   mode: 'dark', // 'system', 'light', 'dark'
   layoutPadding: 24,
+  breakpointToChangeLayout: "lg",
   compactContentWidth: {
     xs: '100%',
-    sm: '640px',
-    md: '820px',
-    lg: '1060px',
-    xl: '1240px',
-    xxl: '1420px',
+    sm: '840px',
+    md: '1020px',
+    lg: '1260px',
+    xl: '1340px',
+    xxl: '1620px',
   },
   toastPosition: 'top-right',
 };

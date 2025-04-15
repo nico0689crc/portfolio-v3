@@ -1,12 +1,15 @@
 'use client';
 
-import type { Locale } from '@/configs/i18n';
-import routes from '@/configs/routes';
-import { getLocalizedUrl } from '@/utils/i18n';
+// External libraries
 import { Button, Stack, Typography } from '@mui/material';
 import { signIn } from 'next-auth/react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback } from 'react';
+
+// Configs and utilities
+import type { Locale } from '@/configs/i18n';
+import routes from '@/configs/routes';
+import { getLocalizedUrl } from '@/utils/i18n';
 
 const LoginPage = () => {
   const searchParams = useSearchParams();
@@ -20,16 +23,21 @@ const LoginPage = () => {
       redirect: false,
     });
 
-    if (res && res.ok && res.error === null) {
+    try {
+      if (res && res.ok && res.error === null) {
       // Vars
       const redirectURL = searchParams.get('redirectTo') ?? routes.pages.authenticated.dashboard;
 
       router.replace(getLocalizedUrl(redirectURL, locale as Locale));
-    } else {
-      if (res?.error) {
-        const error = JSON.parse(res.error);
-        throw new Error(error.message || 'An unknown error occurred');
+      } else {
+      const errorMessage = res?.error
+        ? JSON.parse(res.error)?.message || 'An unknown error occurred'
+        : 'Login failed. Please try again.';
+      throw new Error(errorMessage);
       }
+    } catch (error) {
+      console.error('Login error:', error);
+      // Optionally, you can display an error message to the user here
     }
   }, [locale, router, searchParams]);
 

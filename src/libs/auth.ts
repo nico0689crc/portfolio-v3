@@ -93,24 +93,16 @@ export const authOptions: NextAuthOptions = {
 
   // ** Please refer to https://next-auth.js.org/configuration/options#callbacks for more `callbacks` options
   callbacks: {
+    async signIn({ user, account, profile, email, credentials }) {
+      // Example logic: Always allow sign-in
+      return true;
+    },
+
     /*
      * While using `jwt` as a strategy, `jwt()` callback will be called before
      * the `session()` callback. So we have to add custom parameters in `token`
      * via `jwt()` callback to make them accessible in the `session()` callback
      */
-    async jwt({ token, user }) {
-      if (user) {
-        /*
-         * Extend the User type to include the `token` property.
-         * Ensure that the API response includes a `token` field for this to work.
-         */
-        const extendedUser = user as User & { token: string; user: any };
-        token.jwt = extendedUser.token;
-        token.user = extendedUser.user;
-      }
-
-      return token;
-    },
     async session({ session, token }) {
       if (session.user) {
         // ** Add custom params to user in session which are added in `jwt()` callback via `token` parameter

@@ -25,7 +25,7 @@ const PublicHeader = ({ lang }: PublicHeaderProps) => (
     >
       <Logo />
       <PublicNavigation lang={lang}/>
-      <PublicSocial />
+      <PublicSocial lang={lang} />
       <PublicActions lang={lang}/>
     </ContainerCommon>
   </PublicHeaderWrapper>

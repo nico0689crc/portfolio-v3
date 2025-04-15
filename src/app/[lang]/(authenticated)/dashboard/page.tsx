@@ -1,5 +1,13 @@
-import { Typography } from '@mui/material';
+'use client'
 
-const DashboardPage = () => <Typography>DASHBOARD PAGE</Typography>;
+import { signOut } from 'next-auth/react';
+import { Button, Typography } from '@mui/material';
+
+const DashboardPage = () => (
+  <>
+    <Button onClick={() => signOut()}>Salir</Button>
+    <Typography>DASHBOARD PAGE</Typography>
+  </>
+);
 
 export default DashboardPage;
