@@ -33,6 +33,15 @@ export const apiRoutes = {
     },
     aboutMe: {
       metadata: 'pages/about-me/metadata',
+    },
+    resume: {
+      metadata: 'pages/resume/metadata',
+    },
+    portfolio: {
+      metadata: 'pages/portfolio/metadata',
+    },
+    contact: {
+      metadata: 'pages/contact/metadata',
     }
   }
 }
