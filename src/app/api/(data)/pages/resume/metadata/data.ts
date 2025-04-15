@@ -9,11 +9,11 @@ export const metadata: MetadataType = {
   en: {
     title: "Resume",
     description:
-      "I am Nicolas Ariel Fernandez, a Fullstack Developer with 4+ years of experience in Web and Software Development. Specializing in JavaScript, React.js, Next.js, TypeScript, Node.js, and DevOps practices. Currently based in Neuquén, Argentina, and open to remote projects. Learn more about my skills, experience, and professional journey.",
+      "Explore the professional resume of Nicolas Ariel Fernandez, a Fullstack Developer with 4+ years of experience in Web Development. View my skills, work experience, education, and certifications. My CV is available for download. Get to know my technical expertise in JavaScript, React.js, Node.js, Docker, TypeScript, and more.",
   },
   es: {
     title: "Curriculum",
     description:
-      "Soy Nicolas Ariel Fernandez, un Desarrollador Fullstack con más de 4 años de experiencia en Desarrollo Web y de Software. Especializado en JavaScript, React.js, Next.js, TypeScript, Node.js y prácticas de DevOps. Actualmente radicado en Neuquén, Argentina, y abierto a proyectos remotos. Aprende más sobre mis habilidades, experiencia y trayectoria profesional.",
+      "Explora el currículum profesional de Nicolas Ariel Fernandez, un Desarrollador Fullstack con más de 4 años de experiencia en Desarrollo Web. Consulta mis habilidades, experiencia laboral, educación y certificaciones. Mi CV está disponible para descargar. Conoce mi experiencia técnica en JavaScript, React.js, Node.js, Docker, TypeScript y más.",
   },
 };

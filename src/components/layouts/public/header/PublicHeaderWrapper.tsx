@@ -32,6 +32,7 @@ const PublicHeaderWrapper = ({ children }: ChildrenType) => {
         alignItems: "center",
         height: "70px",
         width: "100%",
+        backgroundColor: "var(--mui-palette-background-default)",
         borderBottom: `1px solid ${theme.palette.grey[100]}`,
         boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.05)",
         transition: "all 0.3s ease-in-out",

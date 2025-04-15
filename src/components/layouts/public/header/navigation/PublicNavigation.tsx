@@ -35,6 +35,7 @@ const PublicNavigation = async (props: PublicNavigationProps) => {
           key={item.name}
           text={dictionary.pages[item.name].title}
           href={item.href}
+          lang={props.lang}
         />
       ))}
     </PublicNavigationList>

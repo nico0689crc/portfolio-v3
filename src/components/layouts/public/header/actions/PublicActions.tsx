@@ -1,8 +1,9 @@
-import { Stack } from "@mui/material";
+import { Button, ButtonGroup, Stack } from "@mui/material";
 import ThemeModeToggle from "./ThemeModeToggle";
 import type { Locale } from "@/configs/i18n";
 import { getDictionary } from "@/utils/getDictionary";
 import NavbarToggle from "./NavbarToggle";
+import LanguageToggle from "./LanguageToggle";
 
 type PublicActionsProps = {
   lang: Locale
@@ -20,6 +21,7 @@ const PublicActions = async ({lang}: PublicActionsProps) => {
       }}
     >
       <ThemeModeToggle title={dictionary.actions.change_mode}/>
+      <LanguageToggle />
       <NavbarToggle title="Menu"/>
     </Stack>
   )

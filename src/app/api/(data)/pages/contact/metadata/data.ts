@@ -9,11 +9,11 @@ export const metadata: MetadataType = {
   en: {
     title: "Conctact",
     description:
-      "I am Nicolas Ariel Fernandez, a Fullstack Developer with 4+ years of experience in Web and Software Development. Specializing in JavaScript, React.js, Next.js, TypeScript, Node.js, and DevOps practices. Currently based in Neuquén, Argentina, and open to remote projects. Learn more about my skills, experience, and professional journey.",
+      "Get in touch with Nicolas Ariel Fernandez, a Fullstack Developer from Neuquen, Argentina. Whether you're interested in collaborating on a project, learning more about my work, or discussing job opportunities, feel free to reach out via email, LinkedIn, or GitHub. Let's connect!",
   },
   es: {
     title: "Contacto",
     description:
-      "Soy Nicolas Ariel Fernandez, un Desarrollador Fullstack con más de 4 años de experiencia en Desarrollo Web y de Software. Especializado en JavaScript, React.js, Next.js, TypeScript, Node.js y prácticas de DevOps. Actualmente radicado en Neuquén, Argentina, y abierto a proyectos remotos. Aprende más sobre mis habilidades, experiencia y trayectoria profesional.",
+      "Ponte en contacto con Nicolas Ariel Fernandez, un Desarrollador Fullstack de Neuquén, Argentina. Si estás interesado en colaborar en un proyecto, aprender más sobre mi trabajo o discutir oportunidades laborales, no dudes en comunicarte a través de correo electrónico, LinkedIn o GitHub. ¡Conectemos!",
   },
 };

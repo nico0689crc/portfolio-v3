@@ -6,6 +6,15 @@ const buttonGroup: Theme['components'] = {
     defaultProps: {},
     styleOverrides: {
       root: ({ ownerState }) => ({
+        '& .MuiButtonBase-root': {
+          padding: "5px",
+          ...(ownerState.size === 'medium' && {
+            padding: "10px",
+          }),
+          ...(ownerState.size === 'large' && {
+            padding: "15px",
+          }),
+        },
         ...(ownerState.variant === 'text' && {
           '& .MuiButtonGroup-firstButton, & .MuiButtonGroup-middleButton': {
             borderColor: `var(--mui-palette-${ownerState.color}-main)`,

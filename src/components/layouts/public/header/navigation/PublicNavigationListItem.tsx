@@ -6,17 +6,19 @@ import { ListItem, Typography, Link as LinkMUI } from "@mui/material";
 
 // Utilities
 import { getLocalizedUrl } from "@/utils/i18n"
+import type { Locale } from "@/configs/i18n";
 
 type PublicNavigationListItemProps = {
   text: string;
   href: string;
+  lang: Locale
 };
 
 /**
  * PublicNavigationListItem Component
  * A navigation list component for public layouts.
  */
-const PublicNavigationListItem = async ({ text, href, ...props }: PublicNavigationListItemProps) => (
+const PublicNavigationListItem = async ({ text, href, lang }: PublicNavigationListItemProps) => (
     <ListItem
       sx={{
         width: "fit-content",
@@ -25,7 +27,7 @@ const PublicNavigationListItem = async ({ text, href, ...props }: PublicNavigati
     >
       <LinkMUI 
         component={Link} 
-        href={getLocalizedUrl(href, "en")} 
+        href={getLocalizedUrl(href, lang)} 
         sx={{ 
           textDecoration: "none",
           "&:after": {
