@@ -145,7 +145,7 @@ const colorSchemes = (): Theme['colorSchemes'] => ({
           successDisabledColor: 'var(--mui-palette-common-white)',
         },
         Tooltip: {
-          bg: '#1A0E33',
+          bg: `rgb(var(--mui-mainColorChannels-light) / 0.9)`,
         },
         TableCell: {
           border: 'var(--mui-palette-divider)',
@@ -305,7 +305,7 @@ const colorSchemes = (): Theme['colorSchemes'] => ({
           successDisabledColor: 'var(--mui-palette-common-white)',
         },
         Tooltip: {
-          bg: '#F7F4FF',
+          bg: `rgb(var(--mui-mainColorChannels-dark) / 0.9)`,
         },
         TableCell: {
           border: 'var(--mui-palette-divider)',

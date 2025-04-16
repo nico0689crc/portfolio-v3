@@ -1,17 +1,20 @@
 // External imports
 import type { Locale } from "@/configs/i18n";
 import type { PublicSocialLinkType } from "@/types";
+import type { LinkProps } from "@mui/material";
 
-// Internal imports
+// Internal imports - Components
 import PublicSocialLink from "./PublicSocialLink";
 import PublicSocialWrapper from "./PublicSocialWrapper";
+
+// Internal imports - Utilities
 import getSocialLinks from "@/utils/requests/getSocialLinks";
 
-type PublicSocialProps = {
+type PublicSocialProps = LinkProps & {
   lang: Locale;
 };
 
-const PublicSocial = async ({ lang }: PublicSocialProps) => {
+const PublicSocial = async ({ lang, sx }: PublicSocialProps) => {
   const socialLinks: PublicSocialLinkType[] = await getSocialLinks();
 
   return (
@@ -25,6 +28,7 @@ const PublicSocial = async ({ lang }: PublicSocialProps) => {
           icon={link.icon}
           aria-label={link.ariaLabel[lang]}
           rel={link.blank ? "noopener noreferrer" : undefined}
+          sx={sx}
         />
       ))}
     </PublicSocialWrapper>

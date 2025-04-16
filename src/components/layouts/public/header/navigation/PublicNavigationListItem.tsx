@@ -28,30 +28,6 @@ const PublicNavigationListItem = async ({ text, href, lang }: PublicNavigationLi
       <LinkMUI 
         component={Link} 
         href={getLocalizedUrl(href, lang)} 
-        sx={{ 
-          textDecoration: "none",
-          "&:after": {
-            position: "absolute",
-            content: "''",
-            height: "2px",
-            width: 0,
-            left: "50%",
-            right: 0,
-            bottom: 0,
-            backgroundColor: "transparent",
-            color: "#fff",
-            borderWidth: "0px 0px 3px 0px",
-            borderStyle: "solid",
-            borderColor: "primary.main",
-            transition: "all 0.3s ease-in-out",
-            transform: "translate(-50%, 0) translateZ(0)",
-          },
-          "&:hover": {
-            "&:after": {
-              width: "100%",
-            },
-          },
-        }}
       >
         <Typography
           noWrap
@@ -59,6 +35,7 @@ const PublicNavigationListItem = async ({ text, href, lang }: PublicNavigationLi
             fontWeight: 600,
             textTransform: "uppercase",
           }}
+          className="MuiLink-with-hover-effect"
         >
           {text}
         </Typography>

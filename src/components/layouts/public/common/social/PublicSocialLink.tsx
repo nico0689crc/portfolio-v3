@@ -8,7 +8,7 @@ type PublicSocialLinkProps = LinkProps & {
   titleTooltip: string;
 }
 
-const PublicSocialLink = ({ icon, titleTooltip, ...props }: PublicSocialLinkProps) => (
+const PublicSocialLink = ({ icon, titleTooltip, sx, ...props }: PublicSocialLinkProps) => (
   <Tooltip title={titleTooltip} arrow>
     <Link
       sx={{
@@ -19,6 +19,7 @@ const PublicSocialLink = ({ icon, titleTooltip, ...props }: PublicSocialLinkProp
           scale: 1.1,
           color: "var(--mui-palette-text-primary)",
         },
+        ...sx
       }} 
       {...props}
     >
