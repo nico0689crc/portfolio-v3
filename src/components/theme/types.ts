@@ -13,7 +13,6 @@
 import type { ComponentsOverrides } from '@mui/material/styles';
 
 declare module '@mui/material/styles' {
-   
   // Theme
   interface Theme {
     shape: {

@@ -5,10 +5,9 @@ import 'server-only';
 // Next Imports
 import { cookies } from 'next/headers';
 
-
 // Type Imports
 import type { Settings } from '@core/contexts/settingsContext';
-import type { SystemMode } from '@core/types';
+import type { SystemMode } from '@/types';
 
 // Config Imports
 import themeConfig from '@/configs/themeConfig';

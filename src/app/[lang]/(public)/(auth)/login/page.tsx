@@ -25,15 +25,15 @@ const LoginPage = () => {
 
     try {
       if (res && res.ok && res.error === null) {
-      // Vars
-      const redirectURL = searchParams.get('redirectTo') ?? routes.pages.authenticated.dashboard;
+        // Vars
+        const redirectURL = searchParams.get('redirectTo') ?? routes.pages.authenticated.dashboard;
 
-      router.replace(getLocalizedUrl(redirectURL, locale as Locale));
+        router.replace(getLocalizedUrl(redirectURL, locale as Locale));
       } else {
-      const errorMessage = res?.error
-        ? JSON.parse(res.error)?.message || 'An unknown error occurred'
-        : 'Login failed. Please try again.';
-      throw new Error(errorMessage);
+        const errorMessage = res?.error
+          ? JSON.parse(res.error)?.message || 'An unknown error occurred'
+          : 'Login failed. Please try again.';
+        throw new Error(errorMessage);
       }
     } catch (error) {
       console.error('Login error:', error);

@@ -16,8 +16,9 @@ import type { Theme } from '@mui/material/styles';
  */
 // import type { Settings } from '@core/contexts/settingsContext'
 
-const userTheme = (/* settings: Settings */): Theme => ({
+const userTheme = (/* settings: Settings */): Theme =>
+  ({
     // Write your custom theme object here.
-  } as Theme);
+  }) as Theme;
 
 export default userTheme;

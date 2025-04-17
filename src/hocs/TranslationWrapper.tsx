@@ -2,7 +2,7 @@
 import type { headers } from 'next/headers';
 // Type Imports
 import type { Locale } from '@/configs/i18n';
-import type { ChildrenType } from '@/@core/types';
+import type { ChildrenType } from '@/types';
 
 // Config Imports
 import { i18n } from '@/configs/i18n';

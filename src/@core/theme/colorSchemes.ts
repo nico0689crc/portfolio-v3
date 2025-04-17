@@ -1,7 +1,8 @@
 // MUI Imports
 import type { Theme } from '@mui/material/styles';
 
-const colorSchemes = (): Theme['colorSchemes'] => ({
+const colorSchemes = (): Theme['colorSchemes'] =>
+  ({
     light: {
       palette: {
         primary: {
@@ -70,7 +71,7 @@ const colorSchemes = (): Theme['colorSchemes'] => ({
           darkerOpacity: 'rgb(var(--mui-palette-success-mainChannel) / 0.38)',
         },
         text: {
-          primary: `rgb(var(--mui-mainColorChannels-light) / 0.9)`,
+          primary: `rgb(var(--mui-mainColorChannels-light) / 1)`,
           secondary: `rgb(var(--mui-mainColorChannels-light) / 0.7)`,
           disabled: `rgb(var(--mui-mainColorChannels-light) / 0.4)`,
           primaryChannel: 'var(--mui-mainColorChannels-light)',
@@ -158,7 +159,7 @@ const colorSchemes = (): Theme['colorSchemes'] => ({
           tableHeaderBg: '#F6F7FB',
           tooltipText: '#FFFFFF',
           trackBg: '#F0F2F8',
-          footerBg: "#111418",
+          footerBg: '#111418',
         },
       },
     },
@@ -230,7 +231,7 @@ const colorSchemes = (): Theme['colorSchemes'] => ({
           darkerOpacity: 'rgb(var(--mui-palette-success-mainChannel) / 0.38)',
         },
         text: {
-          primary: `rgb(var(--mui-mainColorChannels-dark) / 0.9)`,
+          primary: `rgb(var(--mui-mainColorChannels-dark) / 1)`,
           secondary: `rgb(var(--mui-mainColorChannels-dark) / 0.7)`,
           disabled: `rgb(var(--mui-mainColorChannels-dark) / 0.4)`,
           primaryChannel: 'var(--mui-mainColorChannels-dark)',
@@ -318,10 +319,10 @@ const colorSchemes = (): Theme['colorSchemes'] => ({
           tableHeaderBg: '#3D3759',
           tooltipText: '#000000',
           trackBg: '#474360',
-          footerBg: "#111418",
+          footerBg: '#111418',
         },
       },
     },
-  } as Theme['colorSchemes']);
+  }) as Theme['colorSchemes'];
 
 export default colorSchemes;

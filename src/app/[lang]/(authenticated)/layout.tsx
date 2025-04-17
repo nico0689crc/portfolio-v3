@@ -1,4 +1,4 @@
-import type { ChildrenType } from '@/@core/types';
+import type { ChildrenType } from '@/types';
 import type { Locale } from '@/configs/i18n';
 import AuthenticatedGuard from '@/hocs/AuthenticatedGuard';
 

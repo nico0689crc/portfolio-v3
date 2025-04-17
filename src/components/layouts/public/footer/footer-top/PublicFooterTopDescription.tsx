@@ -1,15 +1,15 @@
 // React and Next.js imports
-import React from "react";
+import React from 'react';
 
 // MUI imports
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography } from '@mui/material';
 
 // Config imports
-import themeConfig from "@/configs/themeConfig";
-import type { Locale } from "@/configs/i18n";
+import themeConfig from '@/configs/themeConfig';
+import type { Locale } from '@/configs/i18n';
 
 // Utils imports
-import { getDictionary } from "@/utils/getDictionary";
+import { getDictionary } from '@/utils/getDictionary';
 
 type PublicFooterTopDescriptionProps = {
   lang: Locale;
@@ -22,27 +22,27 @@ const PublicFooterTopDescription = async ({ lang }: PublicFooterTopDescriptionPr
     <Stack
       component="section"
       sx={{
-        justifyContent: "center",
+        justifyContent: 'center',
         alignItems: {
-          xs: "center",
-          [themeConfig.breakpointToChangeLayout]: "flex-start",
+          xs: 'center',
+          [themeConfig.breakpointToChangeLayout]: 'flex-start',
         },
         maxWidth: {
-          xs: "100%",
-          [themeConfig.breakpointToChangeLayout]: "20rem",
+          xs: '100%',
+          [themeConfig.breakpointToChangeLayout]: '20rem',
         },
         textAlign: {
-          xs: "center",
-          [themeConfig.breakpointToChangeLayout]: "left",
+          xs: 'center',
+          [themeConfig.breakpointToChangeLayout]: 'left',
         },
         gap: 1,
       }}
     >
       <Typography
         sx={{
-          fontSize: "1.2rem",
-          textTransform: "uppercase",
-          color: "primary.main",
+          fontSize: '1.2rem',
+          textTransform: 'uppercase',
+          color: 'primary.main',
         }}
         variant="h3"
       >
@@ -50,9 +50,14 @@ const PublicFooterTopDescription = async ({ lang }: PublicFooterTopDescriptionPr
       </Typography>
       <Typography
         sx={{
-          color: "white",
-          span: {
-            backgroundColor: "primary.light",
+          color: 'white',
+          maxWidth: {
+            xs: '30rem',
+            [themeConfig.breakpointToChangeLayout]: '100%',
+          },
+          mark: {
+            backgroundColor: 'primary.primary',
+            px: 0.5,
           },
         }}
         dangerouslySetInnerHTML={{ __html: dictionary.footer.description }}

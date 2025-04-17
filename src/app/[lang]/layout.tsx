@@ -13,22 +13,21 @@ import { getSystemMode } from '@/@core/utils/serverHelpers';
 import TranslationWrapper from '@/hocs/TranslationWrapper';
 
 // Type Imports
-import type { ChildrenType } from '@/@core/types';
-import type { LangParamType } from '@/types';
+import type { ChildrenType } from '@/types';
+import type { LangParamPromiseType } from '@/types';
 
 import Providers from '@/components/Providers';
 import getMetadata from '@/utils/requests/getMetadata';
 
-export async function generateMetadata(props: LangParamType) {
+export async function generateMetadata(props: LangParamPromiseType) {
   const params = await props.params;
-  const metadata = await getMetadata("default")
+  const metadata = await getMetadata('default');
 
   return metadata[params.lang];
 }
 
-const RootLayout = async (props: ChildrenType & LangParamType) => {
+const RootLayout = async (props: ChildrenType & LangParamPromiseType) => {
   const params = await props.params;
-
   const { children } = props;
 
   // Vars

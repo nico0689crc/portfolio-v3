@@ -15,7 +15,7 @@ import type {} from '@mui/lab/themeAugmentation'; //! Do not remove this import 
 import { useMedia } from 'react-use';
 
 // Type Imports
-import type { ChildrenType, SystemMode } from '@core/types';
+import type { ChildrenType, SystemMode } from '@/types';
 
 // Component Imports
 import ModeChanger from './ModeChanger';
@@ -86,8 +86,6 @@ const CustomThemeProvider = (props: Props) => {
     const coreTheme = deepmerge(defaultCoreTheme(currentMode), newTheme);
 
     return createTheme(coreTheme);
-
-     
   }, [settings.primaryColor, currentMode]);
 
   return (

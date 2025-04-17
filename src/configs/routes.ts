@@ -3,21 +3,21 @@ const routes = {
     public: {
       home: '/',
       aboutMe: '/about-me',
-      resume: '/resume',  
-      portfolio: '/portfolio',  
-      contact: '/contact',  
+      resume: '/resume',
+      portfolio: '/portfolio',
+      contact: '/contact',
       auth: {
         login: '/login',
         register: '/register',
         forgotPassword: '/forgot-password',
         resetPassword: '/reset-password',
-      }
+      },
     },
     authenticated: {
       dashboard: '/dashboard',
     },
   },
-}
+};
 
 export const apiRoutes = {
   auth: {
@@ -42,9 +42,8 @@ export const apiRoutes = {
     },
     contact: {
       metadata: 'pages/contact/metadata',
-    }
-  }
-}
+    },
+  },
+};
 
-
-export default routes
+export default routes;

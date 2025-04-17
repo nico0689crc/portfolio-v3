@@ -2,7 +2,7 @@
 import type { ToastPosition } from 'react-toastify';
 
 // Type Imports
-import type { Mode } from '@core/types';
+import type { Mode } from '@/types';
 import type { Breakpoint } from '@mui/material';
 
 export type Config = {
@@ -10,8 +10,9 @@ export type Config = {
   settingsCookieName: string;
   mode: Mode;
   layoutPadding: number;
+  headerHeight: string;
   toastPosition: ToastPosition;
-  breakpointToChangeLayout: Breakpoint,
+  breakpointToChangeLayout: Breakpoint;
   compactContentWidth: {
     xs: string;
     sm: string;
@@ -24,10 +25,11 @@ export type Config = {
 
 const themeConfig: Config = {
   templateName: 'NextJs App MUI Base',
-  settingsCookieName: 'nextjs-app-mui-base',
+  settingsCookieName: 'nicolas-fernandez-portfolio-settings',
   mode: 'dark', // 'system', 'light', 'dark'
+  headerHeight: "70px",
   layoutPadding: 24,
-  breakpointToChangeLayout: "lg",
+  breakpointToChangeLayout: 'lg',
   compactContentWidth: {
     xs: '100%',
     sm: '840px',

@@ -1,6 +1,6 @@
 // Types
 import type { Locale } from '@/configs/i18n';
-import type { LangParamType } from '@/types';
+import type { LangParamPromiseType } from '@/types';
 
 // Utilities
 import { getDictionary } from '@/utils/getDictionary';
@@ -10,9 +10,9 @@ import getMetadata from '@/utils/requests/getMetadata';
 import { Typography } from '@mui/material';
 
 // Page Metadata
-export async function generateMetadata(props: LangParamType) {
+export async function generateMetadata(props: LangParamPromiseType) {
   const params = await props.params;
-  const metadata = await getMetadata("portfolio");
+  const metadata = await getMetadata('portfolio');
 
   return metadata[params.lang];
 }
@@ -26,7 +26,8 @@ const PortfolioPage = async (props: { params: Promise<{ lang: Locale }> }) => {
     <>
       <Typography>{dictionary.pages.portfolio.title}</Typography>
       <Typography>
-        Portfolio page content goes here. You can add your Portfolio details, experience, education, etc. 
+        Portfolio page content goes here. You can add your Portfolio details, experience, education,
+        etc.
       </Typography>
     </>
   );

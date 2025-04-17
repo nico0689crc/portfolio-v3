@@ -1,56 +1,54 @@
-'use client'
+'use client';
 
 // Hooks
-import { useSettings } from "@/@core/hooks/useSettings";
+import { useSettings } from '@/@core/hooks/useSettings';
 
 // Types
-import type { ChildrenType } from "@/@core/types";
+import type { ChildrenType } from '@/types';
 
 // Components
-import Iconify from "@/components/ui/Icon";
-import IconButton from "@/components/ui/IconButton";
-import themeConfig from "@/configs/themeConfig";
+import Iconify from '@/components/ui/Icon';
+import IconButton from '@/components/ui/IconButton';
+import themeConfig from '@/configs/themeConfig';
 
 // Material-UI Components
-import { Drawer, List, useMediaQuery, useTheme } from "@mui/material";
+import { Drawer, List, useMediaQuery, useTheme } from '@mui/material';
 
 /**
  * PublicNavigationList Component
  * A navigation list component for public layouts.
- * 
+ *
  * @param {ChildrenType} props - The children to render inside the navigation list.
  */
 const PublicNavigationList = ({ children }: ChildrenType) => {
-  const { settings: { navbarOpen }, toggleNavbar } = useSettings();
+  const {
+    settings: { navbarOpen },
+    toggleNavbar,
+  } = useSettings();
   const theme = useTheme();
   const isDownLg = useMediaQuery(theme.breakpoints.down(themeConfig.breakpointToChangeLayout));
 
   const content = isDownLg ? (
-    <Drawer 
-      open={navbarOpen} 
-      anchor="right" 
-      variant="temporary" 
-      onClose={toggleNavbar}
-    >
-      <List 
-        component="nav" 
+    <Drawer open={navbarOpen} anchor="right" variant="temporary" onClose={toggleNavbar}>
+      <List
+        component="nav"
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
           gap: 2,
-          width: "100vw",
-          height: "100%"
+          width: '100vw',
+          height: '100%',
         }}
       >
-        <IconButton 
+        <IconButton
           sx={{
-            position: "absolute",
+            position: 'absolute',
             top: 20,
             right: 20,
             zIndex: 20,
-          }} 
+          }}
           onClick={toggleNavbar}
           title="Close Menu"
         >
@@ -60,18 +58,18 @@ const PublicNavigationList = ({ children }: ChildrenType) => {
       </List>
     </Drawer>
   ) : (
-    <List 
-      component="nav" 
+    <List
+      component="nav"
       sx={{
-        position: "relative",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "row",
+        position: 'relative',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
         flexGrow: 1,
         gap: 5,
-        transition: "inherit",
-        transform: "inherit",
+        transition: 'inherit',
+        transform: 'inherit',
       }}
     >
       {children}

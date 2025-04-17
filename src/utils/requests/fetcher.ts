@@ -9,6 +9,6 @@ const fetcher = async (url: string, options?: RequestInit) => {
   });
 
   return response.json();
-}
+};
 
 export default fetcher;

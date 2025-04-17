@@ -1,21 +1,17 @@
-import type { ChildrenType } from "@/@core/types"
-import { Stack } from "@mui/material"
-import ContainerCommon from "@/components/layouts/public/common/ContainerCommon"
+import type { ChildrenType } from '@/types';
+import { Stack } from '@mui/material';
 
 const PublicMain = (props: ChildrenType) => (
-  <Stack 
+  <Stack
     component="main"
     sx={{
       flexGrow: 1,
       flexShrink: 1,
       flexBasis: 'auto',
-      p: "1rem",
     }}
   >
-    <ContainerCommon>
-      {props.children}
-    </ContainerCommon>
+    {props.children}
   </Stack>
-)
+);
 
-export default PublicMain
+export default PublicMain;

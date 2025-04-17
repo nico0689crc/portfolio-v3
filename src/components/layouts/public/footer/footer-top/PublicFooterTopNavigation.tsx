@@ -1,51 +1,51 @@
 // React and Next.js imports
-import Link from "next/link"
+import Link from 'next/link';
 
 // MUI imports
-import { Stack, Typography, Link as LinkMUI } from "@mui/material"
+import { Stack, Typography, Link as LinkMUI } from '@mui/material';
 
 // Local components imports
-import { navigationItems } from "@/components/layouts/public/common/navigations"
+import { navigationItems } from '@/components/layouts/public/common/navigations';
 
 // Config imports
-import themeConfig from "@/configs/themeConfig"
-import type { Locale } from "@/configs/i18n"
+import themeConfig from '@/configs/themeConfig';
+import type { Locale } from '@/configs/i18n';
 
 // Utils imports
-import { getDictionary } from "@/utils/getDictionary"
-import { getLocalizedUrl } from "@/utils/i18n"
+import { getDictionary } from '@/utils/getDictionary';
+import { getLocalizedUrl } from '@/utils/i18n';
 
 type PublicFooterTopNavigationProps = {
-  lang: Locale
-}
+  lang: Locale;
+};
 
 const PublicFooterTopNavigation = async ({ lang }: PublicFooterTopNavigationProps) => {
-  const dictionary = await getDictionary(lang)
+  const dictionary = await getDictionary(lang);
 
   return (
     <Stack
       component="section"
       sx={{
         justifyContent: {
-          xs: "center",
-          [themeConfig.breakpointToChangeLayout]: "flex-start",
+          xs: 'center',
+          [themeConfig.breakpointToChangeLayout]: 'flex-start',
         },
         alignItems: {
-          xs: "center",
-          [themeConfig.breakpointToChangeLayout]: "flex-start",
+          xs: 'center',
+          [themeConfig.breakpointToChangeLayout]: 'flex-start',
         },
         gap: 1,
         width: {
-          xs: "100%",
-          [themeConfig.breakpointToChangeLayout]: "inherit",
-        }
+          xs: '100%',
+          [themeConfig.breakpointToChangeLayout]: 'inherit',
+        },
       }}
     >
       <Typography
         sx={{
-          fontSize: "1.2rem",
-          textTransform: "uppercase",
-          color: "primary.main",
+          fontSize: '1.2rem',
+          textTransform: 'uppercase',
+          color: 'primary.main',
         }}
         variant="h3"
       >
@@ -53,18 +53,18 @@ const PublicFooterTopNavigation = async ({ lang }: PublicFooterTopNavigationProp
       </Typography>
       <Stack
         direction={{
-          xs: "column",
+          xs: 'column',
         }}
-        sx={{ 
+        sx={{
           gap: {
             xs: 1,
             [themeConfig.breakpointToChangeLayout]: 2,
-          }, 
-          flexWrap: "wrap",
+          },
+          flexWrap: 'wrap',
           alignItems: {
-            xs: "center",
-            [themeConfig.breakpointToChangeLayout]: "flex-start",
-          } 
+            xs: 'center',
+            [themeConfig.breakpointToChangeLayout]: 'flex-start',
+          },
         }}
       >
         {navigationItems.map((item) => (
@@ -73,14 +73,14 @@ const PublicFooterTopNavigation = async ({ lang }: PublicFooterTopNavigationProp
             component={Link}
             href={getLocalizedUrl(item.href, lang)}
             className="MuiLink-with-hover-effect"
-            sx={{ color: "white" }}
+            sx={{ color: 'white' }}
           >
             {dictionary.pages[item.name].title}
           </LinkMUI>
         ))}
       </Stack>
     </Stack>
-  )
-}
+  );
+};
 
-export default PublicFooterTopNavigation
+export default PublicFooterTopNavigation;

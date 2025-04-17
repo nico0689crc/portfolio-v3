@@ -1,17 +1,17 @@
 // External Libraries
-import Link from "next/link";
+import Link from 'next/link';
 
 // Material-UI Components
-import { ListItem, Typography, Link as LinkMUI } from "@mui/material";
+import { ListItem, Typography, Link as LinkMUI } from '@mui/material';
 
 // Utilities
-import { getLocalizedUrl } from "@/utils/i18n"
-import type { Locale } from "@/configs/i18n";
+import { getLocalizedUrl } from '@/utils/i18n';
+import type { Locale } from '@/configs/i18n';
 
 type PublicNavigationListItemProps = {
   text: string;
   href: string;
-  lang: Locale
+  lang: Locale;
 };
 
 /**
@@ -19,28 +19,28 @@ type PublicNavigationListItemProps = {
  * A navigation list component for public layouts.
  */
 const PublicNavigationListItem = async ({ text, href, lang }: PublicNavigationListItemProps) => (
-    <ListItem
-      sx={{
-        width: "fit-content",
-        px: 0,
-      }}
+  <ListItem
+    sx={{
+      width: 'fit-content',
+      px: 0,
+    }}
+  >
+    <LinkMUI 
+      component={Link} 
+      href={getLocalizedUrl(href, lang)}
+      className="MuiLink-with-hover-effect"
     >
-      <LinkMUI 
-        component={Link} 
-        href={getLocalizedUrl(href, lang)} 
+      <Typography
+        noWrap
+        sx={{
+          fontWeight: 600,
+          textTransform: 'uppercase',
+        }}
       >
-        <Typography
-          noWrap
-          sx={{
-            fontWeight: 600,
-            textTransform: "uppercase",
-          }}
-          className="MuiLink-with-hover-effect"
-        >
-          {text}
-        </Typography>
-      </LinkMUI>
-    </ListItem>
-  );
+        {text}
+      </Typography>
+    </LinkMUI>
+  </ListItem>
+);
 
 export default PublicNavigationListItem;

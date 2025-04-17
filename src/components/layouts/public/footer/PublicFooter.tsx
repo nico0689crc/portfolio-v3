@@ -1,14 +1,14 @@
 // Types
-import type { Locale } from "@/configs/i18n"
+import type { Locale } from '@/configs/i18n';
 
 // Components
-import PublicFooterWrapper from "./PublicFooterWrapper"
-import PublicFooterBottom from "./footer-bottom/PublicFooterBottom"
-import PublicFooterTop from "./footer-top/PublicFooterTop"
+import PublicFooterWrapper from './PublicFooterWrapper';
+import PublicFooterBottom from './footer-bottom/PublicFooterBottom';
+import PublicFooterTop from './footer-top/PublicFooterTop';
 
 type PublicFooterProps = {
-  lang: Locale
-}
+  lang: Locale;
+};
 
 // PublicFooter component
 const PublicFooter = async ({ lang }: PublicFooterProps) => (
@@ -16,6 +16,6 @@ const PublicFooter = async ({ lang }: PublicFooterProps) => (
     <PublicFooterTop lang={lang} />
     <PublicFooterBottom lang={lang} />
   </PublicFooterWrapper>
-)
+);
 
-export default PublicFooter
+export default PublicFooter;

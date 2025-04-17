@@ -5,7 +5,7 @@ import type { ReactNode } from 'react';
 import { createContext, useCallback, useMemo, useState } from 'react';
 
 // Type Imports
-import type { Mode } from '@core/types';
+import type { Mode } from '@/types';
 
 // Config Imports
 import themeConfig from '@/configs/themeConfig';
@@ -31,8 +31,6 @@ type SettingsContextProps = {
   settings: Settings;
   updateSettings: (settings: Partial<Settings>, options?: UpdateSettingsOptions) => void;
   isSettingsChanged: boolean;
-  resetSettings: () => void;
-  updatePageSettings: (settings: Partial<Settings>) => () => void;
   toggleNavbar: () => void;
 };
 
@@ -45,19 +43,22 @@ type Props = {
 // Initial Settings Context
 export const SettingsContext = createContext<SettingsContextProps | null>(null);
 
+// Initial Settings
+const initialSettings: Settings = {
+  mode: themeConfig.mode,
+  primaryColor: primaryColorConfig[0].main,
+  navbarOpen: false,
+};
+
 // Settings Provider
 export const SettingsProvider = (props: Props) => {
-  // Initial Settings
-  const initialSettings: Settings = {
-    mode: themeConfig.mode,
-    primaryColor: primaryColorConfig[0].main,
-    navbarOpen: false,
-  };
-
-  const updatedInitialSettings = {
-    ...initialSettings,
-    mode: props.mode || themeConfig.mode,
-  };
+  const updatedInitialSettings = useMemo(
+    () => ({
+      ...initialSettings,
+      mode: props.mode || themeConfig.mode,
+    }),
+    [props.mode]
+  );
 
   // Cookies
   const [settingsCookie, updateSettingsCookie] = useObjectCookie<Settings>(
@@ -86,36 +87,13 @@ export const SettingsProvider = (props: Props) => {
     [updateSettingsCookie]
   );
 
-  /**
-   * Updates the settings for page with the provided settings object.
-   * Updated settings won't be saved to cookie hence will be reverted once navigating away from the page.
-   *
-   * @param settings - The partial settings object containing the properties to update.
-   * @returns A function to reset the page settings.
-   *
-   * @example
-   * useEffect(() => {
-   *     return updatePageSettings({ theme: 'dark' });
-   * }, []);
-   */
-  const updatePageSettings = (settings: Partial<Settings>): (() => void) => {
-    updateSettings(settings, { updateCookie: false });
-
-    // Returns a function to reset the page settings
-    return () => updateSettings(settingsCookie, { updateCookie: false });
-  };
-
-  const resetSettings = () => {
-    updateSettings(initialSettings);
-  };
-
   const toggleNavbar = useCallback(() => {
     updateSettings({ navbarOpen: !_settingsState.navbarOpen });
   }, [_settingsState.navbarOpen, updateSettings]);
 
   const isSettingsChanged = useMemo(
     () => JSON.stringify(initialSettings) !== JSON.stringify(_settingsState),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     [_settingsState]
   );
 
@@ -125,9 +103,7 @@ export const SettingsProvider = (props: Props) => {
         settings: _settingsState,
         updateSettings,
         isSettingsChanged,
-        resetSettings,
-        updatePageSettings,
-        toggleNavbar
+        toggleNavbar,
       }}
     >
       {props.children}

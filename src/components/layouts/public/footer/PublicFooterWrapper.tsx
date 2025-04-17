@@ -1,11 +1,11 @@
 // External libraries
-import { Box } from "@mui/material";
+import { Box } from '@mui/material';
 
 // Local components
-import ContainerCommon from "@/components/layouts/public/common/ContainerCommon";
+import ContainerCommon from '@/components/layouts/public/common/ContainerCommon';
 
 // Types
-import type { ChildrenType } from "@/@core/types";
+import type { ChildrenType } from '@/types';
 
 type PublicFooterWrapperProps = ChildrenType;
 
@@ -14,14 +14,14 @@ const PublicFooterWrapper = async ({ children }: PublicFooterWrapperProps) => (
   <Box
     component="footer"
     sx={{
-      backgroundColor: "var(--mui-palette-customColors-footerBg)",
-      padding: "2rem 0",
+      backgroundColor: 'var(--mui-palette-customColors-footerBg)',
+      padding: '2rem 0',
     }}
   >
     <ContainerCommon
       sx={{
-        display: "flex",
-        flexDirection: "column",
+        display: 'flex',
+        flexDirection: 'column',
         gap: 10,
       }}
     >

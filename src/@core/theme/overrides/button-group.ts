@@ -7,12 +7,12 @@ const buttonGroup: Theme['components'] = {
     styleOverrides: {
       root: ({ ownerState }) => ({
         '& .MuiButtonBase-root': {
-          padding: "5px",
+          padding: '5px',
           ...(ownerState.size === 'medium' && {
-            padding: "10px",
+            padding: '10px',
           }),
           ...(ownerState.size === 'large' && {
-            padding: "15px",
+            padding: '15px',
           }),
         },
         ...(ownerState.variant === 'text' && {

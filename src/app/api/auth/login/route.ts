@@ -31,11 +31,11 @@ export async function POST(req: Request) {
 
     return NextResponse.json(
       {
-      message: ['An unexpected error occurred'],
+        message: ['An unexpected error occurred'],
       },
       {
-      status: res.status,
-      statusText: res.statusText || 'Error',
+        status: res.status,
+        statusText: res.statusText || 'Error',
       }
     );
   } catch (_error: unknown) {

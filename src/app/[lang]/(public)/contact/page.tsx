@@ -1,6 +1,6 @@
 // Types
 import type { Locale } from '@/configs/i18n';
-import type { LangParamType } from '@/types';
+import type { LangParamPromiseType } from '@/types';
 
 // Utilities
 import { getDictionary } from '@/utils/getDictionary';
@@ -10,9 +10,9 @@ import getMetadata from '@/utils/requests/getMetadata';
 import { Typography } from '@mui/material';
 
 // Page Metadata
-export async function generateMetadata(props: LangParamType) {
+export async function generateMetadata(props: LangParamPromiseType) {
   const params = await props.params;
-  const metadata = await getMetadata("contact");
+  const metadata = await getMetadata('contact');
 
   return metadata[params.lang];
 }
@@ -26,7 +26,8 @@ const ContactPage = async (props: { params: Promise<{ lang: Locale }> }) => {
     <>
       <Typography>{dictionary.pages.contact.title}</Typography>
       <Typography>
-        Contact page content goes here. You can add your Contact details, experience, education, etc. 
+        Contact page content goes here. You can add your Contact details, experience, education,
+        etc.
       </Typography>
     </>
   );

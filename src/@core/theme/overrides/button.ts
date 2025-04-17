@@ -26,6 +26,7 @@ const button: Theme['components'] = {
   MuiButton: {
     styleOverrides: {
       root: ({ theme, ownerState }) => ({
+        borderRadius: 0,
         ...(ownerState.variant === 'text'
           ? {
               ...(ownerState.size === 'small' && {
@@ -160,16 +161,8 @@ const button: Theme['components'] = {
           {
             props: { variant: 'outlined', color: 'secondary' },
             style: {
-              borderColor: 'var(--mui-palette-secondary-main)',
-              '&:not(.Mui-disabled):hover, &:not(.Mui-disabled):active, &.Mui-focusVisible:not(:has(span.MuiTouchRipple-root))':
-                {
-                  backgroundColor: 'var(--mui-palette-secondary-lighterOpacity)',
-                },
-              '&.Mui-disabled': {
-                opacity: 0.45,
-                color: 'var(--mui-palette-secondary-main)',
-                borderColor: 'var(--mui-palette-secondary-main)',
-              },
+              borderColor: 'var(--mui-palette-text-primary)',
+              color: 'var(--mui-palette-text-primary)',
             },
           },
           {
@@ -249,15 +242,9 @@ const button: Theme['components'] = {
           {
             props: { variant: 'contained', color: 'secondary' },
             style: {
-              '&:not(.Mui-disabled):active, &.Mui-focusVisible:not(:has(span.MuiTouchRipple-root))':
-                {
-                  backgroundColor: 'var(--mui-palette-secondary-dark)',
-                },
-              '&.Mui-disabled': {
-                opacity: 0.45,
-                color: 'var(--mui-palette-secondary-contrastText)',
-                backgroundColor: 'var(--mui-palette-secondary-main)',
-              },
+              backgroundColor: '#000000',
+              borderColor: 'var(--mui-palette-text-primary)',
+              color: 'var(--mui-palette-text-primary)',
             },
           },
           {
@@ -329,15 +316,21 @@ const button: Theme['components'] = {
           },
         }),
       }),
+
       sizeSmall: ({ theme }) => ({
         lineHeight: 1.38462,
         fontSize: theme.typography.body2.fontSize,
-        borderRadius: 'var(--mui-shape-customBorderRadius-sm)',
+        padding: '0.5rem 1rem',
+      }),
+      sizeMedium: ({ theme }) => ({
+        lineHeight: 1.5, 
+        fontSize: theme.typography.body1.fontSize,
+        padding: '0.8rem 2.6rem',
       }),
       sizeLarge: {
         fontSize: '1.0625rem',
         lineHeight: 1.529412,
-        borderRadius: 'var(--mui-shape-customBorderRadius-lg)',
+        padding: '0.8rem 2.6rem',
       },
       startIcon: ({ theme, ownerState }) => ({
         ...(ownerState.size === 'small'
@@ -371,6 +364,7 @@ const button: Theme['components'] = {
             }),
         ...iconStyles(ownerState.size),
       }),
+
     },
   },
 };

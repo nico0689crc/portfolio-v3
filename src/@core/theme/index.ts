@@ -5,7 +5,7 @@ import { Poppins } from 'next/font/google';
 import type { Theme } from '@mui/material/styles';
 
 // Type Imports
-import type { SystemMode } from '@core/types';
+import type { SystemMode } from '@/types';
 
 // Theme Options Imports
 import overrides from './overrides';
@@ -20,7 +20,8 @@ const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
 });
 
-const theme = (mode: SystemMode): Theme => ({
+const theme = (mode: SystemMode): Theme =>
+  ({
     components: overrides(),
     colorSchemes: colorSchemes(),
     ...spacing,
@@ -43,6 +44,6 @@ const theme = (mode: SystemMode): Theme => ({
       lightShadow: '46 38 61',
       darkShadow: '19 17 32',
     },
-  } as Theme);
+  }) as Theme;
 
 export default theme;

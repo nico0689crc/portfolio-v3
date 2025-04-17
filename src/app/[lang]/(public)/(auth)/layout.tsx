@@ -1,16 +1,16 @@
 // Type Imports
-import type { ChildrenType } from '@core/types'
-import type { Locale } from '@/configs/i18n'
+import type { ChildrenType } from '@/types';
+import type { Locale } from '@/configs/i18n';
 
 // HOC Imports
-import GuestOnlyRoute from '@/hocs/GuestOnlyGuard'
+import GuestOnlyRoute from '@/hocs/GuestOnlyGuard';
 
 const Layout = async (props: ChildrenType & { params: Promise<{ lang: Locale }> }) => {
-  const params = await props.params
+  const params = await props.params;
 
-  const { children } = props
+  const { children } = props;
 
-  return <GuestOnlyRoute lang={params.lang}>{children}</GuestOnlyRoute>
-}
+  return <GuestOnlyRoute lang={params.lang}>{children}</GuestOnlyRoute>;
+};
 
-export default Layout
+export default Layout;

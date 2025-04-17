@@ -1,11 +1,32 @@
-import type { Locale } from "./configs/i18n";
+// Types
+import type { Locale } from './configs/i18n';
+import type { getDictionary } from './utils/getDictionary';
 
-export type PageKeys = "home" | "about_me" | "resume" | "portfolio" | "contact";
+// General types
+export type Mode = 'system' | 'light' | 'dark';
+export type SystemMode = 'light' | 'dark';
+export type PageKeys = 'home' | 'about_me' | 'resume' | 'portfolio' | 'contact';
+
+// Parameter types
+export type LangParamPromiseType = {
+  params: Promise<{ lang: Locale }>;
+};
 
 export type LangParamType = {
-  params: Promise<{ lang: Locale }>
-}
+  lang: Locale;
+};
 
+// Component types
+export type ChildrenType = {
+  children: React.ReactNode;
+};
+
+// Utility types
+export type DictionaryType = {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>;
+};
+
+// Social link types
 export type PublicSocialLinkType = {
   icon: string;
   titleTooltip: string;

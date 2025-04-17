@@ -1,7 +1,26 @@
 {
   "pages": {
     "home": {
-      "title": "Inicio"
+      "title": "Inicio",
+      "sections": {
+        "hero": {
+          "title": "Hola, soy Nicolas",
+          "subtitle_1": "Programador",
+          "subtitle_2": "Fullstack",
+          "skills": "JavaScript, TypeScript, React.js, Next.js, Nest.js, Express.js, Node.js, Docker, Postgress, Mysql y más.",
+          "view_portfolio_button": "Ver mi portafolio",
+          "contact_me_button": "Contáctame"
+        },
+        "skills": {
+          "title": "Habilidades"
+        },
+        "experience": {
+          "title": "Experiencia"
+        },
+        "projects": {
+          "title": "Proyectos"
+        }
+      }
     }, 
     "about_me": {
       "title": "Sobre mí"
@@ -23,6 +42,5 @@
     "right_reserved": "Todos los derechos reservados.",
     "site": "Sitio",
     "socials": "Redes sociales",
-    "description": "Soy <mark>Nicolas Fernandez</mark>, un Desarrollador Fullstack con más de 4 años de experiencia en Desarrollo Web y de Software. Especializándome en <mark>JavaScript</mark>, <mark>React.js</mark>, <mark>Next.js</mark>, <mark>TypeScript</mark>, <mark>Node.js</mark>, y prácticas de <mark>DevOps</mark>. Actualmente radicado en Neuquén, Argentina, y abierto a proyectos remotos. Te invito a conocer más sobre mis habilidades, experiencia y trayectoria profesional."
-  }
+    "description": "Soy <mark>Nicolas Fernandez</mark>, un Desarrollador Fullstack con más de 4 años de experiencia en Desarrollo Web y de Software. Especializándome en <mark>JavaScript</mark>, <mark>TypeScript</mark>, <mark>React.js</mark>, <mark>Next.js</mark>, <mark>Nest.js</mark>, <mark>Express.js</mark>, <mark>Node.js</mark>, <mark>Postgress</mark>, <mark>Mysql</mark> y prácticas de Devops como <mark>Docker</mark> y <mark>Github Actions</mark>. Actualmente radicado en Neuquén, Argentina, y abierto a proyectos remotos. Te invito a conocer más sobre mis habilidades, experiencia y trayectoria profesional."}
 }

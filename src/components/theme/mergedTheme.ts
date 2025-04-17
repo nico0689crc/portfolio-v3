@@ -11,7 +11,7 @@ import { deepmerge } from '@mui/utils';
 import type { Theme } from '@mui/material/styles';
 
 // Type Imports
-import type { SystemMode } from '@core/types';
+import type { SystemMode } from '@/types';
 
 // Core Theme Imports
 import coreTheme from '@core/theme';
