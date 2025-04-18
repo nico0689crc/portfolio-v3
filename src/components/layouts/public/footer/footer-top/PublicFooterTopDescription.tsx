@@ -56,7 +56,7 @@ const PublicFooterTopDescription = async ({ lang }: PublicFooterTopDescriptionPr
             [themeConfig.breakpointToChangeLayout]: '100%',
           },
           mark: {
-            backgroundColor: 'primary.primary',
+            backgroundColor: 'var(--mui-palette-primary-main)',
             px: 0.5,
           },
         }}

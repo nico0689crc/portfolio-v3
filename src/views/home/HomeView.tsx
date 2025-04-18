@@ -17,7 +17,7 @@ const HomeView = async (props: HomeViewProps) => {
         <HeroSectionPictureProfile dictionary={dictionary} />
         <HeroSectionTitle dictionary={dictionary} lang={lang}/>
       </HeroSection>
-      <AboutMeSection dictionary={dictionary} />
+      <AboutMeSection dictionary={dictionary} lang={lang}/>
       <ServicesSection dictionary={dictionary} />
     </>
   );

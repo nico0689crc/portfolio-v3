@@ -13,6 +13,7 @@ const typography: Theme['components'] = {
           {
             props: { variant: 'h2' },
             style: { color: 'var(--mui-palette-text-primary)' },
+
           },
           {
             props: { variant: 'h3' },
