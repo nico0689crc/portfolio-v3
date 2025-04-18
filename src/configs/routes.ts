@@ -1,3 +1,4 @@
+import { skills } from "@/app/api/(data)/pages/about-me/skills/data";
 import { faq } from "@/app/api/(data)/pages/home/faq/data";
 
 const routes = {
@@ -36,6 +37,7 @@ export const apiRoutes = {
     },
     aboutMe: {
       metadata: 'pages/about-me/metadata',
+      skills: 'pages/about-me/skills',
     },
     resume: {
       metadata: 'pages/resume/metadata',

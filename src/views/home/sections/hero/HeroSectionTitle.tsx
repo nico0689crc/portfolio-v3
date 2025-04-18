@@ -15,6 +15,10 @@ import { getLocalizedUrl } from '@/utils/i18n';
 // Types
 import type { DictionaryType, LangParamType } from '@/types';
 
+// Resumes
+const resumeES = "/resume/Nicolas_Ariel_Fernandez_Fullstack_Developer_Javascript_CV_ES.pdf";
+const resumeEN = "/resume/Nicolas_Ariel_Fernandez_Fullstack_Developer_Javascript_Resume_EN.pdf";
+
 type HeroSectionTitleProps = DictionaryType & LangParamType;
 
 const HeroSectionTitle = (props: HeroSectionTitleProps) => {
@@ -166,13 +170,14 @@ const HeroButtons = ({
       variant="outlined"
       color="secondary"
       component={Link}
-      href={getLocalizedUrl(routes.pages.public.contact, lang)}
+      target='_blank'
+      href={lang === 'es' ? resumeES : resumeEN}
       sx={{
         color: `rgb(var(--mui-mainColorChannels-light) / 1)`,
         borderColor: `rgb(var(--mui-mainColorChannels-light) / 1)`,
       }}
     >
-      {dictionary.pages.home.sections.hero.contact_me_button}
+      {dictionary.pages.home.sections.hero.download_cv}
     </Button>
   </Stack>
 );
