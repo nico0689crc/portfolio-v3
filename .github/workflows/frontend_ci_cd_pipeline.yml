@@ -1,0 +1,76 @@
+name: ci_cd_pipeline
+on:
+  push:
+    branches:
+      - "main"
+  workflow_dispatch:
+env:
+  #########################################
+  #   GENERAL
+  #########################################
+  SHH_USER_PASSWORD: ${{secrets.SHH_USER_PASSWORD}}
+  DOCKER_HUB_USERNAME: ${{vars.DOCKER_HUB_USERNAME}}
+  DOCKER_HUB_PASSWORD: ${{secrets.DOCKER_HUB_PASSWORD}}
+  DOCKER_IMAGE: ${{vars.DOCKER_HUB_USERNAME}}/${{vars.DOCKER_HUB_APP_IMAGE}}
+
+  #########################################
+  #   ENVIRONMENT
+  #########################################
+  DOCKER_IMAGE_VERSION: ${{vars.DOCKER_IMAGE_VERSION}}
+  DOCKER_CONTAINER_NAME: ${{vars.DOCKER_CONTAINER_NAME}}
+  HOST_PORT: ${{vars.HOST_PORT}}
+  CONTAINER_PORT: ${{vars.CONTAINER_PORT}}
+
+  NEXTAUTH_BASEPATH: ${{vars.NEXTAUTH_BASEPATH}}
+  NEXTAUTH_URL: ${{vars.NEXTAUTH_URL}}
+  NEXTAUTH_SECRET: ${{secrets.NEXTAUTH_SECRET}}
+  GOOGLE_CLIENT_ID: ${{vars.GOOGLE_CLIENT_ID}}
+  GOOGLE_CLIENT_SECRET: ${{secrets.GOOGLE_CLIENT_SECRET}}
+  API_URL: ${{vars.API_URL}}
+  NEXT_PUBLIC_API_URL: ${{vars.NEXT_PUBLIC_API_URL}}
+  API_URL_EXTERNAL: ${{vars.API_URL_EXTERNAL}}
+jobs:
+  build-test-push-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Build Docker Image Production
+        run: |
+          docker build -t ${{env.DOCKER_IMAGE}}:${{env.DOCKER_IMAGE_VERSION}} \
+            ./
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{env.DOCKER_HUB_USERNAME}}
+          password: ${{env.DOCKER_HUB_PASSWORD}}
+
+      - name: Push to Dockerhub
+        run: docker push ${{env.DOCKER_IMAGE}}:${{env.DOCKER_IMAGE_VERSION}}
+
+  pull-frontend-image-and-run-container:
+    runs-on: self-hosted
+    needs: build-test-push-docker-image
+    steps:
+      - name: Stop Current Running Container
+        run: echo ${{env.SHH_USER_PASSWORD}} | sudo -S docker rm -f ${{env.DOCKER_CONTAINER_NAME}} || true
+      - name: Pull Docker image
+        run: echo ${{env.SHH_USER_PASSWORD}} | sudo -S docker pull ${{env.DOCKER_IMAGE}}:${{env.DOCKER_IMAGE_VERSION}}
+      - name: Run Docker Container
+        run: |
+          echo ${{env.SHH_USER_PASSWORD}} | sudo -S docker run -d \
+            --restart unless-stopped \
+            -p ${{env.HOST_PORT}}:${{env.CONTAINER_PORT}} \
+            -e NEXTAUTH_BASEPATH=${{env.NEXTAUTH_BASEPATH}} \
+            -e NEXTAUTH_URL=${{env.NEXTAUTH_URL}} \
+            -e NEXTAUTH_SECRET=${{env.NEXTAUTH_SECRET}} \
+            -e GOOGLE_CLIENT_ID=${{env.GOOGLE_CLIENT_ID}} \
+            -e GOOGLE_CLIENT_SECRET=${{env.GOOGLE_CLIENT_SECRET}} \
+            -e API_URL=${{env.API_URL}} \
+            -e NEXT_PUBLIC_API_URL=${{env.NEXT_PUBLIC_API_URL}} \
+            -e API_URL_EXTERNAL=${{env.API_URL_EXTERNAL}} \
+            --name ${{env.DOCKER_CONTAINER_NAME}} \
+            ${{env.DOCKER_IMAGE}}:${{env.DOCKER_IMAGE_VERSION}}

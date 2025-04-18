@@ -1,0 +1,29 @@
+services:
+  ##################################################################################
+  #   portfolio-v3 - Setup Frontend Container - portfolio-v3
+  ##################################################################################
+
+  portfolio-v3-frontend:
+    container_name: portfolio-v3-frontend-prod
+    image: ${DOCKER_HUB_USERNAME}/${DOCKER_HUB_PORTFOLIO_V3_IMAGE}:prod
+    build:
+      context: ./
+      target: production
+    environment:
+      - NEXTAUTH_BASEPATH=${NEXTAUTH_BASEPATH}
+      - NEXTAUTH_URL=${NEXTAUTH_URL}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - API_URL=${API_URL}
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+      - API_URL_EXTERNAL=${API_URL_EXTERNAL}
+    ports:
+      - "${PORTFOLIO_V3_HOST_PORT}:${PORTFOLIO_V3_CONTAINER_PORT}"
+    expose:
+      - 3000
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+      - /app/node_modules

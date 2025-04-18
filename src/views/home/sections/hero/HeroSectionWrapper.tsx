@@ -79,6 +79,18 @@ const BackgroundVideo = () => (
     loop
     muted
     controls={false}
+    playsInline
+    disablePictureInPicture
+    disableRemotePlayback
+    preload="auto"
+    data-testid="background-video"
+    data-src="/videos/background.mp4"
+    data-type="video/mp4"
+    data-playsinline="true"
+    data-loop="true"
+    data-mute="true"
+    data-controls="false"
+    data-preload="auto"
   >
     <source src="/videos/background.mp4" type="video/mp4" />
   </Box>
