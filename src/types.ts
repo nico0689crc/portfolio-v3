@@ -48,7 +48,7 @@ export type FAQListType = {
   [key in Locale]: FAQType[];
 };
 
-export type SkillType = "frontend" | "backend" | "data_base" | "devops";
+export type SkillType = "frontend" | "backend" | "data_base" | "devops" | "other";
 
 export type Skill = {
   skill_code: string;

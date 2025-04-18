@@ -5,12 +5,12 @@ import { Typography, LinearProgress, Stack, Grid } from "@mui/material";
 import Iconify from "@/components/ui/Icon";
 
 // Types
-import type { Skill, SkillType } from "@/types";
+import type { DictionaryType, Skill, SkillType } from "@/types";
 
 // Utilities
 import getSkills from "@/utils/requests/getSkills";
 
-const AboutMeSkills = async () => {
+const AboutMeSkills = async ({ dictionary }: DictionaryType) => {
   const skillsData = await getSkills();
 
   return (
@@ -20,7 +20,7 @@ const AboutMeSkills = async () => {
         return (
           <Stack key={group} sx={{ marginBottom: 2, gap: 4 }}>
             <Typography variant="h6" component="h3" sx={{ marginBottom: 1, fontWeight: 600 }}>
-              {group.replace(/_/g, ' ').toLocaleUpperCase()}
+              {group === "other" ? "" : group.replace(/_/g, ' ').toLocaleUpperCase()}
             </Typography>
 
             <Grid container spacing={8}>

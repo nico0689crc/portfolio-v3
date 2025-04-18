@@ -169,6 +169,55 @@ export const skills: Skill[] = [
     icon: "skill-icons:aws-dark",
     type: "devops",
   },
+  {
+    skill_code: "english",
+    skill_title: "English - B2",
+    progress: 70,
+    icon: "uil:english-to-chinese",
+    type: "other",
+  },
+  {
+    skill_code: "communication",
+    skill_title: "Communication",
+    progress: 100,
+    icon: "mdi:message-outline",
+    type: "other",
+  },
+  {
+    skill_code: "teamwork",
+    skill_title: "Teamwork",
+    progress: 100,
+    icon: "mdi:account-group-outline",
+    type: "other",
+  },
+  {
+    skill_code: "problem_solving",
+    skill_title: "Problem Solving",
+    progress: 80,
+    icon: "mdi:lightbulb-outline",
+    type: "other",
+  },
+  {
+    skill_code: "adaptability",
+    skill_title: "Adaptability",
+    progress: 90,
+    icon: "mdi:sync",
+    type: "other",
+  },
+  {
+    skill_code: "time_management",
+    skill_title: "Time Management",
+    progress: 80,
+    icon: "mdi:clock-outline",
+    type: "other",
+  },
+  {
+    skill_code: "creativity",
+    skill_title: "Creativity",
+    progress: 80,
+    icon: "mdi:palette-outline",
+    type: "other",
+  },
 ];
 
 export const groupedSkills: GroupedSkills = skills.reduce<GroupedSkills>(
@@ -178,6 +227,7 @@ export const groupedSkills: GroupedSkills = skills.reduce<GroupedSkills>(
     return acc;
   },
   {
+    other: [],
     frontend: [],
     backend: [],
     data_base: [],
