@@ -55,10 +55,6 @@ const PublicFooterTopDescription = async ({ lang }: PublicFooterTopDescriptionPr
             xs: '30rem',
             [themeConfig.breakpointToChangeLayout]: '100%',
           },
-          mark: {
-            backgroundColor: 'var(--mui-palette-primary-main)',
-            px: 0.5,
-          },
         }}
         dangerouslySetInnerHTML={{ __html: dictionary.footer.description }}
       />
