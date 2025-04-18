@@ -68,6 +68,7 @@ jobs:
     name: Deploy Frontend Container
     runs-on: self-hosted
     needs: [retrieve-environment-variable, build-push-docker-image]
+    environment: ${{ needs.retrieve-environment-variable.outputs.environment_name }}
     steps:
       - name: Stop Current Running Container
         run: |
