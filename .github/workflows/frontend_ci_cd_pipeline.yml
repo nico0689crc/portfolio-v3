@@ -30,8 +30,14 @@ env:
   NEXT_PUBLIC_API_URL: ${{vars.NEXT_PUBLIC_API_URL}}
   API_URL_EXTERNAL: ${{vars.API_URL_EXTERNAL}}
 jobs:
-  build-test-push-docker-image:
+  retrieve-environment-variable:
+    name: Retrieve Environment Variable
+    uses: ./.github/workflows/retrieve_environment.yml
+  build-push-docker-image:
+    name: Build and Push Docker Image
+    needs: retrieve-environment-variable
     runs-on: ubuntu-latest
+    environment: ${{needs.retrieve-environment-variable.outputs.environment_name}}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -53,7 +59,7 @@ jobs:
 
   pull-frontend-image-and-run-container:
     runs-on: self-hosted
-    needs: build-test-push-docker-image
+    needs: [retrieve-environment-variable, build-push-docker-image]
     steps:
       - name: Stop Current Running Container
         run: echo ${{env.SHH_USER_PASSWORD}} | sudo -S docker rm -f ${{env.DOCKER_CONTAINER_NAME}} || true
