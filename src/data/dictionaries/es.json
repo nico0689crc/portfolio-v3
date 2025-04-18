@@ -19,6 +19,10 @@
           "years_of_experience": "Años de <span>Experiencia</span>",
           "years": "4",
           "more_about_me": "Más sobre mí"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "sub_title": "Estoy aquí para ayudarte"
         }
       }
     }, 

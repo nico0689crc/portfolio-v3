@@ -40,11 +40,10 @@ const PublicFooterTopDescription = async ({ lang }: PublicFooterTopDescriptionPr
     >
       <Typography
         sx={{
-          fontSize: '1.2rem',
           textTransform: 'uppercase',
           color: 'primary.main',
         }}
-        variant="h3"
+        variant="h6"
       >
         Nicolas Fernandez
       </Typography>
