@@ -5,12 +5,12 @@ import { Typography, LinearProgress, Stack, Grid } from "@mui/material";
 import Iconify from "@/components/ui/Icon";
 
 // Types
-import type { DictionaryType, Skill, SkillType } from "@/types";
+import type { Skill, SkillType } from "@/types";
 
 // Utilities
 import getSkills from "@/utils/requests/getSkills";
 
-const AboutMeSkills = async ({ dictionary }: DictionaryType) => {
+const AboutMeSkills = async () => {
   const skillsData = await getSkills();
 
   return (
