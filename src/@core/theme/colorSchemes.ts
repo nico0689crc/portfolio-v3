@@ -241,7 +241,7 @@ const colorSchemes = (): Theme['colorSchemes'] =>
         dividerChannel: 'var(--mui-mainColorChannels-dark)',
         background: {
           default: '#000000',
-          paper: '#FFFFFF',
+          paper: '#1d1d1d',
         },
         action: {
           active: `rgb(var(--mui-mainColorChannels-dark) / 0.6)`,

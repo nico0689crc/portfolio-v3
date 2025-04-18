@@ -1,3 +1,5 @@
+import { faq } from "@/app/api/(data)/pages/home/faq/data";
+
 const routes = {
   pages: {
     public: {
@@ -30,6 +32,7 @@ export const apiRoutes = {
     },
     home: {
       metadata: 'pages/home/metadata',
+      faq: 'pages/home/faq',
     },
     aboutMe: {
       metadata: 'pages/about-me/metadata',

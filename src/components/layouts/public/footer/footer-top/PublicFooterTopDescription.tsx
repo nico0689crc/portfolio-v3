@@ -40,11 +40,10 @@ const PublicFooterTopDescription = async ({ lang }: PublicFooterTopDescriptionPr
     >
       <Typography
         sx={{
-          fontSize: '1.2rem',
           textTransform: 'uppercase',
           color: 'primary.main',
         }}
-        variant="h3"
+        variant="h6"
       >
         Nicolas Fernandez
       </Typography>
@@ -54,10 +53,6 @@ const PublicFooterTopDescription = async ({ lang }: PublicFooterTopDescriptionPr
           maxWidth: {
             xs: '30rem',
             [themeConfig.breakpointToChangeLayout]: '100%',
-          },
-          mark: {
-            backgroundColor: 'var(--mui-palette-primary-main)',
-            px: 0.5,
           },
         }}
         dangerouslySetInnerHTML={{ __html: dictionary.footer.description }}

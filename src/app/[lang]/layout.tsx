@@ -13,11 +13,11 @@ import { getSystemMode } from '@/@core/utils/serverHelpers';
 import TranslationWrapper from '@/hocs/TranslationWrapper';
 
 // Type Imports
-import type { ChildrenType } from '@/types';
-import type { LangParamPromiseType } from '@/types';
+import type { ChildrenType, LangParamPromiseType } from '@/types';
 
 import Providers from '@/components/Providers';
 import getMetadata from '@/utils/requests/getMetadata';
+import BackToTopButton from '@/components/ui/BackToTopButton';
 
 export async function generateMetadata(props: LangParamPromiseType) {
   const params = await props.params;
@@ -42,6 +42,7 @@ const RootLayout = async (props: ChildrenType & LangParamPromiseType) => {
           <Providers>
             <InitColorSchemeScript attribute="data" defaultMode={systemMode} />
             {children}
+            <BackToTopButton />
           </Providers>
         </body>
       </html>

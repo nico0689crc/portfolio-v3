@@ -40,11 +40,10 @@ const PublicFooterTopSocials = async ({ lang }: PublicFooterTopSocialsProps) => 
       <Typography
         sx={{
           display: 'flex',
-          fontSize: '1.2rem',
           textTransform: 'uppercase',
           color: 'primary.main',
         }}
-        variant="h3"
+        variant="h6"
         noWrap
       >
         {dictionary.footer.socials}

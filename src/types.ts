@@ -37,3 +37,13 @@ export type PublicSocialLinkType = {
   };
   blank?: boolean;
 };
+
+export type FAQType = {
+  id: string;
+  question: string;
+  answer: string;
+};
+
+export type FAQListType = {
+  [key in Locale]: FAQType[];
+};

@@ -43,11 +43,10 @@ const PublicFooterTopNavigation = async ({ lang }: PublicFooterTopNavigationProp
     >
       <Typography
         sx={{
-          fontSize: '1.2rem',
           textTransform: 'uppercase',
           color: 'primary.main',
         }}
-        variant="h3"
+        variant="h6"
       >
         {dictionary.footer.site}
       </Typography>

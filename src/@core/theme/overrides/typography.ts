@@ -6,59 +6,51 @@ const typography: Theme['components'] = {
     styleOverrides: {
       root: {
         variants: [
-          {
-            props: { variant: 'h1' },
-            style: { color: 'var(--mui-palette-text-primary)' },
-          },
-          {
-            props: { variant: 'h2' },
-            style: { color: 'var(--mui-palette-text-primary)' },
-
-          },
-          {
-            props: { variant: 'h3' },
-            style: { color: 'var(--mui-palette-text-primary)' },
-          },
-          {
-            props: { variant: 'h4' },
-            style: { color: 'var(--mui-palette-text-primary)' },
-          },
-          {
-            props: { variant: 'h5' },
-            style: { color: 'var(--mui-palette-text-primary)' },
-          },
-          {
-            props: { variant: 'h6' },
-            style: { color: 'var(--mui-palette-text-primary)' },
-          },
-          {
-            props: { variant: 'subtitle1' },
-            style: { color: 'rgb(var(--mui-palette-text-primaryChannel) / 0.55)' },
-          },
-          {
-            props: { variant: 'subtitle2' },
-            style: { color: 'rgb(var(--mui-palette-text-primaryChannel) / 0.55)' },
-          },
-          {
-            props: { variant: 'body1' },
-            style: { color: 'var(--mui-palette-text-primary)' },
-          },
-          {
-            props: { variant: 'body2' },
-            style: { color: 'var(--mui-palette-text-secondary)' },
-          },
-          {
-            props: { variant: 'button' },
-            style: { color: 'var(--mui-palette-text-primary)' },
-          },
-          {
-            props: { variant: 'caption' },
-            style: { color: 'var(--mui-palette-text-disabled)', display: 'inline-block' },
-          },
-          {
-            props: { variant: 'overline' },
-            style: { color: 'var(--mui-palette-text-primary)', display: 'inline-block' },
-          },
+          ...['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body1', 'body2'].map((variant) => ({
+            props: { variant },
+            style: ({ theme }: { theme: Theme }) => ({
+              color: variant === 'body2' ? 'var(--mui-palette-text-secondary)' : 'var(--mui-palette-text-primary)',
+              fontSize: {
+                h1: '2rem',
+                h2: '1.75rem',
+                h3: '1.5rem',
+                h4: '1.25rem',
+                h5: '1.125rem',
+                h6: '1rem',
+                body1: '0.875rem',
+                body2: '0.75rem',
+              }[variant],
+              [theme.breakpoints.up('sm')]: {
+                fontSize: {
+                  h1: '3rem',
+                  h2: '2.5rem',
+                  h3: '2rem',
+                  h4: '1.75rem',
+                  h5: '1.5rem',
+                  h6: '1.25rem',
+                  body1: '1rem',
+                  body2: '0.875rem',
+                }[variant],
+              },
+              [theme.breakpoints.up('md')]: {
+                fontSize: {
+                  h1: '4rem',
+                  h2: '3.5rem',
+                  h3: '3rem',
+                  h4: '2.5rem',
+                  h5: '2rem',
+                  h6: '1.75rem',
+                  body1: '1.125rem',
+                  body2: '1rem',
+                }[variant],
+              },
+              "& mark": {
+                backgroundColor: 'var(--mui-palette-primary-main)',
+                color: 'var(--mui-palette-primary-contrastText)',
+                paddingInline: '0.2rem',
+              }
+            }),
+          })),
         ],
       },
       gutterBottom: ({ theme }) => ({

@@ -9,16 +9,14 @@ const accordion: Theme['components'] = {
         transition: theme.transitions.create(['margin', 'border-radius', 'box-shadow']),
         boxShadow: 'var(--mui-customShadows-xs)',
         '&:not(.Mui-expanded):has(+ .Mui-expanded)': {
-          borderBottomLeftRadius: 'var(--mui-shape-borderRadius)',
-          borderBottomRightRadius: 'var(--mui-shape-borderRadius)',
+
         },
         '&.Mui-expanded': {
-          borderRadius: 'var(--mui-shape-borderRadius)',
+
           boxShadow: 'var(--mui-customShadows-md)',
           margin: theme.spacing(2, 0),
           '& + .MuiAccordion-root': {
-            borderTopLeftRadius: 'var(--mui-shape-borderRadius)',
-            borderTopRightRadius: 'var(--mui-shape-borderRadius)',
+
             '&:before': {
               opacity: 0,
             },
@@ -34,6 +32,7 @@ const accordion: Theme['components'] = {
     styleOverrides: {
       root: ({ theme }) => ({
         padding: theme.spacing(3, 5),
+        borderRadius: 0,
         color: 'var(--mui-palette-text-primary)',
         '&.Mui-expanded': {
           minHeight: 48,
