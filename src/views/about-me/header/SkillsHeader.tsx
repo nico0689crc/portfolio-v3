@@ -5,24 +5,7 @@ import { Box, Typography } from "@mui/material";
 import type { DictionaryType } from "@/types";
 
 // Component: SkillsHeaderTitle
-const SkillsHeaderTitle = ({ title }: { title: string }) => (
-  <Typography
-    id="skills-header-title"
-    variant="body1"
-    component="h1"
-    className="skills-header__title"
-    sx={{
-      paddingInline: '0.5rem',
-      backgroundColor: 'var(--mui-palette-primary-main)',
-      color: `rgb(var(--mui-mainColorChannels-light) / 1)`,
-    }}
-  >
-    {title}
-  </Typography>
-);
-
-// Component: SkillsHeaderSubtitle
-const SkillsHeaderSubtitle = ({ subtitle }: { subtitle: string }) => (
+const SkillsHeaderTitle = ({ subtitle }: { subtitle: string }) => (
   <Typography
     variant="h6"
     component="h2"
@@ -49,7 +32,7 @@ const SkillsHeader = ({ dictionary }: DictionaryType) => (
       gap: 4,
     }}
   >
-    <SkillsHeaderSubtitle subtitle={dictionary.pages.about_me.skills_title} />
+    <SkillsHeaderTitle subtitle={dictionary.pages.about_me.skills_title} />
   </Box>
 );
 
