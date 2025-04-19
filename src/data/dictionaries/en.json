@@ -108,5 +108,9 @@
       "name": "December",
       "short_name": "Dec"
     }
+  },
+  "common": {
+    "remote": "Remote",
+    "on_site": "On site"
   }
 }

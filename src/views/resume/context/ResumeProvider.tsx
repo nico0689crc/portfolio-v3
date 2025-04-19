@@ -7,7 +7,7 @@ import { useCallback, useState } from "react";
 import { ResumeContext } from "./ResumeContext";
 
 export const ResumeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [expanded, setExpanded] = useState<string | false>(false);
+  const [expanded, setExpanded] = useState<string | false>("it-experience");
 
   const handleChangeExpanded = useCallback(
     (id: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {

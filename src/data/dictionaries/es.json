@@ -108,5 +108,9 @@
       "name": "Diciembre",
       "short_name": "Dic"
     }
+  },
+  "common": {
+    "remote": "Remoto",
+    "on_site": "Presencial"
   }
 }

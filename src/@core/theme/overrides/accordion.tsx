@@ -59,7 +59,7 @@ const accordion: Theme['components'] = {
       root: ({ theme }) => ({
         padding: theme.spacing(0, 5, 5),
         '& .MuiTypography-root': {
-          color: 'var(--mui-palette-text-secondary)',
+          color: 'var(--mui-palette-text-primary)',
         },
       }),
     },

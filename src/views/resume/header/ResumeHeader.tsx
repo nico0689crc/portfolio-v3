@@ -24,8 +24,8 @@ const ResumeHeaderTitle = ({ title }: { title: string }) => (
 // Component: ResumeHeaderSubtitle
 const ResumeHeaderSubtitle = ({ subtitle }: { subtitle: string }) => (
   <Typography
-    variant="h6"
-    component="h2"
+    variant="h5"
+    component="h1"
     className="resume-header__subtitle"
   >
     {subtitle}

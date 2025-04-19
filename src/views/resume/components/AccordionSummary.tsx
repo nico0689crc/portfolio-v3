@@ -1,7 +1,7 @@
 'use client'
 
 // External library imports
-import { AccordionSummary as AccordionSummaryMUI } from "@mui/material";
+import { AccordionSummary as AccordionSummaryMUI, Typography } from "@mui/material";
 import type { AccordionSummaryProps } from "@mui/material";
 
 // Internal components and types
@@ -22,9 +22,9 @@ const AccordionSummary = ({ children, accordion_id, ...props }: AccordionSummary
       expandIcon={<Iconify icon={expanded === accordion_id ? 'radix-icons:minus' : 'radix-icons:plus'} />}
       {...props}
     >
-      <>
+      <Typography variant="h5" component="h2" sx={{ flexGrow: 1 }}>
         {children}
-      </>
+      </Typography>
     </AccordionSummaryMUI>
   )
 };

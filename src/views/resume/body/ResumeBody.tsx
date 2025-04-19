@@ -5,20 +5,20 @@ import { Stack } from "@mui/material";
 import { ResumeProvider } from "../context/ResumeProvider";
 
 // Sections
-import ExperienceSection from "../sections/ExperienceSection";
 import EducationSection from "../sections/EducationSection";
 import CoursesSection from "../sections/CoursesSection";
 
 // Types
-import type { ResumeDataType } from "@/types";
+import type { DictionaryType, ResumeDataType } from "@/types";
+import ExperienceSection from "../sections/experience/ExperienceSection";
 
 // Props Type
-type ResumeBodyProps = {
+type ResumeBodyProps = DictionaryType & {
   data: ResumeDataType;
 };
 
 const ResumeBody = (props: ResumeBodyProps) => {
-  const { data } = props;
+  const { data, dictionary } = props;
 
   return (
     <Stack sx={{ gap: 4 }}>
@@ -27,19 +27,23 @@ const ResumeBody = (props: ResumeBodyProps) => {
           title="IT Experience"
           experiences={data.experience.filter((exp) => exp.is_IT_experience)}
           accordion_id="it-experience"
+          dictionary={dictionary}
         />
         <ExperienceSection
           title="Other Experience"
           experiences={data.experience.filter((exp) => !exp.is_IT_experience)}
           accordion_id="other-experience"
+          dictionary={dictionary}
         />
         <EducationSection
           accordion_id="education" 
-          education={data.education} 
+          education={data.education}
+          dictionary={dictionary} 
         />
         <CoursesSection
           accordion_id="courses" 
           courses={data.courses} 
+          dictionary={dictionary}
         />
       </ResumeProvider>
     </Stack>

@@ -10,7 +10,7 @@ const ResumeView = async ({ dictionary, lang }: DictionaryType & LangParamType) 
   return (
     <ResumeWrapper>
       <ResumeHeader dictionary={dictionary} />
-      <ResumeBody data={data[lang]} />
+      <ResumeBody data={data[lang]} dictionary={dictionary} />
     </ResumeWrapper>
   )
 }

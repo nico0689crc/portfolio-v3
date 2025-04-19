@@ -6,10 +6,10 @@ const typography: Theme['components'] = {
     styleOverrides: {
       root: {
         variants: [
-          ...['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body1', 'body2'].map((variant) => ({
+          ...['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body1', 'body2', 'subtitle1', 'subtitle2'].map((variant) => ({
             props: { variant },
             style: ({ theme }: { theme: Theme }) => ({
-              color: variant === 'body2' ? 'var(--mui-palette-text-secondary)' : 'var(--mui-palette-text-primary)',
+              color: variant === 'body2' || variant === 'subtitle2' ? 'var(--mui-palette-text-secondary)' : 'var(--mui-palette-text-primary)',
               fontSize: {
                 h1: '2rem',
                 h2: '1.75rem',
@@ -19,6 +19,8 @@ const typography: Theme['components'] = {
                 h6: '1rem',
                 body1: '0.875rem',
                 body2: '0.75rem',
+                subtitle1: '1.1rem',
+                subtitle2: '1rem',
               }[variant],
               [theme.breakpoints.up('sm')]: {
                 fontSize: {
@@ -30,6 +32,8 @@ const typography: Theme['components'] = {
                   h6: '1.25rem',
                   body1: '1rem',
                   body2: '0.875rem',
+                  subtitle1: '1.125rem',
+                  subtitle2: '1.1rem',
                 }[variant],
               },
               [theme.breakpoints.up('md')]: {
@@ -42,6 +46,8 @@ const typography: Theme['components'] = {
                   h6: '1.75rem',
                   body1: '1.125rem',
                   body2: '1rem',
+                  subtitle1: '1.25rem',
+                  subtitle2: '1.125rem',
                 }[variant],
               },
               "& mark": {
