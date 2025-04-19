@@ -40,7 +40,8 @@
       "skills_title": "<span>Mis Habilidades</span>"
     },
     "resume": {
-      "title": "Currículum"
+      "title": "Currículum",
+      "sub_title": "Mi trayectoria profesional"
     },
     "portfolio": {
       "title": "Portafolio"
@@ -56,5 +57,60 @@
     "right_reserved": "Todos los derechos reservados.",
     "site": "Sitio",
     "socials": "Redes sociales",
-    "description": "Soy <mark>Nicolás Fernández</mark>, un Desarrollador Fullstack con más de 4 años de experiencia en Desarrollo Web y de Software. Especializándome en <mark>JavaScript</mark>, <mark>TypeScript</mark>, <mark>React.js</mark>, <mark>Next.js</mark>, <mark>Nest.js</mark>, <mark>Express.js</mark>, <mark>Node.js</mark>, <mark>Postgress</mark>, <mark>Mysql</mark> y prácticas de Devops como <mark>Docker</mark> y <mark>Github Actions</mark>. Actualmente radicado en Neuquén, Argentina, y abierto a proyectos remotos. Te invito a conocer más sobre mis habilidades, experiencia y trayectoria profesional."}
+    "description": "Soy <mark>Nicolás Fernández</mark>, un Desarrollador Fullstack con más de 4 años de experiencia en Desarrollo Web y de Software. Especializándome en <mark>JavaScript</mark>, <mark>TypeScript</mark>, <mark>React.js</mark>, <mark>Next.js</mark>, <mark>Nest.js</mark>, <mark>Express.js</mark>, <mark>Node.js</mark>, <mark>Postgress</mark>, <mark>Mysql</mark> y prácticas de Devops como <mark>Docker</mark> y <mark>Github Actions</mark>. Actualmente radicado en Neuquén, Argentina, y abierto a proyectos remotos. Te invito a conocer más sobre mis habilidades, experiencia y trayectoria profesional."
+  },
+  "months": {
+    "1": {
+      "name": "Enero",
+      "short_name": "Ene"
+    }, 
+    "2": {
+      "name": "Febrero",
+      "short_name": "Feb"
+    },
+    "3": {
+      "name": "Marzo",
+      "short_name": "Mar"
+    },
+    "4": {
+      "name": "Abril",
+      "short_name": "Abr"
+    },
+    "5": {
+      "name": "Mayo",
+      "short_name": "May"
+    },
+    "6": {
+      "name": "Junio",
+      "short_name": "Jun"
+    },
+    "7": {
+      "name": "Julio",
+      "short_name": "Jul"
+    },
+    "8": {
+      "name": "Agosto",
+      "short_name": "Ago"
+    },
+    "9": {
+      "name": "Septiembre",
+      "short_name": "Sep"
+    },
+    "10": {
+      "name": "Octubre",
+      "short_name": "Oct"
+    },
+    "11": {
+      "name": "Noviembre",
+      "short_name": "Nov"
+    },
+    "12": {
+      "name": "Diciembre",
+      "short_name": "Dic"
+    }
+  },
+  "common": {
+    "remote": "Remoto",
+    "on_site": "Presencial"
+  }
 }

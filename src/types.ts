@@ -1,4 +1,6 @@
 // Types
+
+// Locale and dictionary imports
 import type { Locale } from './configs/i18n';
 import type { getDictionary } from './utils/getDictionary';
 
@@ -38,6 +40,7 @@ export type PublicSocialLinkType = {
   blank?: boolean;
 };
 
+// FAQ types
 export type FAQType = {
   id: string;
   question: string;
@@ -48,7 +51,8 @@ export type FAQListType = {
   [key in Locale]: FAQType[];
 };
 
-export type SkillType = "frontend" | "backend" | "data_base" | "devops" | "other";
+// Skill types
+export type SkillType = 'frontend' | 'backend' | 'data_base' | 'devops' | 'other';
 
 export type Skill = {
   skill_code: string;
@@ -60,4 +64,68 @@ export type Skill = {
 
 export type GroupedSkills = {
   [key in SkillType]: Skill[];
+};
+
+// Experience types
+export type ExperienceType = {
+  job_title: string;
+  company: string;
+  start_date: {
+    year: number;
+    month: number;
+  };
+  end_date: {
+    year: number;
+    month: number;
+  };
+  duration: {
+    years: number;
+    months: number;
+  };
+  location: string;
+  on_site: boolean;
+  skills: string[];
+  description: string;
+  is_IT_experience: boolean;
+};
+
+export type CourseType = {
+  course_name: string;
+  issuer: string;
+  issue_date: {
+    month: number | null;
+    year: number | null;
+  };
+  credential_id: string | null;
+  skills: string[];
+  certificate_link: string | null;
+  course_link: string;
+  description: string;
+}
+
+export type EducationType = {
+  degree: string;
+  field_of_study: string;
+  institution: string;
+  start_date: {
+    month: number;
+    year: number;
+  };
+  end_date: {
+    month: number;
+    year: number;
+  };
+  location: string;
+  description: string;
+};
+
+// Resume types
+export type ResumeDataType = {
+  experience: ExperienceType[];
+  courses: CourseType[];
+  education: EducationType[];
+};
+
+export type ResumeType = {
+  [key in Locale]: ResumeDataType;
 };

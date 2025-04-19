@@ -40,7 +40,8 @@
       "skills_title": "<span>My Skills</span>"
     },
     "resume": {
-      "title": "Resume"
+      "title": "Resume",
+      "sub_title": "My professional journey"
     },
     "portfolio": {
       "title": "Portfolio"
@@ -57,5 +58,59 @@
     "site": "Site",
     "socials": "Socials",
     "description": "I am <mark>Nicolás Fernández</mark>, a Fullstack Developer with 4+ years of experience in Web and Software Development. Specializing in <mark>JavaScript</mark>, <mark>TypeScript</mark>, <mark>React.js</mark>, <mark>Next.js</mark>, <mark>Nest.js</mark>, <mark>Express.js</mark>, <mark>Node.js</mark>, <mark>Postgress</mark>, <mark>Mysql</mark> and Devops practices such <mark>Docker</mark> and <mark>Github Actions</mark>. Currently based in Neuquén, Argentina, and open to remote projects. I invite you to learn more about my skills, experience, and professional journey."
+  },
+  "months": {
+    "1": {
+      "name": "January",
+      "short_name": "Jan"
+    },
+    "2": {
+      "name": "February",
+      "short_name": "Feb"
+    },
+    "3": {
+      "name": "March",
+      "short_name": "Mar"
+    },
+    "4": {
+      "name": "April",
+      "short_name": "Apr"
+    },
+    "5": {
+      "name": "May",
+      "short_name": "May"
+    },
+    "6": {
+      "name": "June",
+      "short_name": "Jun"
+    },
+    "7": {
+      "name": "July",
+      "short_name": "Jul"
+    },
+    "8": {
+      "name": "August",
+      "short_name": "Aug"
+    },
+    "9": {
+      "name": "September",
+      "short_name": "Sep"
+    },
+    "10": {
+      "name": "October",
+      "short_name": "Oct"
+    },
+    "11": {
+      "name": "November",
+      "short_name": "Nov"
+    },
+    "12": {
+      "name": "December",
+      "short_name": "Dec"
+    }
+  },
+  "common": {
+    "remote": "Remote",
+    "on_site": "On site"
   }
 }
