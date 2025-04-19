@@ -40,7 +40,9 @@ export const apiRoutes = {
       skills: 'pages/about-me/skills',
     },
     resume: {
+      root: 'pages/resume',
       metadata: 'pages/resume/metadata',
+
     },
     portfolio: {
       metadata: 'pages/portfolio/metadata',

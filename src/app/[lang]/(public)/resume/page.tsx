@@ -5,9 +5,7 @@ import type { LangParamPromiseType } from '@/types';
 // Utilities
 import { getDictionary } from '@/utils/getDictionary';
 import getMetadata from '@/utils/requests/getMetadata';
-
-// External Components
-import { Typography } from '@mui/material';
+import ResumeView from '@/views/resume/ResumeView';
 
 // Page Metadata
 export async function generateMetadata(props: LangParamPromiseType) {
@@ -23,12 +21,7 @@ const ResumePage = async (props: { params: Promise<{ lang: Locale }> }) => {
   const dictionary = await getDictionary(params.lang);
 
   return (
-    <>
-      <Typography>{dictionary.pages.resume.title}</Typography>
-      <Typography>
-        Resume page content goes here. You can add your resume details, experience, education, etc.
-      </Typography>
-    </>
+    <ResumeView dictionary={dictionary} lang={params.lang} />
   );
 };
 
