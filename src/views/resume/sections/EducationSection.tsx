@@ -34,7 +34,7 @@ const EducationSection = ({ education, accordion_id, dictionary }: EducationSect
                 py: 3,
               }}
             >
-              <Typography variant="subtitle1" component="h3" noWrap sx={{ fontWeight: 600 }}>
+              <Typography variant="subtitle1" component="h3" sx={{ fontWeight: 600 }}>
                 {`${edu.field_of_study}`}
               </Typography>
               <Typography variant="subtitle2" component="h3">

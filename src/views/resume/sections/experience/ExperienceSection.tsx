@@ -12,7 +12,7 @@ import themeConfig from "@/configs/themeConfig";
 const calculateWorkDuration = (startDate: { month: number; year: number }, endDate: { month: number; year: number }) => {
   const start = new Date(`${startDate.month} 1, ${startDate.year}`);
   const end = new Date(`${endDate.month} 1, ${endDate.year}`);
-  const diffInMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+  const diffInMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1; // Add 1 month
   const years = Math.floor(diffInMonths / 12);
   const months = diffInMonths % 12;
   return `${years > 0 ? `${years} year${years > 1 ? 's' : ''}` : ''}${years > 0 && months > 0 ? ' and ' : ''}${months > 0 ? `${months} month${months > 1 ? 's' : ''}` : ''}`;
@@ -46,7 +46,7 @@ const ExperienceSection = ({ title, experiences, accordion_id, dictionary }: Exp
                 py: 3,
               }}
             >
-              <Typography variant="subtitle1" component="h3" noWrap sx={{ fontWeight: 600 }}>
+              <Typography variant="subtitle1" component="h3" sx={{ fontWeight: 600 }}>
                 {`${exp.job_title} (${exp.on_site ? dictionary.common.on_site : dictionary.common.remote})`}
               </Typography>
               <Typography variant="body2" component="h3">
