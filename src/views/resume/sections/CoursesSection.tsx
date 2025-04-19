@@ -35,7 +35,7 @@ const CoursesSection = ({ courses, accordion_id, dictionary }: CoursesSectionPro
                 py: 3,
               }}
             >
-              <Typography variant="subtitle1" component="h3" noWrap sx={{ fontWeight: 600 }}>
+              <Typography variant="subtitle1" component="h3" sx={{ fontWeight: 600 }}>
                 {`${course.course_name}`}
               </Typography>
               <Typography variant="body1" component="p">
@@ -67,7 +67,7 @@ const CoursesSection = ({ courses, accordion_id, dictionary }: CoursesSectionPro
                     Ver certificado
                   </Button>
                 )}
-                {course.certificate_link && (
+                {course.course_link && (
                   <Button
                     component={Link}
                     href={course.course_link as string}
