@@ -74,7 +74,6 @@ const HeroTitle = ({ title }: { title: string }) => (
       textAlign: 'center',
       fontWeight: 300,
     }}
-    noWrap
   >
     {title}
   </Typography>

@@ -22,7 +22,19 @@ const FaqAccordion = ({ faqs }: FaqAccordionProps) => {
   return (
     <Stack gap={2}>
       {faqs.map((faq, index) => (
-        <Accordion key={index} expanded={expanded === faq.id} onChange={handleChangeExpanded(faq.id)}>
+        <Accordion 
+          key={index} 
+          expanded={expanded === faq.id} 
+          onChange={handleChangeExpanded(faq.id)}
+          sx={{
+            backgroundColor: "transparent",
+            boxShadow: "none",
+            "&.Mui-expanded": {
+              margin: 0,
+              boxShadow: "none",
+            },
+          }}
+        >
           <AccordionSummary
             expandIcon={<Iconify icon={expanded === faq.id ? 'radix-icons:minus' : 'radix-icons:plus'} />}
             aria-controls={`faq-content-${index}`}

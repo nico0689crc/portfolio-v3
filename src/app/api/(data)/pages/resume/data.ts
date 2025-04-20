@@ -85,7 +85,7 @@ export const resume: ResumeType = {
         },
         "location": "Provincia de Buenos Aires, Argentina",
         "on_site": false,
-        "skills": ["Amazon Web Services (AWS)", "Ruby on Rails", "Python", "JavaScript", "Node.js", "React.js", "Trabajo en equipo"],
+        "skills": ["AWS", "Ruby on Rails", "Python", "JavaScript", "Node.js", "React.js", "Trabajo en equipo"],
         "description": "Developed web applications using full-stack technologies, including backend services with Ruby on Rails and frontend frameworks like React.js, working closely with cross-functional teams.",
         "is_IT_experience": true
       },
@@ -316,7 +316,7 @@ export const resume: ResumeType = {
         },
         "location": "Corrientes, Argentina",
         "on_site": false,
-        "skills": ["SQL", "HTML", "CSS", "JavaScript (AngularJs, JQuery)", "PHP (Laravel Framework)"],
+        "skills": ["SQL", "HTML", "CSS", "JavaScript", "AngularJs", "JQuery", "PHP (Laravel Framework)"],
         "description": "Designed and developed websites for clients across various industries, gathering client requirements, and delivering projects on time.",
         "is_IT_experience": true
       },
@@ -336,7 +336,7 @@ export const resume: ResumeType = {
           "months": 6
         },
         "location": "Corrientes, Argentina",
-        "on_site": false,
+        "on_site": true,
         "skills": ["JAVA", "SQL (LiteSql, Microsoft SQL Server, MYSQL)", "HTML", "CSS", "JavaScript", "PHP (Laravel Framework)"],
         "description": "Developed Android applications and web platforms, working with cross-functional teams and ensuring smooth user experiences.",
         "is_IT_experience": true
@@ -406,7 +406,7 @@ export const resume: ResumeType = {
           "year": 2024
         },
         "credential_id": "UC-beb05285-17db-43a2-85b7-18292d22c953",
-        "skills": ["Continuous Integration and Continuous Delivery (CI/CD)", "Docker Products", "Git", "GitHub"],
+        "skills": ["CI/CD", "Docker Products", "Git", "GitHub"],
         "certificate_link": "https://www.udemy.com/certificate/UC-beb05285-17db-43a2-85b7-18292d22c953/",
         "course_link": "https://www.udemy.com/course/github-actions-the-complete-guide/",
         "description": "A comprehensive course that covers GitHub Actions for automating workflows in your DevOps pipeline, improving Continuous Integration and Continuous Delivery (CI/CD) processes."
@@ -657,7 +657,7 @@ export const resume: ResumeType = {
         },
         "location": "Provincia de Buenos Aires, Argentina",
         "on_site": false,
-        "skills": ["Amazon Web Services (AWS)", "Ruby on Rails", "Python", "JavaScript", "Node.js", "React.js", "Trabajo en equipo"],
+        "skills": ["AWS", "Ruby on Rails", "Python", "JavaScript", "Node.js", "React.js", "Trabajo en equipo"],
         "description": "Desarrollé aplicaciones web utilizando tecnologías de pila completa, incluidos servicios backend con Ruby on Rails y marcos frontend como React.js, trabajando en estrecha colaboración con equipos multifuncionales.",
         "is_IT_experience": true
       }, {
@@ -877,7 +877,7 @@ export const resume: ResumeType = {
         },
         "location": "Corrientes, Argentina",
         "on_site": false,
-        "skills": ["SQL", "HTML", "CSS", "JavaScript (AngularJs, JQuery)", "PHP (Laravel Framework)"],
+        "skills": ["SQL", "HTML", "CSS", "JavaScript", "AngularJs", "JQuery", "PHP (Laravel Framework)"],
         "description": "Diseñé y desarrollé sitios web para clientes de diversas industrias, recopilando requisitos del cliente y entregando proyectos a tiempo.",
         "is_IT_experience": true
       }, {
@@ -896,7 +896,7 @@ export const resume: ResumeType = {
           "months": 6
         },
         "location": "Corrientes, Argentina",
-        "on_site": false,
+        "on_site": true,
         "skills": ["JAVA", "SQL (LiteSql, Microsoft SQL Server, MYSQL)", "HTML", "CSS", "JavaScript", "PHP (Laravel Framework)"],
         "description": "Desarrollé aplicaciones Android y plataformas web, trabajando con equipos multifuncionales y asegurando experiencias de usuario fluidas.",
         "is_IT_experience": true
@@ -936,7 +936,7 @@ export const resume: ResumeType = {
           "year": 2024
         },
         "credential_id": "UC-beb05285-17db-43a2-85b7-18292d22c953",
-        "skills": ["Integración continua y entrega continua (CI/CD)", "Productos Docker", "Git", "GitHub"],
+        "skills": ["CI/CD", "Productos Docker", "Git", "GitHub"],
         "certificate_link": "https://www.udemy.com/certificate/UC-beb05285-17db-43a2-85b7-18292d22c953/",
         "course_link": "https://www.udemy.com/course/github-actions-the-complete-guide/",
         "description": "Un curso completo que cubre GitHub Actions para automatizar flujos de trabajo en tu canalización de DevOps, mejorando los procesos de Integración Continua y Entrega Continua (CI/CD)."
