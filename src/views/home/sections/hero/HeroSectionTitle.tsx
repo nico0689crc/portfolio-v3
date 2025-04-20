@@ -165,7 +165,7 @@ const HeroButtons = ({
       {dictionary.pages.home.sections.hero.view_portfolio_button}
     </Button>
     <Button
-      className="contact-me-button"
+      className="download-cv-button"
       variant="outlined"
       color="secondary"
       component={Link}

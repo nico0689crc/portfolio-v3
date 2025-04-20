@@ -17,7 +17,7 @@ type CoursesSectionProps = DictionaryType & {
 const CoursesSection = ({ courses, accordion_id, dictionary }: CoursesSectionProps) => (
   <Accordion {...{ accordion_id }}>
     <AccordionSummary {...{ accordion_id }}>
-      Courses
+      {dictionary.pages.resume.accordion_sections.courses}
     </AccordionSummary>
     <AccordionDetails>
       <Stack gap={7}>

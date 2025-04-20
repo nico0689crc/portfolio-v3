@@ -17,7 +17,7 @@ const ResumeWrapper = ({ children }: ChildrenType) => (
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      gap: 15,
+      gap: 5,
       py: {
         xs: '2rem', 
         [themeConfig.breakpointToChangeLayout]: '4rem',

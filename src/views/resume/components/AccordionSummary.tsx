@@ -8,6 +8,7 @@ import type { AccordionSummaryProps } from "@mui/material";
 import Iconify from "@/components/ui/Icon";
 import type { ChildrenType } from "@/types";
 import { useResumeContext } from "../context/useResumeContext";
+import { useBackToTop } from "minimal-shared/hooks";
 
 // Props Type
 type AccordionSummaryPropsType = ChildrenType & AccordionSummaryProps & {
@@ -15,15 +16,13 @@ type AccordionSummaryPropsType = ChildrenType & AccordionSummaryProps & {
 }
 
 const AccordionSummary = ({ children, accordion_id, ...props }: AccordionSummaryPropsType) => {
-  const { expanded, accordionRefs, handleScrollToAccordion } = useResumeContext()
+  const { expanded } = useResumeContext()
+  const { onBackToTop } = useBackToTop(0)
   
   return (
     <AccordionSummaryMUI
       expandIcon={<Iconify icon={expanded === accordion_id ? 'radix-icons:minus' : 'radix-icons:plus'} />}
-      aria-controls={`panel-${accordion_id}-content`}
-      id={`panel-${accordion_id}-header`}
-      ref={(el) => { if (el) accordionRefs.push(el); }} // Store ref
-      onClick={() => handleScrollToAccordion(accordion_id)}
+      onClick={onBackToTop}
       {...props}
     >
       <Typography variant="h5" component="h2">

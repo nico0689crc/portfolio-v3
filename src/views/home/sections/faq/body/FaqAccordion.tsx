@@ -26,14 +26,6 @@ const FaqAccordion = ({ faqs }: FaqAccordionProps) => {
           key={index} 
           expanded={expanded === faq.id} 
           onChange={handleChangeExpanded(faq.id)}
-          sx={{
-            backgroundColor: "transparent",
-            boxShadow: "none",
-            "&.Mui-expanded": {
-              margin: 0,
-              boxShadow: "none",
-            },
-          }}
         >
           <AccordionSummary
             expandIcon={<Iconify icon={expanded === faq.id ? 'radix-icons:minus' : 'radix-icons:plus'} />}
