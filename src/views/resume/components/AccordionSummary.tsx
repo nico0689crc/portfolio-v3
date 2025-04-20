@@ -15,14 +15,18 @@ type AccordionSummaryPropsType = ChildrenType & AccordionSummaryProps & {
 }
 
 const AccordionSummary = ({ children, accordion_id, ...props }: AccordionSummaryPropsType) => {
-  const { expanded } = useResumeContext()
+  const { expanded, accordionRefs, handleScrollToAccordion } = useResumeContext()
   
   return (
     <AccordionSummaryMUI
       expandIcon={<Iconify icon={expanded === accordion_id ? 'radix-icons:minus' : 'radix-icons:plus'} />}
+      aria-controls={`panel-${accordion_id}-content`}
+      id={`panel-${accordion_id}-header`}
+      ref={(el) => { if (el) accordionRefs.push(el); }} // Store ref
+      onClick={() => handleScrollToAccordion(accordion_id)}
       {...props}
     >
-      <Typography variant="h5" component="h2" sx={{ flexGrow: 1 }}>
+      <Typography variant="h5" component="h2">
         {children}
       </Typography>
     </AccordionSummaryMUI>

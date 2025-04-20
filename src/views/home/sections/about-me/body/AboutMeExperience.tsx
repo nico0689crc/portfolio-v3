@@ -32,7 +32,6 @@ const AboutMeExperience = ({ dictionary }: DictionaryType) => (
     <Typography
       component="p"
       className="about-me-experience-description"
-      noWrap
       sx={{
         fontWeight: 500,
         "span": {
