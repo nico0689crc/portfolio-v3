@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 
 // Internal imports
 import type { DictionaryType } from "@/types";
+import themeConfig from "@/configs/themeConfig";
 
 const AboutMeExperience = ({ dictionary }: DictionaryType) => (
   <Box
@@ -10,9 +11,13 @@ const AboutMeExperience = ({ dictionary }: DictionaryType) => (
     className="about-me-experience"
     role="region"
     aria-labelledby="about-me-experience-title"
+    gap={2}
     sx={{
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: {
+        xs: 'row',
+        [themeConfig.breakpointToChangeLayout]: 'column',
+      },
       alignItems: 'center',
       justifyContent: 'center',
     }}
@@ -32,6 +37,7 @@ const AboutMeExperience = ({ dictionary }: DictionaryType) => (
     <Typography
       component="p"
       className="about-me-experience-description"
+      noWrap
       sx={{
         fontWeight: 500,
         "span": {

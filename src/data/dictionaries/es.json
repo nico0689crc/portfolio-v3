@@ -15,9 +15,9 @@
           "title": "Sobre mí",
           "know_me_more": "Conóceme más",
           "introduction": "Hola, soy <span>Nicolás Fernández</span>",
-          "description": "Soy un Desarrollador Fullstack con más de <b>4 años de experiencia en Desarrollo Web y de Software</b>. Mi experiencia abarca tanto tecnologías frontend como backend. En el frontend, me especializo en <mark>React.js</mark>, <mark>Next.js</mark>, <mark>JavaScript</mark>, <mark>TypeScript</mark>, <mark>HTML</mark>, <mark>CSS</mark>, <mark>Tailwind CSS</mark> y <mark>Material UI</mark>. En el backend, tengo amplia experiencia con <mark>Node.js</mark>, <mark>Express.js</mark>, <mark>NestJS</mark>, <mark>GraphQL</mark>, <mark>REST APIs</mark>, <mark>Laravel</mark> y <mark>Ruby on Rails</mark>. Para bases de datos, trabajo con <mark>MongoDB</mark>, <mark>PostgreSQL</mark> y <mark>MySQL</mark>. Además, tengo habilidades en DevOps y herramientas como <mark>Docker</mark>, <mark>Git</mark>, <mark>CI/CD</mark>, <mark>GitHub Actions</mark>, <mark>Linux</mark> y <mark>AWS</mark>. Radicado en Neuquén, Argentina, me apasiona construir soluciones escalables y eficientes y estoy abierto a oportunidades remotas.",
+          "description": "Soy un Desarrollador Fullstack con más de <b>3 años de experiencia en Desarrollo Web y de Software</b>. Mi experiencia abarca tanto tecnologías frontend como backend. En el frontend, me especializo en <mark>React.js</mark>, <mark>Next.js</mark>, <mark>JavaScript</mark>, <mark>TypeScript</mark>, <mark>HTML</mark>, <mark>CSS</mark>, <mark>Tailwind CSS</mark> y <mark>Material UI</mark>. En el backend, tengo amplia experiencia con <mark>Node.js</mark>, <mark>Express.js</mark>, <mark>NestJS</mark>, <mark>GraphQL</mark>, <mark>REST APIs</mark>, <mark>Laravel</mark> y <mark>Ruby on Rails</mark>. Para bases de datos, trabajo con <mark>MongoDB</mark>, <mark>PostgreSQL</mark> y <mark>MySQL</mark>. Además, tengo habilidades en DevOps y herramientas como <mark>Docker</mark>, <mark>Git</mark>, <mark>CI/CD</mark>, <mark>GitHub Actions</mark>, <mark>Linux</mark> y <mark>AWS</mark>. Radicado en Neuquén, Argentina, me apasiona construir soluciones escalables y eficientes y estoy abierto a oportunidades remotas.",
           "years_of_experience": "Años de <span>Experiencia</span>",
-          "years": "4",
+          "years": "3",
           "more_about_me": "Más sobre mí"
         },
         "faq": {
@@ -31,7 +31,7 @@
       "know_me_more": "Conóceme más",
       "introduction": "Hola de nuevo, soy <span>Nicolás Fernández</span>",
       "description": {
-        "paragraph_1": "Soy un Desarrollador Fullstack con más de <b>4 años de experiencia en Desarrollo Web y de Software</b>. Mi experiencia abarca tanto tecnologías frontend como backend. En el frontend, me especializo en <mark>React.js</mark>, <mark>Next.js</mark>, <mark>JavaScript</mark>, <mark>TypeScript</mark>, <mark>HTML</mark>, <mark>CSS</mark>, <mark>Tailwind CSS</mark> y <mark>Material UI</mark>. En el backend, tengo amplia experiencia con <mark>Node.js</mark>, <mark>Express.js</mark>, <mark>NestJS</mark>, <mark>GraphQL</mark>, <mark>REST APIs</mark>, <mark>Laravel</mark> y <mark>Ruby on Rails</mark>. Para bases de datos, trabajo con <mark>MongoDB</mark>, <mark>PostgreSQL</mark> y <mark>MySQL</mark>. Además, tengo habilidades en DevOps y herramientas como <mark>Docker</mark>, <mark>Git</mark>, <mark>CI/CD</mark>, <mark>GitHub Actions</mark>, <mark>Linux</mark> y <mark>AWS</mark>. Radicado en Neuquén, Argentina, me apasiona construir soluciones escalables y eficientes y estoy abierto a oportunidades remotas.",
+        "paragraph_1": "Soy un Desarrollador Fullstack con más de <b>3 años de experiencia en Desarrollo Web y de Software</b>. Mi experiencia abarca tanto tecnologías frontend como backend. En el frontend, me especializo en <mark>React.js</mark>, <mark>Next.js</mark>, <mark>JavaScript</mark>, <mark>TypeScript</mark>, <mark>HTML</mark>, <mark>CSS</mark>, <mark>Tailwind CSS</mark> y <mark>Material UI</mark>. En el backend, tengo amplia experiencia con <mark>Node.js</mark>, <mark>Express.js</mark>, <mark>NestJS</mark>, <mark>GraphQL</mark>, <mark>REST APIs</mark>, <mark>Laravel</mark> y <mark>Ruby on Rails</mark>. Para bases de datos, trabajo con <mark>MongoDB</mark>, <mark>PostgreSQL</mark> y <mark>MySQL</mark>. Además, tengo habilidades en DevOps y herramientas como <mark>Docker</mark>, <mark>Git</mark>, <mark>CI/CD</mark>, <mark>GitHub Actions</mark>, <mark>Linux</mark> y <mark>AWS</mark>. Radicado en Neuquén, Argentina, me apasiona construir soluciones escalables y eficientes y estoy abierto a oportunidades remotas.",
         "paragraph_2": "Me gusta aprender nuevas tecnologías y mejorar mis habilidades constantemente. Me considero una persona proactiva, responsable y comprometida con mi trabajo. Siempre busco la mejor manera de resolver problemas y aportar valor a los proyectos en los que participo.",
         "paragraph_3": "En mi tiempo libre, disfruto de la lectura, el deporte y cocinar. Me gusta estar al tanto de las últimas tendencias en <mark>tecnología</mark> y <mark>desarrollo de software</mark>. También disfruto de compartir mis conocimientos y aprender de otros profesionales del sector.",
         "paragraph_4": "Además, tengo <b>7 años de experiencia internacional</b> en el sector de la hospitalidad como cocinero y asistente de cocina, habiendo trabajado en <mark>Nueva Zelanda</mark>, <mark>Suecia</mark>, <mark>Alemania</mark> y <mark>Australia</mark>. Esta experiencia me ha ayudado a desarrollar adaptabilidad, habilidades para resolver problemas y capacidad para trabajar bajo presión.",
@@ -41,7 +41,13 @@
     },
     "resume": {
       "title": "Currículum",
-      "sub_title": "Mi trayectoria profesional"
+      "sub_title": "Mi trayectoria profesional",
+      "accordion_sections": {
+        "it_experience": "Experiencia en IT",
+        "other_experience": "Otras Experiencias",
+        "education": "Educación",
+        "courses": "Cursos"
+      }
     },
     "portfolio": {
       "title": "Portafolio"
@@ -57,7 +63,7 @@
     "right_reserved": "Todos los derechos reservados.",
     "site": "Sitio",
     "socials": "Redes sociales",
-    "description": "Soy <mark>Nicolás Fernández</mark>, un Desarrollador Fullstack con más de 4 años de experiencia en Desarrollo Web y de Software. Especializándome en <mark>JavaScript</mark>, <mark>TypeScript</mark>, <mark>React.js</mark>, <mark>Next.js</mark>, <mark>Nest.js</mark>, <mark>Express.js</mark>, <mark>Node.js</mark>, <mark>Postgress</mark>, <mark>Mysql</mark> y prácticas de Devops como <mark>Docker</mark> y <mark>Github Actions</mark>. Actualmente radicado en Neuquén, Argentina, y abierto a proyectos remotos. Te invito a conocer más sobre mis habilidades, experiencia y trayectoria profesional."
+    "description": "Soy <mark>Nicolás Fernández</mark>, un Desarrollador Fullstack con más de 3 años de experiencia en Desarrollo Web y de Software. Especializándome en <mark>JavaScript</mark>, <mark>TypeScript</mark>, <mark>React.js</mark>, <mark>Next.js</mark>, <mark>Nest.js</mark>, <mark>Express.js</mark>, <mark>Node.js</mark>, <mark>Postgress</mark>, <mark>Mysql</mark> y prácticas de Devops como <mark>Docker</mark> y <mark>Github Actions</mark>. Actualmente radicado en Neuquén, Argentina, y abierto a proyectos remotos. Te invito a conocer más sobre mis habilidades, experiencia y trayectoria profesional."
   },
   "months": {
     "1": {

@@ -22,14 +22,6 @@ const Accordion = ({ children, accordion_id, ...props }: AccordionPropsType) => 
     <AccordionMUI
       expanded={expanded === accordion_id}
       onChange={handleChangeExpanded(accordion_id)}
-      sx={{
-        backgroundColor: "transparent",
-        boxShadow: "none",
-        "&.Mui-expanded": {
-          margin: 0,
-          boxShadow: "none",
-        },
-      }}
       {...props}
     >
       {children}
