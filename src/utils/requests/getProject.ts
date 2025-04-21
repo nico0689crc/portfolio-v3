@@ -5,9 +5,9 @@ import { apiRoutes } from '@/configs/routes';
 import fetcher from './fetcher';
 import type { ProjectType } from '@/types';
 
-const getPortfolio = async (): Promise<ProjectType[]> => {
+const getProject = async (slug: string): Promise<ProjectType> => {
   try {
-    const data: ProjectType[] = await fetcher(`${process.env.API_URL}/${apiRoutes.pages.portfolio.root}`);
+    const data: ProjectType = await fetcher(`${process.env.API_URL}/${apiRoutes.pages.portfolio.root}/${slug}`);
 
     return data;
   } catch (error) {
@@ -16,4 +16,4 @@ const getPortfolio = async (): Promise<ProjectType[]> => {
   }
 };
 
-export default getPortfolio;
+export default getProject;

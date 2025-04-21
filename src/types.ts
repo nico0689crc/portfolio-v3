@@ -152,3 +152,7 @@ export type ProjectType = {
     description?: string;
   }[];
 };
+
+export type SlugProjectParamPromiseType = {
+  params: Promise<{ slug: string }>;
+};

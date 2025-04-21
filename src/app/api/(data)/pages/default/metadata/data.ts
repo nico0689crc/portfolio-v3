@@ -51,15 +51,15 @@ export const metadata: MetadataType = {
       creator: '@nicolasfernandez',
     },
     icons: {
-      icon: '/favicon/favicon.ico',
-      shortcut: '/favicon/favicon.ico',
-      apple: '/favicon/favicon.ico',
+      icon: 'favicon.ico',
+      shortcut: 'favicon.ico',
+      apple: 'favicon.ico',
     },
     appleWebApp: {
       capable: true,
       statusBarStyle: 'default',
       title: 'Nicolas Ariel Fernandez - Expert Fullstack JavaScript Developer',
-      startupImage: '/favicon/favicon.ico',
+      startupImage: 'favicon.ico',
     },
   },
   es: {
@@ -107,15 +107,15 @@ export const metadata: MetadataType = {
       creator: '@nicolasfernandez',
     },
     icons: {
-      icon: '/favicon/favicon.ico',
-      shortcut: '/favicon/favicon.ico',
-      apple: '/favicon/favicon.ico',
+      icon: 'favicon.ico',
+      shortcut: 'favicon.ico',
+      apple: 'favicon.ico',
     },
     appleWebApp: {
       capable: true,
       statusBarStyle: 'default',
       title: 'Nicolas Ariel Fernandez - Desarrollador Fullstack JavaScript Experto',
-      startupImage: '/favicon/favicon.ico',
+      startupImage: 'favicon.ico',
     },
   },
 };

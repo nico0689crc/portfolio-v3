@@ -13,6 +13,7 @@ import type { DictionaryType, LangParamType, ProjectType } from '@/types';
 
 // Utility imports
 import { getLocalizedUrl } from '@/utils/i18n';
+import routes from '@/configs/routes';
 
 type ProjectCardContentProps = LangParamType & DictionaryType & {
   project: ProjectType;
@@ -40,7 +41,7 @@ const ProjectCardContent = (props: ProjectCardContentProps) => {
       <Stack spacing="1rem" sx={{ flexGrow: 1 }}>
         <LinkMUI
           component={Link}
-          href={getLocalizedUrl(project.slug, lang)}
+          href={getLocalizedUrl(`${routes.pages.public.portfolio}/${project.slug}`, lang)}
           className="MuiLink-with-hover-effect"
           sx={{
             textDecoration: 'none',
@@ -100,7 +101,7 @@ const ProjectCardContent = (props: ProjectCardContentProps) => {
         )}
         <LinkMUI
           component={Link}
-          href={getLocalizedUrl(project.slug, lang)}
+          href={getLocalizedUrl(`${routes.pages.public.portfolio}/${project.slug}`, lang)}
           className="MuiLink-with-hover-effect"
           sx={{
             textDecoration: 'none',
