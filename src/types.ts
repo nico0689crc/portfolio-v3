@@ -143,7 +143,7 @@ export type ProjectType = {
     url: string;
     description?: string;
   }[];
-  frendly_seo_url: string;
+  slug: string;
   website: string;
   figma?: string;
   image: {

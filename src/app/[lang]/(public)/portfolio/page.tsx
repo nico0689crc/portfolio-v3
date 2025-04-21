@@ -5,7 +5,7 @@ import type { LangParamPromiseType } from '@/types';
 // Utilities
 import { getDictionary } from '@/utils/getDictionary';
 import getMetadata from '@/utils/requests/getMetadata';
-import WorkInProgressView from '@/views/work-in-progress/WorkInProgressView';
+import PortfolioView from '@/views/portfolio/PortfolioView';
 
 // Page Metadata
 export async function generateMetadata(props: LangParamPromiseType) {
@@ -21,7 +21,7 @@ const PortfolioPage = async (props: { params: Promise<{ lang: Locale }> }) => {
   const dictionary = await getDictionary(params.lang);
 
   return (
-    <WorkInProgressView
+    <PortfolioView
       dictionary={dictionary}
       lang={params.lang}
     />

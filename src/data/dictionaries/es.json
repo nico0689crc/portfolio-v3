@@ -50,7 +50,9 @@
       }
     },
     "portfolio": {
-      "title": "Portafolio"
+      "title": "Portafolio",
+      "sub_title": "Algunos de mis proyectos más recientes",
+      "description": "Aquí puedes ver algunos de mis proyectos más recientes. Cada uno de ellos representa un desafío único y una oportunidad para aplicar mis habilidades y conocimientos en el desarrollo de soluciones efectivas y atractivas. Espero que los disfrutes y te inspiren a conocer más sobre mi trabajo."
     },
     "contact": {
       "title": "Contacto"
@@ -135,6 +137,7 @@
   },
   "common": {
     "remote": "Remoto",
-    "on_site": "Presencial"
+    "on_site": "Presencial",
+    "view_more": "Ver más"
   }
 }

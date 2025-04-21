@@ -19,7 +19,7 @@ export const portfolio: ProjectType[] = [
         url: "https://github.com/nico0689crc/quiz-grad",
       },
     ],
-    frendly_seo_url: "quizgrad-game-advanced-full-stack-application-developed-with-nestjs-nextjs-and-mysql",
+    slug: "quizgrad-game-advanced-full-stack-application-developed-with-nestjs-nextjs-and-mysql",
     website: "https://quizgrad.nicolasfernandez.tech",
     image: [
       {
@@ -58,7 +58,7 @@ export const portfolio: ProjectType[] = [
         url: "https://github.com/nico0689crc/kanban",
       },
     ],
-    frendly_seo_url: "kanban-dashboard-project-management-tool-reactjs-nextjs-docker-mysql-expressjs",
+    slug: "kanban-dashboard-project-management-tool-reactjs-nextjs-docker-mysql-expressjs",
     website: "https://kanban.nicolasfernandez.tech",
     image: [
       {
@@ -105,7 +105,7 @@ export const portfolio: ProjectType[] = [
         url: "https://github.com/nico0689crc/portfolio-v3",
       },
     ],
-    frendly_seo_url: "portfolio-personal-website-nicolas-fernandez-full-stack-developer-nextjs-mui",
+    slug: "portfolio-personal-website-nicolas-fernandez-full-stack-developer-nextjs-mui",
     website: "https://nicolasfernandez.tech",
     image: [
       {
@@ -149,7 +149,7 @@ export const portfolio: ProjectType[] = [
       },
     ],
     figma: "https://www.figma.com/design/7QkMpfUSDrWkqeLujS1o9o/Untitled?node-id=13-922",
-    frendly_seo_url: "fremantle-city-library-web-development-project-ux-ui-design-html-css-javascript",
+    slug: "fremantle-city-library-web-development-project-ux-ui-design-html-css-javascript",
     website: "https://nico0689crc.github.io/web-development-essentials-skill-assessment",
     image: [
       {
@@ -200,9 +200,8 @@ export const portfolio: ProjectType[] = [
         url: "https://github.com/nico0689crc/prueba-tecnica-muni-backend",
       },
     ],
-    figma: "https://www.figma.com/design/7QkMpfUSDrWkqeLujS1o9o/Untitled?node-id=13-922",
-    frendly_seo_url: "tasks-app-code-technical-test-task-management-system-reactjs-php-mysql",
-    website: "https://nico0689crc.github.io/web-development-essentials-skill-assessment",
+    slug: "tasks-app-code-technical-test-task-management-system-reactjs-php-mysql",
+    website: "https://tareas.nicolasfernandez.tech",
     image: [
       {
         src: "/images/projects/tasks_app/image_1.png",

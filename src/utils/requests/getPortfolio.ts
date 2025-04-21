@@ -5,9 +5,9 @@ import { apiRoutes } from '@/configs/routes';
 import fetcher from './fetcher';
 import type { ProjectType } from '@/types';
 
-const getResume = async () => {
+const getResume = async (): Promise<ProjectType[]> => {
   try {
-    const data: ProjectType = await fetcher(`${process.env.API_URL}/${apiRoutes.pages.portfolio.root}`);
+    const data: ProjectType[] = await fetcher(`${process.env.API_URL}/${apiRoutes.pages.portfolio.root}`);
 
     return data;
   } catch (error) {

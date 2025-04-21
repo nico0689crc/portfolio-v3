@@ -8,7 +8,7 @@ type IconButonProps = ChildrenType &
     title: string;
   };
 
-const IconButon = ({ children, title, ...props }: IconButonProps) => {
+const IconButton = ({ children, title, ...props }: IconButonProps) => {
   const { sx, ...restProps } = props;
 
   return (
@@ -32,4 +32,4 @@ const IconButon = ({ children, title, ...props }: IconButonProps) => {
   );
 };
 
-export default IconButon;
+export default IconButton;
