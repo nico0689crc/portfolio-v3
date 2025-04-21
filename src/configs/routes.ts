@@ -41,6 +41,7 @@ export const apiRoutes = {
       metadata: 'pages/resume/metadata',
     },
     portfolio: {
+      root: 'pages/portfolio',
       metadata: 'pages/portfolio/metadata',
     },
     contact: {

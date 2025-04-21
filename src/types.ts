@@ -129,3 +129,26 @@ export type ResumeDataType = {
 export type ResumeType = {
   [key in Locale]: ResumeDataType;
 };
+
+export type ProjectType = {
+  information: {
+    [key in Locale]: {
+      title: string;
+      description: string;
+    }
+  }
+  tags: string[];
+  github: {
+    name: string;
+    url: string;
+    description?: string;
+  }[];
+  frendly_seo_url: string;
+  website: string;
+  figma?: string;
+  image: {
+    src: string;
+    alt: string;
+    description?: string;
+  }[];
+};
