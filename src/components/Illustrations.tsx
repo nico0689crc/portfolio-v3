@@ -26,7 +26,7 @@ const Illustrations = (props: IllustrationsProps) => {
         style={{ maxWidth: '100%', height: 'auto', margin: '0 auto' }}
         priority
       />
-      <Typography variant="h3" component="h1" gutterBottom>
+      <Typography variant="h3" component="h1" gutterBottom textAlign="center">
         {title}
       </Typography>
       <Typography variant="subtitle1" component="p" gutterBottom sx={{ textAlign: 'center' }}>
