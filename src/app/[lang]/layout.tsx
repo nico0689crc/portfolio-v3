@@ -43,7 +43,7 @@ const RootLayout = async (props: ChildrenType & LangParamPromiseType) => {
         <body>
           <Providers>
             <InitColorSchemeScript attribute="data" defaultMode={systemMode} />
-            {children}
+              {children}
             <BackToTopButton />
           </Providers>
         </body>
