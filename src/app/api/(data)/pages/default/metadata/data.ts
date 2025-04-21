@@ -28,11 +28,11 @@ export const metadata: MetadataType = {
       siteName: 'Nicolas Ariel Fernandez Portfolio',
       images: [
         {
-          url: 'https://nicolasfernandez.tech/static/images/og-image.png',
+          url: '/images/profile-picture.jpeg',
           width: 1200,
           height: 630,
           alt: 'Nicolas Ariel Fernandez - Fullstack Developer',
-          type: 'image/png',
+          type: 'image/jpeg',
         },
       ],
       locale: 'en-US',
@@ -47,7 +47,7 @@ export const metadata: MetadataType = {
       },
       description:
         'Learn about Nicolas Ariel Fernandez, a Fullstack Developer with advanced skills in JavaScript, React.js, Node.js, Next.js, and cloud-based solutions. Explore his portfolio of projects and expertise in DevOps and scalable architecture.',
-      images: ['https://nicolasfernandez.tech/static/images/og-image.png'],
+      images: ['/images/profile-picture.jpeg'],
       creator: '@nicolasfernandez',
     },
     icons: {
@@ -84,11 +84,11 @@ export const metadata: MetadataType = {
       siteName: 'Portafolio de Nicolas Ariel Fernandez',
       images: [
         {
-          url: 'https://nicolasfernandez.tech/static/images/og-image.png',
+          url: '/images/profile-picture.jpeg',
           width: 1200,
           height: 630,
           alt: 'Nicolas Ariel Fernandez - Desarrollador Fullstack',
-          type: 'image/png',
+          type: 'image/jpeg',
         },
       ],
       locale: 'es-ES',
@@ -103,7 +103,7 @@ export const metadata: MetadataType = {
       },
       description:
         'Conoce a Nicolas Ariel Fernandez, un Desarrollador Fullstack con habilidades avanzadas en JavaScript, React.js, Node.js, Next.js y soluciones basadas en la nube. Explora su portafolio de proyectos y experiencia en DevOps y arquitectura escalable.',
-      images: ['https://nicolasfernandez.tech/static/images/og-image.png'],
+      images: ['/images/profile-picture.jpeg'],
       creator: '@nicolasfernandez',
     },
     icons: {

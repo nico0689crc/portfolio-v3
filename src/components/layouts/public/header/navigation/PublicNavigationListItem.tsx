@@ -39,8 +39,8 @@ const PublicNavigationListItem = ({ text, href, lang }: PublicNavigationListItem
         px: 0,
       }}
     >
-      <LinkMUI 
-        component={Link} 
+      <LinkMUI
+        component={Link}
         href={getLocalizedUrl(href, lang)}
         className="MuiLink-with-hover-effect"
         onClick={isDownLg ? handleNavbarToggle : undefined}
@@ -56,7 +56,7 @@ const PublicNavigationListItem = ({ text, href, lang }: PublicNavigationListItem
         </Typography>
       </LinkMUI>
     </ListItem>
-  )
+  );
 };
 
 export default PublicNavigationListItem;

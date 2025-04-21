@@ -8,6 +8,7 @@ const PublicMain = (props: ChildrenType) => (
       flexGrow: 1,
       flexShrink: 1,
       flexBasis: 'auto',
+      minHeight: 'calc(100vh - 64px)',
     }}
   >
     {props.children}

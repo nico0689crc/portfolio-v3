@@ -1,8 +1,8 @@
 // External imports
-import { Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
 
 // Internal imports
-import type { DictionaryType } from "@/types";
+import type { DictionaryType } from '@/types';
 
 // Component: AboutMeHeaderTitle
 const AboutMeHeaderTitle = ({ title }: { title: string }) => (
@@ -23,11 +23,7 @@ const AboutMeHeaderTitle = ({ title }: { title: string }) => (
 
 // Component: AboutMeHeaderSubtitle
 const AboutMeHeaderSubtitle = ({ subtitle }: { subtitle: string }) => (
-  <Typography
-    variant="h6"
-    component="h2"
-    className="about-me-header__subtitle"
-  >
+  <Typography variant="h6" component="h2" className="about-me-header__subtitle">
     {subtitle}
   </Typography>
 );

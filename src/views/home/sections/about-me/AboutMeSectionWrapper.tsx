@@ -4,10 +4,10 @@ import type { ChildrenType } from '@/types';
 
 type AboutMeSectionWrapperProps = ChildrenType;
 
-const AboutMeSectionWrapper = ({children}: AboutMeSectionWrapperProps) => (
+const AboutMeSectionWrapper = ({ children }: AboutMeSectionWrapperProps) => (
   <ContainerCommon
     component="section"
-    id='about-me-section'
+    id="about-me-section"
     className="about-me-section"
     role="region"
     aria-labelledby="about-me-header-title"
@@ -19,11 +19,11 @@ const AboutMeSectionWrapper = ({children}: AboutMeSectionWrapperProps) => (
       py: {
         xs: '4rem',
         [themeConfig.breakpointToChangeLayout]: '8rem',
-      }
+      },
     }}
   >
     {children}
   </ContainerCommon>
-)
+);
 
 export default AboutMeSectionWrapper;

@@ -40,7 +40,8 @@ export const faq: FAQListType = {
     },
     {
       id: '9i0j1k2l-3m4n-5o6p-7q8r9s0t1u2v',
-      question: '¿Puedo contratarte solo para tareas específicas, como optimización o corrección de errores?',
+      question:
+        '¿Puedo contratarte solo para tareas específicas, como optimización o corrección de errores?',
       answer:
         'Sí, también puedes contratarme para tareas específicas, como auditoría de código, optimización de rendimiento, corrección de errores o cualquier otra tarea puntual que necesites. Estoy disponible para adaptarme a tus necesidades específicas.',
     },
@@ -91,12 +92,14 @@ export const faq: FAQListType = {
     {
       id: '9i0j1k2l-3m4n-5o6p-7q8r9s0t1u2v3w4x',
       question: 'Can I hire you only for specific tasks, such as optimization or bug fixing?',
-      answer: "Yes, you can also hire me for specific tasks, such as code auditing, performance optimization, bug fixing, or any other specific task you need. I am available to adapt to your specific needs.",
+      answer:
+        'Yes, you can also hire me for specific tasks, such as code auditing, performance optimization, bug fixing, or any other specific task you need. I am available to adapt to your specific needs.',
     },
     {
       id: '0j1k2l3m-4n5o-6p7q-8r9s0t1u2v3w4x5y',
       question: 'How can I start working with you?',
-      answer: "You can start by emailing me at contact@nicolasfernandez.tech or contacting me through my LinkedIn profile. I would be happy to discuss your project, understand your needs, and provide a detailed proposal."
-    }
+      answer:
+        'You can start by emailing me at contact@nicolasfernandez.tech or contacting me through my LinkedIn profile. I would be happy to discuss your project, understand your needs, and provide a detailed proposal.',
+    },
   ],
 };

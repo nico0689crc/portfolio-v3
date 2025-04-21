@@ -13,13 +13,13 @@ type Props = ChildrenType & {
 };
 
 // Layout Component
-const Layout = async (props: Props) => {
-  const { lang } = await props.params;
+const Layout = async ({ params, children }: Props) => {
+  const { lang } = await params;
 
   return (
     <PublicLayout
       header={<PublicHeader lang={lang} />}
-      main={<PublicMain>{props.children}</PublicMain>}
+      main={<PublicMain>{children}</PublicMain>}
       footer={<PublicFooter lang={lang} />}
     />
   );

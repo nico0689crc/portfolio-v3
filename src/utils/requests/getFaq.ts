@@ -7,9 +7,7 @@ import type { FAQListType } from '@/types';
 
 const getFaq = async () => {
   try {
-    const data: FAQListType = await fetcher(
-      `${process.env.API_URL}/${apiRoutes.pages.home.faq}`,
-    );
+    const data: FAQListType = await fetcher(`${process.env.API_URL}/${apiRoutes.pages.home.faq}`);
 
     return data;
   } catch (error) {

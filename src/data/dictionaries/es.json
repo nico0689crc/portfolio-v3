@@ -54,6 +54,24 @@
     },
     "contact": {
       "title": "Contacto"
+    },
+    "not_found": {
+      "title": "¡Oops! Página No Encontrada",
+      "description": "Parece que la página que buscas no existe o ha sido movida. Por favor, verifica la URL o navega de regreso a la página de inicio para continuar explorando.",
+      "go_home": "Ir a Inicio",
+      "image_alt": "Imagen de error 404"
+    },
+    "error": {
+      "title": "¡Oops! Algo salió mal",
+      "description": "Parece que hubo un error al cargar la página. Por favor, verifica tu conexión a Internet o intenta recargar la página.",
+      "go_home": "Ir a Inicio",
+      "image_alt": "Imagen de error 500"
+    },
+    "work_in_progress": {
+      "title": "¡Estamos trabajando en ello!",
+      "description": "Esta sección está actualmente en construcción. Estamos trabajando arduamente para traerte contenido emocionante y actualizaciones. ¡Por favor, vuelve pronto y gracias por tu paciencia y comprensión!",
+      "go_home": "Ir a Inicio",
+      "image_alt": "Imagen de trabajo en progreso"
     }
   },
   "actions": {

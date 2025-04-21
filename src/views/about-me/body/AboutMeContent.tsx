@@ -1,11 +1,11 @@
 // External libraries
-import { Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
 
 // Internal configurations
-import themeConfig from "@/configs/themeConfig";
+import themeConfig from '@/configs/themeConfig';
 
 // Types
-import type { DictionaryType } from "@/types";
+import type { DictionaryType } from '@/types';
 
 const AboutMeContent = ({ dictionary }: DictionaryType) => (
   <Box
@@ -28,7 +28,7 @@ const AboutMeContent = ({ dictionary }: DictionaryType) => (
     <Typography
       id="about-me-content-title"
       variant="h5"
-      component='h1'
+      component="h1"
       className="about-me-content-title"
       dangerouslySetInnerHTML={{
         __html: dictionary.pages.about_me.introduction,
@@ -38,11 +38,11 @@ const AboutMeContent = ({ dictionary }: DictionaryType) => (
           fontWeight: 700,
           textDecoration: 'underline',
           textDecorationColor: 'var(--mui-palette-primary-main)',
-        }
+        },
       }}
     />
     <Typography
-      variant='body1'
+      variant="body1"
       className="about-me-content-description"
       dangerouslySetInnerHTML={{
         __html: dictionary.pages.about_me.description.paragraph_1,
@@ -55,7 +55,7 @@ const AboutMeContent = ({ dictionary }: DictionaryType) => (
       }}
     />
     <Typography
-      variant='body1'
+      variant="body1"
       className="about-me-content-description"
       dangerouslySetInnerHTML={{
         __html: dictionary.pages.about_me.description.paragraph_2,
@@ -68,7 +68,7 @@ const AboutMeContent = ({ dictionary }: DictionaryType) => (
       }}
     />
     <Typography
-      variant='body1'
+      variant="body1"
       className="about-me-content-description"
       dangerouslySetInnerHTML={{
         __html: dictionary.pages.about_me.description.paragraph_3,
@@ -81,7 +81,7 @@ const AboutMeContent = ({ dictionary }: DictionaryType) => (
       }}
     />
     <Typography
-      variant='body1'
+      variant="body1"
       className="about-me-content-description"
       dangerouslySetInnerHTML={{
         __html: dictionary.pages.about_me.description.paragraph_4,
@@ -94,7 +94,7 @@ const AboutMeContent = ({ dictionary }: DictionaryType) => (
       }}
     />
     <Typography
-      variant='body1'
+      variant="body1"
       className="about-me-content-description"
       dangerouslySetInnerHTML={{
         __html: dictionary.pages.about_me.description.paragraph_5,

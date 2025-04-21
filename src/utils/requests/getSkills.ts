@@ -8,7 +8,7 @@ import type { GroupedSkills } from '@/types';
 const getSkills = async (): Promise<GroupedSkills> => {
   try {
     const data: GroupedSkills = await fetcher(
-      `${process.env.API_URL}/${apiRoutes.pages.aboutMe.skills}`,
+      `${process.env.API_URL}/${apiRoutes.pages.aboutMe.skills}`
     );
 
     return data;

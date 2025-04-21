@@ -1,11 +1,11 @@
 // External libraries
-import { Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
 
 // Internal configurations
-import themeConfig from "@/configs/themeConfig";
+import themeConfig from '@/configs/themeConfig';
 
 // Types
-import type { DictionaryType } from "@/types";
+import type { DictionaryType } from '@/types';
 
 const AboutMeContent = ({ dictionary }: DictionaryType) => (
   <Box
@@ -37,11 +37,11 @@ const AboutMeContent = ({ dictionary }: DictionaryType) => (
           fontWeight: 700,
           textDecoration: 'underline',
           textDecorationColor: 'var(--mui-palette-primary-main)',
-        }
+        },
       }}
     />
     <Typography
-      variant='body1'
+      variant="body1"
       className="about-me-content-description"
       dangerouslySetInnerHTML={{
         __html: dictionary.pages.home.sections.about.description,

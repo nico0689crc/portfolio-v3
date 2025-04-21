@@ -1,14 +1,14 @@
 // External libraries
-import { Box } from "@mui/material";
+import { Box } from '@mui/material';
 
 // Internal configs
-import themeConfig from "@/configs/themeConfig";
+import themeConfig from '@/configs/themeConfig';
 
 // Internal components
-import ContainerCommon from "@/components/layouts/public/common/ContainerCommon";
+import ContainerCommon from '@/components/layouts/public/common/ContainerCommon';
 
 // Types
-import type { ChildrenType } from "@/types";
+import type { ChildrenType } from '@/types';
 
 const FaqSectionWrapper = ({ children }: ChildrenType) => (
   <Box
@@ -17,11 +17,11 @@ const FaqSectionWrapper = ({ children }: ChildrenType) => (
     }}
   >
     <ContainerCommon
-      id='faq'
-      component='section'
-      className='faq-section'
-      role='region'
-      aria-labelledby='faq-header-title'
+      id="faq"
+      component="section"
+      className="faq-section"
+      role="region"
+      aria-labelledby="faq-header-title"
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -30,7 +30,7 @@ const FaqSectionWrapper = ({ children }: ChildrenType) => (
         py: {
           xs: '4rem',
           [themeConfig.breakpointToChangeLayout]: '8rem',
-        }
+        },
       }}
     >
       {children}

@@ -1,9 +1,9 @@
-import type { DictionaryType } from "@/types";
-import AboutMeWrapper from "./AboutMeWrapper";
-import AboutMeHeader from "./header/AboutMeHeader";
-import { AboutMeBody, AboutMeContent, AboutMeSkills } from "./body";
-import SkillsWrapper from "./SkillsWrapper";
-import SkillsHeader from "./header/SkillsHeader";
+import type { DictionaryType } from '@/types';
+import AboutMeWrapper from './AboutMeWrapper';
+import AboutMeHeader from './header/AboutMeHeader';
+import { AboutMeBody, AboutMeContent, AboutMeSkills } from './body';
+import SkillsWrapper from './SkillsWrapper';
+import SkillsHeader from './header/SkillsHeader';
 
 const AboutMeView = ({ dictionary }: DictionaryType) => (
   <>
@@ -18,6 +18,6 @@ const AboutMeView = ({ dictionary }: DictionaryType) => (
       <AboutMeSkills />
     </SkillsWrapper>
   </>
-)
+);
 
 export default AboutMeView;

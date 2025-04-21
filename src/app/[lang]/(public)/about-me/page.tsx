@@ -8,7 +8,6 @@ import getMetadata from '@/utils/requests/getMetadata';
 import AboutMeView from '@/views/about-me/AboutMeView';
 
 // External Components
-import { Typography } from '@mui/material';
 
 // Page Metadata
 export async function generateMetadata(props: LangParamPromiseType) {

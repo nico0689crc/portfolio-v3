@@ -1,9 +1,9 @@
 // External imports
-import { Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
 
 // Internal imports
-import type { DictionaryType } from "@/types";
-import themeConfig from "@/configs/themeConfig";
+import type { DictionaryType } from '@/types';
+import themeConfig from '@/configs/themeConfig';
 
 const AboutMeExperience = ({ dictionary }: DictionaryType) => (
   <Box
@@ -40,9 +40,9 @@ const AboutMeExperience = ({ dictionary }: DictionaryType) => (
       noWrap
       sx={{
         fontWeight: 500,
-        "span": {
+        span: {
           fontWeight: 700,
-        }
+        },
       }}
       dangerouslySetInnerHTML={{
         __html: dictionary.pages.home.sections.about.years_of_experience,

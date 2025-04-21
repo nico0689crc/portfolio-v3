@@ -1,8 +1,8 @@
 // External imports
-import { Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
 
 // Internal imports
-import type { DictionaryType } from "@/types";
+import type { DictionaryType } from '@/types';
 
 // Component: SkillsHeaderTitle
 const SkillsHeaderTitle = ({ subtitle }: { subtitle: string }) => (

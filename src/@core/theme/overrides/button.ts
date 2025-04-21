@@ -323,7 +323,7 @@ const button: Theme['components'] = {
         padding: '0.5rem 1rem',
       }),
       sizeMedium: ({ theme }) => ({
-        lineHeight: 1.5, 
+        lineHeight: 1.5,
         fontSize: theme.typography.body1.fontSize,
         padding: '0.8rem 2.6rem',
       }),
@@ -364,7 +364,6 @@ const button: Theme['components'] = {
             }),
         ...iconStyles(ownerState.size),
       }),
-
     },
   },
 };

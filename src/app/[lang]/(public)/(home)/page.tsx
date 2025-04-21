@@ -18,7 +18,7 @@ const HomePage = async (props: { params: Promise<{ lang: Locale }> }) => {
   const params = await props.params;
   const dictionary = await getDictionary(params.lang);
 
-  return <HomeView dictionary={dictionary} lang={params.lang}/>;
+  return <HomeView dictionary={dictionary} lang={params.lang} />;
 };
 
 export default HomePage;

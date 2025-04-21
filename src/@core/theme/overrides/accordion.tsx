@@ -7,14 +7,14 @@ const accordion: Theme['components'] = {
     styleOverrides: {
       root: ({ theme }) => ({
         transition: theme.transitions.create(['margin', 'border-radius', 'box-shadow']),
-        backgroundColor: "transparent",
-        boxShadow: "none",
-        "&.Mui-expanded": {
+        backgroundColor: 'transparent',
+        boxShadow: 'none',
+        '&.Mui-expanded': {
           margin: 0,
-          boxShadow: "none",
-          "&:before": {
+          boxShadow: 'none',
+          '&:before': {
             opacity: 1,
-          }
+          },
         },
       }),
     },

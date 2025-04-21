@@ -1,26 +1,27 @@
 // External Libraries
-import { Button, Stack } from "@mui/material";
+import { Button, Stack } from '@mui/material';
 
 // Context
-import { ResumeProvider } from "../context/ResumeProvider";
+import { ResumeProvider } from '../context/ResumeProvider';
 
 // Sections
-import EducationSection from "../sections/EducationSection";
-import CoursesSection from "../sections/CoursesSection";
+import EducationSection from '../sections/EducationSection';
+import CoursesSection from '../sections/CoursesSection';
 
 // Types
-import type { DictionaryType, LangParamType, ResumeDataType } from "@/types";
-import ExperienceSection from "../sections/experience/ExperienceSection";
-import Link from "next/link";
+import type { DictionaryType, LangParamType, ResumeDataType } from '@/types';
+import ExperienceSection from '../sections/experience/ExperienceSection';
+import Link from 'next/link';
 
 // Resumes
-const resumeES = "/resume/Nicolas_Ariel_Fernandez_Fullstack_Developer_Javascript_CV_ES.pdf";
-const resumeEN = "/resume/Nicolas_Ariel_Fernandez_Fullstack_Developer_Javascript_Resume_EN.pdf";
+const resumeES = '/resume/Nicolas_Ariel_Fernandez_Fullstack_Developer_Javascript_CV_ES.pdf';
+const resumeEN = '/resume/Nicolas_Ariel_Fernandez_Fullstack_Developer_Javascript_Resume_EN.pdf';
 
 // Props Type
-type ResumeBodyProps = DictionaryType & LangParamType & {
-  data: ResumeDataType;
-};
+type ResumeBodyProps = DictionaryType &
+  LangParamType & {
+    data: ResumeDataType;
+  };
 
 const ResumeBody = (props: ResumeBodyProps) => {
   const { data, dictionary, lang } = props;
@@ -30,7 +31,7 @@ const ResumeBody = (props: ResumeBodyProps) => {
       <Button
         variant="contained"
         component={Link}
-        target='_blank'
+        target="_blank"
         href={lang === 'es' ? resumeES : resumeEN}
         className="resume-download-button"
       >
@@ -51,15 +52,11 @@ const ResumeBody = (props: ResumeBodyProps) => {
             dictionary={dictionary}
           />
           <EducationSection
-            accordion_id="education" 
+            accordion_id="education"
             education={data.education}
-            dictionary={dictionary} 
-          />
-          <CoursesSection
-            accordion_id="courses" 
-            courses={data.courses} 
             dictionary={dictionary}
           />
+          <CoursesSection accordion_id="courses" courses={data.courses} dictionary={dictionary} />
         </ResumeProvider>
       </Stack>
     </>

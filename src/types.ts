@@ -101,7 +101,7 @@ export type CourseType = {
   certificate_link: string | null;
   course_link: string;
   description: string;
-}
+};
 
 export type EducationType = {
   degree: string;

@@ -5,9 +5,7 @@ import type { LangParamPromiseType } from '@/types';
 // Utilities
 import { getDictionary } from '@/utils/getDictionary';
 import getMetadata from '@/utils/requests/getMetadata';
-
-// External Components
-import { Typography } from '@mui/material';
+import WorkInProgressView from '@/views/work-in-progress/WorkInProgressView';
 
 // Page Metadata
 export async function generateMetadata(props: LangParamPromiseType) {
@@ -23,13 +21,10 @@ const ContactPage = async (props: { params: Promise<{ lang: Locale }> }) => {
   const dictionary = await getDictionary(params.lang);
 
   return (
-    <>
-      <Typography>{dictionary.pages.contact.title}</Typography>
-      <Typography>
-        Contact page content goes here. You can add your Contact details, experience, education,
-        etc.
-      </Typography>
-    </>
+    <WorkInProgressView
+      dictionary={dictionary}
+      lang={params.lang}
+    />
   );
 };
 

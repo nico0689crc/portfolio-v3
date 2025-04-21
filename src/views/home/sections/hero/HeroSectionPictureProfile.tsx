@@ -6,7 +6,7 @@ import { Box } from '@mui/material';
 import type { DictionaryType } from '@/types';
 
 // Local imports
-import profilePicture from "@public/images/profile-picture.jpeg";
+import profilePicture from '@public/images/profile-picture.jpeg';
 import themeConfig from '@/configs/themeConfig';
 
 // Types

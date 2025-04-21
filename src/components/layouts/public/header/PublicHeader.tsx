@@ -24,12 +24,12 @@ const PublicHeader = ({ lang }: PublicHeaderProps) => (
         alignItems: 'center',
         justifyContent: 'space-between',
         gap: '1.5rem',
-        ".PublicSocialWrapper": {
+        '.PublicSocialWrapper': {
           display: {
             xs: 'none',
-            [themeConfig.breakpointToChangeLayout]: 'flex'
-          }
-        }
+            [themeConfig.breakpointToChangeLayout]: 'flex',
+          },
+        },
       }}
     >
       <Logo />
