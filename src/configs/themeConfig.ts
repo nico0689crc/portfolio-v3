@@ -27,7 +27,7 @@ const themeConfig: Config = {
   templateName: 'NextJs App MUI Base',
   settingsCookieName: 'nicolas-fernandez-portfolio-settings',
   mode: 'dark', // 'system', 'light', 'dark'
-  headerHeight: "70px",
+  headerHeight: '70px',
   layoutPadding: 24,
   breakpointToChangeLayout: 'lg',
   compactContentWidth: {

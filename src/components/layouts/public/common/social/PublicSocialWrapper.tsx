@@ -22,7 +22,7 @@ const PublicSocialWrapper = ({ children }: PublicSocialWrapperProps) => (
       },
       gap: 3,
     })}
-    className='PublicSocialWrapper'
+    className="PublicSocialWrapper"
   >
     {children}
   </Stack>

@@ -1,4 +1,4 @@
-import type { ChildrenType, DictionaryType } from '@/types';
+import type { DictionaryType } from '@/types';
 import { Typography } from '@mui/material';
 
 type ServicesSectionProps = DictionaryType;

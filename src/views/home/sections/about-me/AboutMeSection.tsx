@@ -8,11 +8,7 @@ import { getLocalizedUrl } from '@/utils/i18n';
 import routes from '@/configs/routes';
 import AboutMeSectionWrapper from './AboutMeSectionWrapper';
 import AboutMeHeader from './header/AboutMeHeader';
-import {
-  AboutMeBodyWrapper,
-  AboutMeContent,
-  AboutMeExperience,
-} from './body';
+import { AboutMeBodyWrapper, AboutMeContent, AboutMeExperience } from './body';
 
 // Component Definition
 const AboutMeSection = async ({ dictionary, lang }: DictionaryType & LangParamType) => (
@@ -25,8 +21,8 @@ const AboutMeSection = async ({ dictionary, lang }: DictionaryType & LangParamTy
     <Button
       component={Link}
       href={getLocalizedUrl(routes.pages.public.aboutMe, lang)}
-      variant='contained'
-      color='primary'
+      variant="contained"
+      color="primary"
     >
       {dictionary.pages.home.sections.about.more_about_me}
     </Button>

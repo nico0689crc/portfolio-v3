@@ -1,16 +1,15 @@
-'use client'
+'use client';
 
 import { Fab } from '@mui/material';
 import { useBackToTop } from 'minimal-shared/hooks';
 import Iconify from './Icon';
 
 const BackToTopButton = () => {
-
-  const { onBackToTop, isVisible } = useBackToTop("30%", true);
+  const { onBackToTop, isVisible } = useBackToTop('30%', true);
 
   return (
     <Fab
-      color='primary'
+      color="primary"
       aria-label="Back to top"
       onClick={onBackToTop}
       sx={[
@@ -30,6 +29,6 @@ const BackToTopButton = () => {
       <Iconify width={24} icon="radix-icons:double-arrow-up" />
     </Fab>
   );
-}
+};
 
 export default BackToTopButton;

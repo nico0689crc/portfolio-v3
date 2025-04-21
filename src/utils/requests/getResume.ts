@@ -7,8 +7,7 @@ import type { ResumeType } from '@/types';
 
 const getResume = async () => {
   try {
-    const data: ResumeType = await fetcher(
-      `${process.env.API_URL}/${apiRoutes.pages.resume.root}`);
+    const data: ResumeType = await fetcher(`${process.env.API_URL}/${apiRoutes.pages.resume.root}`);
 
     return data;
   } catch (error) {

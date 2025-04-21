@@ -54,6 +54,24 @@
     },
     "contact": {
       "title": "Contact"
+    },
+    "not_found": {
+      "title": "Oops! Page Not Found",
+      "description": "It seems the page you are looking for doesn't exist or has been moved. Please check the URL or navigate back to the homepage to continue exploring.",
+      "go_home": "Go home",
+      "image_alt": "404 error image"
+    },
+    "error": {
+      "title": "Something Went Wrong",
+      "description": "Oops! It seems something went wrong while loading the page. Please try refreshing the page or come back later. If the issue persists, feel free to contact us for assistance.",
+      "go_home": "Go home",
+      "image_alt": "Error image 500"
+    },
+    "work_in_progress": {
+      "title": "We are working on it!",
+      "description": "This section is currently under construction. We are working hard to bring you exciting content and updates. Please check back soon, and thank you for your patience and understanding!",
+      "go_home": "Go home",
+      "image_alt": "Work in progress image"
     }
   },
   "actions": {

@@ -109,7 +109,7 @@ const HeroContent = ({ children }: ChildrenType) => (
         justifyContent: 'space-evenly',
         my: 'auto',
         zIndex: 2,
-        gap: 5
+        gap: 5,
       }}
     >
       {children}

@@ -1,6 +1,3 @@
-import { skills } from "@/app/api/(data)/pages/about-me/skills/data";
-import { faq } from "@/app/api/(data)/pages/home/faq/data";
-
 const routes = {
   pages: {
     public: {
@@ -42,7 +39,6 @@ export const apiRoutes = {
     resume: {
       root: 'pages/resume',
       metadata: 'pages/resume/metadata',
-
     },
     portfolio: {
       metadata: 'pages/portfolio/metadata',

@@ -1,8 +1,8 @@
-import type { ChildrenType } from "@/types";
+import type { ChildrenType } from '@/types';
 // External Imports
-import { Stack } from "@mui/material";
+import { Stack } from '@mui/material';
 // Internal Imports
-import themeConfig from "@/configs/themeConfig";
+import themeConfig from '@/configs/themeConfig';
 
 // Component: AboutMeBody
 const AboutMeBody = ({ children }: ChildrenType) => (

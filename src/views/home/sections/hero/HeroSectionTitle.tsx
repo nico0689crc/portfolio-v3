@@ -16,8 +16,8 @@ import { getLocalizedUrl } from '@/utils/i18n';
 import type { DictionaryType, LangParamType } from '@/types';
 
 // Resumes
-const resumeES = "/resume/Nicolas_Ariel_Fernandez_Fullstack_Developer_Javascript_CV_ES.pdf";
-const resumeEN = "/resume/Nicolas_Ariel_Fernandez_Fullstack_Developer_Javascript_Resume_EN.pdf";
+const resumeES = '/resume/Nicolas_Ariel_Fernandez_Fullstack_Developer_Javascript_CV_ES.pdf';
+const resumeEN = '/resume/Nicolas_Ariel_Fernandez_Fullstack_Developer_Javascript_Resume_EN.pdf';
 
 type HeroSectionTitleProps = DictionaryType & LangParamType;
 
@@ -42,7 +42,7 @@ const HeroSectionTitle = (props: HeroSectionTitleProps) => {
           xs: 3,
           [themeConfig.breakpointToChangeLayout]: 4,
         },
-        "*:not(a)": {
+        '*:not(a)': {
           color: `rgb(var(--mui-mainColorChannels-light) / 1)`,
         },
       }}
@@ -120,7 +120,7 @@ const HeroSkills = ({ skills }: { skills: string }) => (
         xs: 'center',
         [themeConfig.breakpointToChangeLayout]: 'left',
       },
-      maxWidth:{
+      maxWidth: {
         xs: '20rem',
         sm: '25rem',
         md: '30rem',
@@ -169,7 +169,7 @@ const HeroButtons = ({
       variant="outlined"
       color="secondary"
       component={Link}
-      target='_blank'
+      target="_blank"
       href={lang === 'es' ? resumeES : resumeEN}
       sx={{
         color: `rgb(var(--mui-mainColorChannels-light) / 1)`,

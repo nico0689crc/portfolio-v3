@@ -27,6 +27,8 @@ export async function generateMetadata(props: LangParamPromiseType) {
 }
 
 const RootLayout = async (props: ChildrenType & LangParamPromiseType) => {
+
+
   const params = await props.params;
   const { children } = props;
 

@@ -1,15 +1,20 @@
-'use client'
+'use client';
 
 import React, { useState, useEffect } from 'react'; // React imports
 import { motion } from 'framer-motion'; // Third-party library imports
-import { Typography, TypographyProps } from '@mui/material';
+import type { TypographyProps } from '@mui/material';
+import { Typography } from '@mui/material';
 
 type TypewriterEffectProps = TypographyProps & {
   phrases: string[];
   period?: number;
-}
+};
 
-const TypewriterEffect: React.FC<TypewriterEffectProps> = ({ phrases, period = 2000, ...props }) => {
+const TypewriterEffect: React.FC<TypewriterEffectProps> = ({
+  phrases,
+  period = 2000,
+  ...props
+}) => {
   const [text, setText] = useState<string>('');
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
   const [loopNum, setLoopNum] = useState<number>(0);
@@ -38,11 +43,7 @@ const TypewriterEffect: React.FC<TypewriterEffectProps> = ({ phrases, period = 2
   }, [text, isDeleting, loopNum, phrases, period]);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
       <Typography {...props}>{text}</Typography>
     </motion.div>
   );

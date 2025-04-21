@@ -1,8 +1,8 @@
 // External imports
-import { Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
 
 // Internal imports
-import type { DictionaryType } from "@/types";
+import type { DictionaryType } from '@/types';
 
 // Component: ResumeHeaderTitle
 const ResumeHeaderTitle = ({ title }: { title: string }) => (
@@ -23,11 +23,7 @@ const ResumeHeaderTitle = ({ title }: { title: string }) => (
 
 // Component: ResumeHeaderSubtitle
 const ResumeHeaderSubtitle = ({ subtitle }: { subtitle: string }) => (
-  <Typography
-    variant="h5"
-    component="h1"
-    className="resume-header__subtitle"
-  >
+  <Typography variant="h5" component="h1" className="resume-header__subtitle">
     {subtitle}
   </Typography>
 );

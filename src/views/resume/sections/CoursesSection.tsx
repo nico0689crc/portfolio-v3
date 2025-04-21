@@ -1,16 +1,16 @@
 // Types
-import type { DictionaryType, ResumeDataType } from "@/types";
+import type { DictionaryType, ResumeDataType } from '@/types';
 
 // Internal components
-import Accordion from "../components/Accordion";
-import AccordionSummary from "../components/AccordionSummary";
-import AccordionDetails from "../components/AccordionDetails";
-import { Button, Chip, Stack, Typography } from "@mui/material";
-import themeConfig from "@/configs/themeConfig";
-import Link from "next/link";
+import Accordion from '../components/Accordion';
+import AccordionSummary from '../components/AccordionSummary';
+import AccordionDetails from '../components/AccordionDetails';
+import { Button, Chip, Stack, Typography } from '@mui/material';
+import themeConfig from '@/configs/themeConfig';
+import Link from 'next/link';
 
 type CoursesSectionProps = DictionaryType & {
-  courses: ResumeDataType["courses"];
+  courses: ResumeDataType['courses'];
   accordion_id: string;
 };
 
@@ -23,7 +23,7 @@ const CoursesSection = ({ courses, accordion_id, dictionary }: CoursesSectionPro
       <Stack gap={7}>
         {courses.map((course, index) => (
           <Stack key={index}>
-            <Stack 
+            <Stack
               sx={{
                 flexDirection: 'column',
                 gap: {
@@ -41,18 +41,12 @@ const CoursesSection = ({ courses, accordion_id, dictionary }: CoursesSectionPro
               <Typography variant="body1" component="p">
                 {course.description}
               </Typography>
-              <Stack direction='row' flexWrap="wrap" sx={{ gap: 2 }}>
+              <Stack direction="row" flexWrap="wrap" sx={{ gap: 2 }}>
                 {course.skills.map((skill, key) => (
-                  <Chip
-                    key={key}
-                    label={skill}
-                    variant="filled"
-                    size="small"
-                    color="primary"
-                  />
+                  <Chip key={key} label={skill} variant="filled" size="small" color="primary" />
                 ))}
               </Stack>
-              <Stack direction="row" gap={2} >
+              <Stack direction="row" gap={2}>
                 {course.certificate_link && (
                   <Button
                     component={Link}

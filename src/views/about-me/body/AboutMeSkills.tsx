@@ -1,14 +1,14 @@
 // External libraries
-import { Typography, LinearProgress, Stack, Grid } from "@mui/material";
+import { Typography, LinearProgress, Stack, Grid } from '@mui/material';
 
 // Components
-import Iconify from "@/components/ui/Icon";
+import Iconify from '@/components/ui/Icon';
 
 // Types
-import type { Skill, SkillType } from "@/types";
+import type { Skill, SkillType } from '@/types';
 
 // Utilities
-import getSkills from "@/utils/requests/getSkills";
+import getSkills from '@/utils/requests/getSkills';
 
 const AboutMeSkills = async () => {
   const skillsData = await getSkills();
@@ -20,7 +20,7 @@ const AboutMeSkills = async () => {
         return (
           <Stack key={group} sx={{ marginBottom: 2, gap: 4 }}>
             <Typography variant="h6" component="h3" sx={{ marginBottom: 1, fontWeight: 600 }}>
-              {group === "other" ? "" : group.replace(/_/g, ' ').toLocaleUpperCase()}
+              {group === 'other' ? '' : group.replace(/_/g, ' ').toLocaleUpperCase()}
             </Typography>
 
             <Grid container spacing={8}>
@@ -29,8 +29,13 @@ const AboutMeSkills = async () => {
                   <Stack sx={{ gap: 2 }}>
                     <Stack direction="row" alignItems="center" spacing={2} width="100%">
                       <Iconify icon={skill.icon} />
-                      <Typography sx={{ fontWeight: 500 }} variant="body1">{skill.skill_title}</Typography>
-                      <Typography sx={{ fontWeight: 500, flexGrow: 1, textAlign: 'right' }} variant="body1">{`${skill.progress}%`}</Typography>
+                      <Typography sx={{ fontWeight: 500 }} variant="body1">
+                        {skill.skill_title}
+                      </Typography>
+                      <Typography
+                        sx={{ fontWeight: 500, flexGrow: 1, textAlign: 'right' }}
+                        variant="body1"
+                      >{`${skill.progress}%`}</Typography>
                     </Stack>
                     <LinearProgress
                       variant="determinate"

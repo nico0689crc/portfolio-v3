@@ -1,8 +1,8 @@
 // External imports
-import { Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
 
 // Internal imports
-import type { DictionaryType } from "@/types";
+import type { DictionaryType } from '@/types';
 
 // Component: FaqHeaderTitle
 const FaqHeaderTitle = ({ title }: { title: string }) => (
@@ -23,11 +23,7 @@ const FaqHeaderTitle = ({ title }: { title: string }) => (
 
 // Component: FaqHeaderSubtitle
 const FaqHeaderSubtitle = ({ subtitle }: { subtitle: string }) => (
-  <Typography
-    variant="h5"
-    component="p"
-    className="faq-header__subtitle"
-  >
+  <Typography variant="h5" component="p" className="faq-header__subtitle">
     {subtitle}
   </Typography>
 );
