@@ -28,7 +28,7 @@ export const metadata: MetadataType = {
       siteName: 'Nicolas Ariel Fernandez Portfolio',
       images: [
         {
-          url: '/images/profile-picture.jpeg',
+          url: 'https://nicolasfernandez.tech/images/profile-picture.jpeg',
           width: 1200,
           height: 630,
           alt: 'Nicolas Ariel Fernandez - Fullstack Developer',
@@ -47,19 +47,19 @@ export const metadata: MetadataType = {
       },
       description:
         'Learn about Nicolas Ariel Fernandez, a Fullstack Developer with advanced skills in JavaScript, React.js, Node.js, Next.js, and cloud-based solutions. Explore his portfolio of projects and expertise in DevOps and scalable architecture.',
-      images: ['/images/profile-picture.jpeg'],
+      images: ['https://nicolasfernandez.tech/images/profile-picture.jpeg'],
       creator: '@nicolasfernandez',
     },
     icons: {
-      icon: '/favicon.ico',
-      shortcut: '/favicon.ico',
-      apple: '/favicon.ico',
+      icon: '/favicon/favicon.ico',
+      shortcut: '/favicon/favicon.ico',
+      apple: '/favicon/favicon.ico',
     },
     appleWebApp: {
       capable: true,
       statusBarStyle: 'default',
       title: 'Nicolas Ariel Fernandez - Expert Fullstack JavaScript Developer',
-      startupImage: '/favicon.ico',
+      startupImage: '/favicon/favicon.ico',
     },
   },
   es: {
@@ -84,7 +84,7 @@ export const metadata: MetadataType = {
       siteName: 'Portafolio de Nicolas Ariel Fernandez',
       images: [
         {
-          url: '/images/profile-picture.jpeg',
+          url: 'https://nicolasfernandez.tech/images/profile-picture.jpeg',
           width: 1200,
           height: 630,
           alt: 'Nicolas Ariel Fernandez - Desarrollador Fullstack',
@@ -103,19 +103,19 @@ export const metadata: MetadataType = {
       },
       description:
         'Conoce a Nicolas Ariel Fernandez, un Desarrollador Fullstack con habilidades avanzadas en JavaScript, React.js, Node.js, Next.js y soluciones basadas en la nube. Explora su portafolio de proyectos y experiencia en DevOps y arquitectura escalable.',
-      images: ['/images/profile-picture.jpeg'],
+      images: ['https://nicolasfernandez.tech/images/profile-picture.jpeg'],
       creator: '@nicolasfernandez',
     },
     icons: {
-      icon: '/favicon.ico',
-      shortcut: '/favicon.ico',
-      apple: '/favicon.ico',
+      icon: '/favicon/favicon.ico',
+      shortcut: '/favicon/favicon.ico',
+      apple: '/favicon/favicon.ico',
     },
     appleWebApp: {
       capable: true,
       statusBarStyle: 'default',
       title: 'Nicolas Ariel Fernandez - Desarrollador Fullstack JavaScript Experto',
-      startupImage: '/favicon.ico',
+      startupImage: '/favicon/favicon.ico',
     },
   },
 };
