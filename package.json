@@ -24,6 +24,8 @@
     "@mui/material-nextjs": "^7.0.2",
     "@reduxjs/toolkit": "^2.6.1",
     "embla-carousel": "^8.6.0",
+    "embla-carousel-auto-scroll": "^8.6.0",
+    "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "minimal-shared": "^1.0.8",
     "motion": "^12.7.0",

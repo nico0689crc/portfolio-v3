@@ -2,7 +2,7 @@
 
 import type { CSSObject } from '@mui/material/styles';
 
-import { varAlpha, mergeClasses } from 'minimal-shared/utils';
+import { mergeClasses } from 'minimal-shared/utils';
 
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';

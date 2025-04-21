@@ -6,7 +6,6 @@ import { i18n, type Locale } from '@/configs/i18n';
 import { getDictionary } from '@/utils/getDictionary';
 import getProject from '@/utils/requests/getProject';
 import ProjectView from '@/views/project/ProjectView';
-import { Typography } from '@mui/material';
 import type { Metadata } from 'next';
 
 type ProjectPageProps = {
