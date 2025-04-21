@@ -156,3 +156,9 @@ export type ProjectType = {
 export type SlugProjectParamPromiseType = {
   params: Promise<{ slug: string }>;
 };
+
+
+export type BreadcrumbLinkType = {
+  title: string;
+  href?: string;
+}

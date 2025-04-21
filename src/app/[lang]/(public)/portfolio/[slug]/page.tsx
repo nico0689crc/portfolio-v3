@@ -4,7 +4,8 @@ import { i18n, type Locale } from '@/configs/i18n';
 
 // Utilities
 import { getDictionary } from '@/utils/getDictionary';
-import WorkInProgressView from '@/views/work-in-progress/WorkInProgressView';
+import getProject from '@/utils/requests/getProject';
+import ProjectView from '@/views/project/ProjectView';
 import { Typography } from '@mui/material';
 import type { Metadata } from 'next';
 
@@ -76,11 +77,14 @@ export const generateStaticParams = async () => (
 const ProjectPage = async (props: ProjectPageProps) => {
   const params = await props.params;
   const dictionary = await getDictionary(params.lang);
-
-  const project = portfolio.find(_project => _project.slug === params.slug);
+  const project = await getProject(params.slug);
 
   return (
-    <Typography>{project?.information[params.lang].title}</Typography>
+    <ProjectView
+      dictionary={dictionary}
+      lang={params.lang}
+      project={project}
+    />
   );
 };
 
