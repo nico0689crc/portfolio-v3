@@ -42,7 +42,10 @@ ENV NODE_ENV=production
 COPY --chown=node:node --from=development /app/node_modules ./node_modules
 COPY --chown=node:node . .
 
+ARG NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+
 RUN touch .env.production
+RUN echo "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=$NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME" >> .env.production
 RUN cat .env.production
 
 RUN npm run build
