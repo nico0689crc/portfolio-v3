@@ -13,7 +13,6 @@ const ProjectCard = ({ children }: ChildrenType) => (
     size={{ xs: 12, md: 6, lg: 4 }}
     sx={{
       display: 'flex',
-      padding: '1.25rem',
       backgroundColor: 'background.paper',
       transition: 'transform 0.5s, box-shadow 0.5s',
       ':hover': {

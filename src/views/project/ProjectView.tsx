@@ -7,7 +7,8 @@ import themeConfig from '@/configs/themeConfig';
 import Breadcrumbs from '@/components/ui/BreadCrumbs';
 import { getLocalizedUrl } from '@/utils/i18n';
 import routes from '@/configs/routes';
-import Carousel from '@/components/Carousel';
+import Carousel from '@/components/ui/carousel/Carousel';
+import makeSlide from '@/utils/makeSlide';
 
 type ProjectViewProps = DictionaryType & LangParamType & {
   project: ProjectType;
@@ -15,6 +16,15 @@ type ProjectViewProps = DictionaryType & LangParamType & {
 
 const ProjectView = async (props: ProjectViewProps) => {
   const { dictionary, lang, project } = props;
+
+  const slidesContent = await Promise.all(project.image.map(async ({ src, alt }) => {
+    const slide = await makeSlide(src);
+
+    return {
+      ...slide,
+      alt
+    };
+  }));
   
   return (
     <ProjectWrapper>
@@ -33,7 +43,7 @@ const ProjectView = async (props: ProjectViewProps) => {
       />
       <Grid container spacing={10} direction={{ xs: "column", [themeConfig.breakpointToChangeLayout]: "row" }}>
         <Grid size={{ xs: 12, [themeConfig.breakpointToChangeLayout]: 6 }}>
-          <Carousel slides={project.image.map(({src, alt}) => ({src, alt}))} />
+          <Carousel slides={slidesContent} />
         </Grid>
         <Grid size={{ xs: 12, [themeConfig.breakpointToChangeLayout]: 6 }} sx={{ height: "100%" }}>
           <Stack

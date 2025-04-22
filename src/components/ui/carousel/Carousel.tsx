@@ -9,14 +9,13 @@ import {
   styled,
   keyframes,
 } from '@mui/material';
-import Iconify from './ui/Icon';
+import Iconify from '@/components/ui/Icon';
 import { CldImage } from 'next-cloudinary';
-
-type Slide = { src: string; alt?: string };
+import type { CarouselSlide } from '@/types';
+import SlideImage from './SlideImage';
 
 interface Props {
-  slides: Slide[];
-  autoPlayMs?: number;   // opcional: autoplay en ms (p.ej. 5000)
+  slides: CarouselSlide[];
   height?: number;       // alto en px – útil para el layout shift
 }
 
@@ -88,13 +87,9 @@ export default function Carousel({ slides, height = 480 }: Props) {
           {slides.map((slide, i) => (
             i === index && (
               <SlideBox key={i} active direction={dir}>
-                <CldImage
-                  src={slide.src}
-                  alt={slide.alt ?? `slide-${i}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 60vw"
-                  style={{ objectFit: 'cover' }}
-                  priority={i === 0} // sólo la primera tiene prioridad
+                <SlideImage
+                  slide={slide}
+                  sizes="(max-width:768px) 100vw, 60vw"
                 />
               </SlideBox>
             )

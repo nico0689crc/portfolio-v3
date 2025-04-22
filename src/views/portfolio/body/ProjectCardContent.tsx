@@ -44,7 +44,7 @@ const ProjectCardContent = (props: ProjectCardContentProps) => {
           priority
         />
       </LinkMUI>
-      <Stack spacing="1rem" sx={{ flexGrow: 1 }}>
+      <Stack spacing="1rem" sx={{ flexGrow: 1, p: '1.25rem' }}>
         <LinkMUI
           component={Link}
           href={getLocalizedUrl(`${routes.pages.public.portfolio}/${project.slug}`, lang)}

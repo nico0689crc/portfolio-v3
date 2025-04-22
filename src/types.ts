@@ -157,8 +157,13 @@ export type SlugProjectParamPromiseType = {
   params: Promise<{ slug: string }>;
 };
 
-
 export type BreadcrumbLinkType = {
   title: string;
   href?: string;
 }
+
+export type CarouselSlide = { 
+  src: string; 
+  alt?: string;
+  blurDataURL?: string 
+};
