@@ -34,6 +34,7 @@ env:
   API_URL: ${{ vars.API_URL }}
   NEXT_PUBLIC_API_URL: ${{ vars.NEXT_PUBLIC_API_URL }}
   API_URL_EXTERNAL: ${{ vars.API_URL_EXTERNAL }}
+  NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}}
 
 jobs:
   retrieve-environment-variable:
@@ -91,5 +92,6 @@ jobs:
             -e API_URL=${{ env.API_URL }} \
             -e NEXT_PUBLIC_API_URL=${{ env.NEXT_PUBLIC_API_URL }} \
             -e API_URL_EXTERNAL=${{ env.API_URL_EXTERNAL }} \
+            -e NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }} \
             --name ${{ env.DOCKER_CONTAINER_NAME }} \
             ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}

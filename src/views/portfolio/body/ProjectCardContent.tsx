@@ -1,5 +1,7 @@
+'use client'
+
 import React from 'react'; // React imports
-import Image from 'next/image'; // Next.js imports
+import { CldImage } from 'next-cloudinary';
 import Link from 'next/link'; // Next.js imports
 
 // Material-UI imports
@@ -24,7 +26,7 @@ const ProjectCardContent = (props: ProjectCardContentProps) => {
 
   return (
     <>
-      <Image
+      <CldImage
         src={project.image[0].src}
         alt={project.information[lang].title}
         width={500}

@@ -3,7 +3,6 @@ import ProjectWrapper from './ProjectWrapper';
 import ProjectHeader from './header/ProjectHeader';
 import ProjectBody from './body/ProjectBody';
 import { Grid, Stack } from '@mui/material';
-import { ProjectCarousel } from './body/ProjectCarousel';
 import themeConfig from '@/configs/themeConfig';
 import Breadcrumbs from '@/components/ui/BreadCrumbs';
 import { getLocalizedUrl } from '@/utils/i18n';
@@ -33,7 +32,7 @@ const ProjectView = async (props: ProjectViewProps) => {
       />
       <Grid container spacing={10} direction={{ xs: "column", [themeConfig.breakpointToChangeLayout]: "row" }}>
         <Grid size={{ xs: 12, [themeConfig.breakpointToChangeLayout]: 6 }}>
-          <ProjectCarousel images={project.image.map(ima => ima.src)} />
+          {/* <ProjectCarousel images={project.image.map(ima => ima.src)} /> */}
         </Grid>
         <Grid size={{ xs: 12, [themeConfig.breakpointToChangeLayout]: 6 }} sx={{ height: "100%" }}>
           <Stack
