@@ -23,19 +23,19 @@ export const portfolio: ProjectType[] = [
     website: "https://quizgrad.nicolasfernandez.tech",
     image: [
       {
-        src: "/images/projects/quizz_grad/image_1.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/quizz_grad/gdyjryty7o2bkj9tmfmm",
         alt: "QuizGrad Game 1",
       },
       {
-        src: "/images/projects/quizz_grad/image_2.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/quizz_grad/sy79zhvv8pmvwrr488dv",
         alt: "QuizGrad Game 2",
       },
       {
-        src: "/images/projects/quizz_grad/image_3.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/quizz_grad/jt8kr45ebf75ne7a1i68",
         alt: "QuizGrad Game 3",
       },
       {
-        src: "/images/projects/quizz_grad/image_4.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/quizz_grad/kthpiqkfggttoibpjwzh",
         alt: "QuizGrad Game 4",
       },
     ],
@@ -62,27 +62,27 @@ export const portfolio: ProjectType[] = [
     website: "https://kanban.nicolasfernandez.tech",
     image: [
       {
-        src: "/images/projects/kanban/image_1.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/kanban/uiarnlbf41abzzdbrfiv",
         alt: "Kanban Dashboard 1",
       },
       {
-        src: "/images/projects/kanban/image_2.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/kanban/mynmezazceomtikwh1by",
         alt: "Kanban Dashboard 2",
       },
       {
-        src: "/images/projects/kanban/image_3.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/kanban/vmchkbpjfdbiloa79tzv",
         alt: "Kanban Dashboard 3",
       },
       {
-        src: "/images/projects/kanban/image_4.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/kanban/ywselos3r67rwrpc8x55",
         alt: "Kanban Dashboard 4",
       },
       {
-        src: "/images/projects/kanban/image_5.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/kanban/xv3pul5habauw2eafpmz",
         alt: "Kanban Dashboard 5",
       },
       {
-        src: "/images/projects/kanban/image_6.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/kanban/nsjnjeqshiu5u8p8qg5e",
         alt: "Kanban Dashboard 6",
       },
     ],
@@ -109,23 +109,23 @@ export const portfolio: ProjectType[] = [
     website: "https://nicolasfernandez.tech",
     image: [
       {
-        src: "/images/projects/portfolio/image_1.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/portfolio/tvf8g8ldlaaghbg3ub7f",
         alt: "Portfolio 1",
       },
       {
-        src: "/images/projects/portfolio/image_2.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/portfolio/uujzysy3k6eixqpxs6ok",
         alt: "Portfolio 2",
       },
       {
-        src: "/images/projects/portfolio/image_3.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/portfolio/p5pfsfs1djfvd4a4ugmc",
         alt: "Portfolio 3",
       },
       {
-        src: "/images/projects/portfolio/image_4.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/portfolio/p6pimxyqs88hdxdx4ipl",
         alt: "Portfolio 4",
       },
       {
-        src: "/images/projects/portfolio/image_5.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/portfolio/ovf2f1qwirrhrp7kes7r",
         alt: "Portfolio 5",
       },
     ],
@@ -153,27 +153,27 @@ export const portfolio: ProjectType[] = [
     website: "https://nico0689crc.github.io/web-development-essentials-skill-assessment",
     image: [
       {
-        src: "/images/projects/fremantle_library/image_1.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/fremantle_library/lidhhhsiqtzvxli8mjx2",
         alt: "Fremantle City Library 1",
       },
       {
-        src: "/images/projects/fremantle_library/image_2.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/fremantle_library/jhscbt4yafik3ymfidve",
         alt: "Fremantle City Library 2",
       },
       {
-        src: "/images/projects/fremantle_library/image_3.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/fremantle_library/svplgtrdilnkqq9vz7le",
         alt: "Fremantle City Library 3",
       },
       {
-        src: "/images/projects/fremantle_library/image_4.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/fremantle_library/mtinx7iorc6ffkjmzlua",
         alt: "Fremantle City Library 4",
       },
       {
-        src: "/images/projects/fremantle_library/image_5.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/fremantle_library/i43pxuzattbgnfsxxh56",
         alt: "Fremantle City Library 5",
       },
       {
-        src: "/images/projects/fremantle_library/image_6.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/fremantle_library/zpbjsrskyp3a3vlj1ggl",
         alt: "Fremantle City Library 6",
       },
     ],
@@ -204,23 +204,23 @@ export const portfolio: ProjectType[] = [
     website: "https://tareas.nicolasfernandez.tech",
     image: [
       {
-        src: "/images/projects/tasks_app/image_1.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/tasks_app/nm9xseblekzvgsejly61",
         alt: "Tasks App 1",
       },
       {
-        src: "/images/projects/tasks_app/image_2.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/tasks_app/kvhfy4gchaqtr1rlkpz1",
         alt: "Tasks App 2",
       },
       {
-        src: "/images/projects/tasks_app/image_3.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/tasks_app/ia7dpnfa9rgiynn2vl5b",
         alt: "Tasks App 3",
       },
       {
-        src: "/images/projects/tasks_app/image_4.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/tasks_app/cc07kkmbso5lhow1sil9",
         alt: "Tasks App 4",
       },
       {
-        src: "/images/projects/tasks_app/image_5.jpg",
+        src: "https://res.cloudinary.com/nico0689crc/image/upload/f_auto,q_auto/v1/portfolio/projects/tasks_app/ezjvk3d942wqiliihi25",
         alt: "Tasks App 5",
       },
     ],
