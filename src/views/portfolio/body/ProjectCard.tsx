@@ -15,7 +15,6 @@ const ProjectCard = ({ children }: ChildrenType) => (
       display: 'flex',
       padding: '1.25rem',
       backgroundColor: 'background.paper',
-      borderRadius: '8px',
       transition: 'transform 0.5s, box-shadow 0.5s',
       ':hover': {
         transform: 'scale(1.005)',

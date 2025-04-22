@@ -26,20 +26,24 @@ const ProjectCardContent = (props: ProjectCardContentProps) => {
 
   return (
     <>
-      <CldImage
-        src={project.image[0].src}
-        alt={project.information[lang].title}
-        width={500}
-        height={300}
-        style={{
-          borderRadius: '10px',
-          objectFit: 'cover',
-          width: '100%',
-          minHeight: '300px',
-          marginBottom: '1rem',
-        }}
-        priority
-      />
+      <LinkMUI
+        component={Link}
+        href={getLocalizedUrl(`${routes.pages.public.portfolio}/${project.slug}`, lang)}
+      >
+        <CldImage
+          src={project.image[0].src}
+          alt={project.information[lang].title}
+          width={500}
+          height={300}
+          style={{
+            objectFit: 'cover',
+            width: '100%',
+            minHeight: '300px',
+            marginBottom: '1rem',
+          }}
+          priority
+        />
+      </LinkMUI>
       <Stack spacing="1rem" sx={{ flexGrow: 1 }}>
         <LinkMUI
           component={Link}
