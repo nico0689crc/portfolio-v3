@@ -23,19 +23,19 @@ export const portfolio: ProjectType[] = [
     website: "https://quizgrad.nicolasfernandez.tech",
     image: [
       {
-        src: "/images/projects/quizz_grad/image_1.png",
+        src: "/images/projects/quizz_grad/image_1.jpg",
         alt: "QuizGrad Game 1",
       },
       {
-        src: "/images/projects/quizz_grad/image_2.png",
+        src: "/images/projects/quizz_grad/image_2.jpg",
         alt: "QuizGrad Game 2",
       },
       {
-        src: "/images/projects/quizz_grad/image_3.png",
+        src: "/images/projects/quizz_grad/image_3.jpg",
         alt: "QuizGrad Game 3",
       },
       {
-        src: "/images/projects/quizz_grad/image_4.png",
+        src: "/images/projects/quizz_grad/image_4.jpg",
         alt: "QuizGrad Game 4",
       },
     ],
@@ -62,27 +62,27 @@ export const portfolio: ProjectType[] = [
     website: "https://kanban.nicolasfernandez.tech",
     image: [
       {
-        src: "/images/projects/kanban/image_1.png",
+        src: "/images/projects/kanban/image_1.jpg",
         alt: "Kanban Dashboard 1",
       },
       {
-        src: "/images/projects/kanban/image_2.png",
+        src: "/images/projects/kanban/image_2.jpg",
         alt: "Kanban Dashboard 2",
       },
       {
-        src: "/images/projects/kanban/image_3.png",
+        src: "/images/projects/kanban/image_3.jpg",
         alt: "Kanban Dashboard 3",
       },
       {
-        src: "/images/projects/kanban/image_4.png",
+        src: "/images/projects/kanban/image_4.jpg",
         alt: "Kanban Dashboard 4",
       },
       {
-        src: "/images/projects/kanban/image_5.png",
+        src: "/images/projects/kanban/image_5.jpg",
         alt: "Kanban Dashboard 5",
       },
       {
-        src: "/images/projects/kanban/image_6.png",
+        src: "/images/projects/kanban/image_6.jpg",
         alt: "Kanban Dashboard 6",
       },
     ],
@@ -109,23 +109,23 @@ export const portfolio: ProjectType[] = [
     website: "https://nicolasfernandez.tech",
     image: [
       {
-        src: "/images/projects/portfolio/image_1.png",
+        src: "/images/projects/portfolio/image_1.jpg",
         alt: "Portfolio 1",
       },
       {
-        src: "/images/projects/portfolio/image_2.png",
+        src: "/images/projects/portfolio/image_2.jpg",
         alt: "Portfolio 2",
       },
       {
-        src: "/images/projects/portfolio/image_3.png",
+        src: "/images/projects/portfolio/image_3.jpg",
         alt: "Portfolio 3",
       },
       {
-        src: "/images/projects/portfolio/image_4.png",
+        src: "/images/projects/portfolio/image_4.jpg",
         alt: "Portfolio 4",
       },
       {
-        src: "/images/projects/portfolio/image_5.png",
+        src: "/images/projects/portfolio/image_5.jpg",
         alt: "Portfolio 5",
       },
     ],
@@ -153,27 +153,27 @@ export const portfolio: ProjectType[] = [
     website: "https://nico0689crc.github.io/web-development-essentials-skill-assessment",
     image: [
       {
-        src: "/images/projects/fremantle_library/image_1.png",
+        src: "/images/projects/fremantle_library/image_1.jpg",
         alt: "Fremantle City Library 1",
       },
       {
-        src: "/images/projects/fremantle_library/image_2.png",
+        src: "/images/projects/fremantle_library/image_2.jpg",
         alt: "Fremantle City Library 2",
       },
       {
-        src: "/images/projects/fremantle_library/image_3.png",
+        src: "/images/projects/fremantle_library/image_3.jpg",
         alt: "Fremantle City Library 3",
       },
       {
-        src: "/images/projects/fremantle_library/image_4.png",
+        src: "/images/projects/fremantle_library/image_4.jpg",
         alt: "Fremantle City Library 4",
       },
       {
-        src: "/images/projects/fremantle_library/image_5.png",
+        src: "/images/projects/fremantle_library/image_5.jpg",
         alt: "Fremantle City Library 5",
       },
       {
-        src: "/images/projects/fremantle_library/image_6.png",
+        src: "/images/projects/fremantle_library/image_6.jpg",
         alt: "Fremantle City Library 6",
       },
     ],
@@ -204,23 +204,23 @@ export const portfolio: ProjectType[] = [
     website: "https://tareas.nicolasfernandez.tech",
     image: [
       {
-        src: "/images/projects/tasks_app/image_1.png",
+        src: "/images/projects/tasks_app/image_1.jpg",
         alt: "Tasks App 1",
       },
       {
-        src: "/images/projects/tasks_app/image_2.png",
+        src: "/images/projects/tasks_app/image_2.jpg",
         alt: "Tasks App 2",
       },
       {
-        src: "/images/projects/tasks_app/image_3.png",
+        src: "/images/projects/tasks_app/image_3.jpg",
         alt: "Tasks App 3",
       },
       {
-        src: "/images/projects/tasks_app/image_4.png",
+        src: "/images/projects/tasks_app/image_4.jpg",
         alt: "Tasks App 4",
       },
       {
-        src: "/images/projects/tasks_app/image_5.png",
+        src: "/images/projects/tasks_app/image_5.jpg",
         alt: "Tasks App 5",
       },
     ],

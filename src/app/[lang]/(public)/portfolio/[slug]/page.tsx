@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
           width: 1200,
           height: 630,
           alt: project?.information[lang].title,
-          type: 'image/png',
+          type: 'image/jpg',
         },
       ],
       locale: 'en-US',
