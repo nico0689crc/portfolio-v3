@@ -1,12 +1,12 @@
 // External libraries
-import { Stack } from "@mui/material";
+import { Stack } from '@mui/material';
 
 // Components
-import Iconify from "@/components/ui/Icon";
+import Iconify from '@/components/ui/Icon';
 
 // Types
-import type { ProjectType } from "@/types";
-import IconButton from "@/components/ui/IconButton";
+import type { ProjectType } from '@/types';
+import IconButton from '@/components/ui/IconButton';
 
 type ProjectCardActionsProps = {
   project: ProjectType;

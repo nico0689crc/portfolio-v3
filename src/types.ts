@@ -135,8 +135,8 @@ export type ProjectType = {
     [key in Locale]: {
       title: string;
       description: string;
-    }
-  }
+    };
+  };
   tags: string[];
   github: {
     name: string;
@@ -160,10 +160,10 @@ export type SlugProjectParamPromiseType = {
 export type BreadcrumbLinkType = {
   title: string;
   href?: string;
-}
+};
 
-export type CarouselSlide = { 
-  src: string; 
+export type CarouselSlide = {
+  src: string;
   alt?: string;
-  blurDataURL?: string 
+  blurDataURL?: string;
 };

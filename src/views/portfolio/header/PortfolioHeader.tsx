@@ -35,7 +35,6 @@ const PortfolioHeaderDescription = ({ description }: { description: string }) =>
   </Typography>
 );
 
-
 // Main Component: PortfolioHeader
 const PortfolioHeader = ({ dictionary }: DictionaryType) => (
   <Box

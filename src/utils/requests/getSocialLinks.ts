@@ -1,9 +1,9 @@
-import fetcher from './fetcher';
-import { apiRoutes } from '@/configs/routes';
+import { socialLinks } from '@/data/social-links';
+import type { PublicSocialLinkType } from '@/types';
 
-const getSocialLinks = async () => {
+const getSocialLinks = (): PublicSocialLinkType[] => {
   try {
-    return await fetcher(`${process.env.API_URL}/${apiRoutes.socialLinks}`);
+    return socialLinks;
   } catch (error) {
     console.error('Failed to fetch social links:', error);
     throw error;

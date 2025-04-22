@@ -9,7 +9,7 @@ import HomeView from '@/views/home/HomeView';
 
 export async function generateMetadata(props: LangParamPromiseType) {
   const params = await props.params;
-  const metadata = await getMetadata('home');
+  const metadata = getMetadata('home');
 
   return metadata[params.lang];
 }

@@ -1,20 +1,10 @@
-import { CldImage } from 'next-cloudinary'
-import {
-  Box,
-  Skeleton,
-  CircularProgress,
-} from '@mui/material'
-import type { CarouselSlide } from '@/types'
-import { useState } from 'react'
+import { CldImage } from 'next-cloudinary';
+import { Box, Skeleton, CircularProgress } from '@mui/material';
+import type { CarouselSlide } from '@/types';
+import { useState } from 'react';
 
-function SlideImage({
-  slide,
-  sizes,
-}: {
-  slide: CarouselSlide
-  sizes: string
-}) {
-  const [loaded, setLoaded] = useState(false)
+function SlideImage({ slide, sizes }: { slide: CarouselSlide; sizes: string }) {
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
@@ -54,7 +44,7 @@ function SlideImage({
         onLoad={() => setLoaded(true)}
       />
     </Box>
-  )
+  );
 }
 
-export default SlideImage
+export default SlideImage;

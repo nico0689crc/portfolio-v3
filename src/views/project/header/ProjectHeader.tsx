@@ -31,17 +31,22 @@ const ProjectHeaderSubtitle = ({ subtitle }: { subtitle: string }) => (
 
 // Component: ProjectHeaderDescription
 const ProjectHeaderDescription = ({ description }: { description: string }) => (
-  <Typography variant="body1" sx={{ textAlign: { xs: 'center', [themeConfig.breakpointToChangeLayout]: "left" } }} className="resume-header__description">
+  <Typography
+    variant="body1"
+    sx={{ textAlign: { xs: 'center', [themeConfig.breakpointToChangeLayout]: 'left' } }}
+    className="resume-header__description"
+  >
     {description}
   </Typography>
 );
 
-type ProjectHeaderProps = DictionaryType & LangParamType & {
-  project: ProjectType;
-}
+type ProjectHeaderProps = DictionaryType &
+  LangParamType & {
+    project: ProjectType;
+  };
 
 // Main Component: ProjectHeader
-const ProjectHeader = ({ project, dictionary, lang }: ProjectHeaderProps ) => (
+const ProjectHeader = ({ project, dictionary, lang }: ProjectHeaderProps) => (
   <Box
     component="header"
     className="resume-header"

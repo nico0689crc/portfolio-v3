@@ -1,25 +1,25 @@
 // Types
-import { portfolio } from '@/app/api/(data)/pages/portfolio/data';
 import { i18n, type Locale } from '@/configs/i18n';
 
 // Utilities
 import { getDictionary } from '@/utils/getDictionary';
+import getPortfolio from '@/utils/requests/getPortfolio';
 import getProject from '@/utils/requests/getProject';
 import ProjectView from '@/views/project/ProjectView';
 import type { Metadata } from 'next';
 
 type ProjectPageProps = {
-  params: Promise<{ 
+  params: Promise<{
     lang: Locale;
     slug: string;
   }>;
-}
+};
 
 // // Page Metadata
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { lang, slug } = await params;
-  
-  const project = portfolio.find(_project => _project.slug === slug);
+
+  const project = getProject(slug);
 
   return {
     metadataBase: new URL('https://nicolasfernandez.tech'),
@@ -63,28 +63,24 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   };
 }
 
-export const generateStaticParams = async () => (
-  portfolio.flatMap(product =>
-    i18n.locales.map(lang => ({
+export const generateStaticParams = async () => {
+  const portfolio = getPortfolio();
+
+  return portfolio.flatMap((product) =>
+    i18n.locales.map((lang) => ({
       lang,
       slug: product.slug,
     }))
-  )
-)
+  );
+};
 
 // Page Component
 const ProjectPage = async (props: ProjectPageProps) => {
   const params = await props.params;
   const dictionary = await getDictionary(params.lang);
-  const project = await getProject(params.slug);
+  const project = getProject(params.slug);
 
-  return (
-    <ProjectView
-      dictionary={dictionary}
-      lang={params.lang}
-      project={project}
-    />
-  );
+  return <ProjectView dictionary={dictionary} lang={params.lang} project={project} />;
 };
 
 export default ProjectPage;

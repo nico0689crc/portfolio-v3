@@ -1,30 +1,30 @@
 // Types
-import type { DictionaryType, LangParamType } from "@/types"
+import type { DictionaryType, LangParamType } from '@/types';
 
 // Configs
-import routes from "@/configs/routes"
+import routes from '@/configs/routes';
 
 // Utils
-import { getLocalizedUrl } from "@/utils/i18n"
+import { getLocalizedUrl } from '@/utils/i18n';
 
 // Components
-import Illustrations from "@/components/Illustrations"
-import ContainerCommon from "@/components/layouts/public/common/ContainerCommon"
+import Illustrations from '@/components/Illustrations';
+import ContainerCommon from '@/components/layouts/public/common/ContainerCommon';
 
 // Types
-type WorkInProgressViewProps = DictionaryType & LangParamType
+type WorkInProgressViewProps = DictionaryType & LangParamType;
 
 const WorkInProgressView = ({ dictionary, lang }: WorkInProgressViewProps) => (
   <ContainerCommon
     sx={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
       flexGrow: 1,
       flexShrink: 1,
-      flexBasis: "auto",
-      height: "100%",
+      flexBasis: 'auto',
+      height: '100%',
       gap: 10,
     }}
   >
@@ -37,6 +37,6 @@ const WorkInProgressView = ({ dictionary, lang }: WorkInProgressViewProps) => (
       hrefText={dictionary.pages.work_in_progress.go_home}
     />
   </ContainerCommon>
-)
+);
 
-export default WorkInProgressView
+export default WorkInProgressView;

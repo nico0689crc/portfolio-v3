@@ -1,15 +1,11 @@
 // Configs
-import { apiRoutes } from '@/configs/routes';
+import { faq } from '@/data/pages/home/faq/data';
 
-// Utils
-import fetcher from './fetcher';
 import type { FAQListType } from '@/types';
 
-const getFaq = async () => {
+const getFaq = (): FAQListType => {
   try {
-    const data: FAQListType = await fetcher(`${process.env.API_URL}/${apiRoutes.pages.home.faq}`);
-
-    return data;
+    return faq;
   } catch (error) {
     console.error('Error fetching default metadata:', error);
     throw error;

@@ -1,17 +1,9 @@
-// Configs
-import { apiRoutes } from '@/configs/routes';
-
-// Utils
-import fetcher from './fetcher';
 import type { GroupedSkills } from '@/types';
+import { groupedSkills } from '@/data/pages/about-me/skills/data';
 
-const getSkills = async (): Promise<GroupedSkills> => {
+const getSkills = (): GroupedSkills => {
   try {
-    const data: GroupedSkills = await fetcher(
-      `${process.env.API_URL}/${apiRoutes.pages.aboutMe.skills}`
-    );
-
-    return data;
+    return groupedSkills;
   } catch (error) {
     console.error('Error fetching default metadata:', error);
     throw error;

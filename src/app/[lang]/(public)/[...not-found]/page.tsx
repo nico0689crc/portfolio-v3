@@ -15,12 +15,7 @@ const NotFound = async ({ params }: NotFoundPageProps) => {
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
-  return (
-    <NotFoundView 
-      dictionary={dictionary}
-      lang={lang} 
-    />
-  );
+  return <NotFoundView dictionary={dictionary} lang={lang} />;
 };
 
 export default NotFound;

@@ -21,9 +21,7 @@ const ProjectCard = ({ children }: ChildrenType) => (
       },
     }}
   >
-    <Stack>
-      {children}
-    </Stack>
+    <Stack>{children}</Stack>
   </Grid>
 );
 

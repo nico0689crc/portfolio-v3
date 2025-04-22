@@ -9,9 +9,10 @@ import ProjectCardContent from './ProjectCardContent';
 import type { DictionaryType, LangParamType, ProjectType } from '@/types';
 
 // Props Type
-type PortfolioBodyProps = DictionaryType &  LangParamType & {
-  data: ProjectType[];
-};
+type PortfolioBodyProps = DictionaryType &
+  LangParamType & {
+    data: ProjectType[];
+  };
 
 // Main Component
 const PortfolioBody = (props: PortfolioBodyProps) => {

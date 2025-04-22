@@ -1,30 +1,30 @@
 // Types
-import type { DictionaryType, LangParamType } from "@/types"
+import type { DictionaryType, LangParamType } from '@/types';
 
 // Configs
-import routes from "@/configs/routes"
+import routes from '@/configs/routes';
 
 // Utils
-import { getLocalizedUrl } from "@/utils/i18n"
+import { getLocalizedUrl } from '@/utils/i18n';
 
 // Components
-import Illustrations from "@/components/Illustrations"
-import ContainerCommon from "@/components/layouts/public/common/ContainerCommon"
+import Illustrations from '@/components/Illustrations';
+import ContainerCommon from '@/components/layouts/public/common/ContainerCommon';
 
 // Types
-type NotFoundViewProps = DictionaryType & LangParamType
+type NotFoundViewProps = DictionaryType & LangParamType;
 
 const NotFoundView = ({ dictionary, lang }: NotFoundViewProps) => (
   <ContainerCommon
     sx={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
       flexGrow: 1,
       flexShrink: 1,
-      flexBasis: "auto",
-      height: "100%",
+      flexBasis: 'auto',
+      height: '100%',
       gap: 10,
     }}
   >
@@ -37,6 +37,6 @@ const NotFoundView = ({ dictionary, lang }: NotFoundViewProps) => (
       hrefText={dictionary.pages.not_found.go_home}
     />
   </ContainerCommon>
-)
+);
 
-export default NotFoundView
+export default NotFoundView;

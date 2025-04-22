@@ -10,7 +10,7 @@ import ResumeView from '@/views/resume/ResumeView';
 // Page Metadata
 export async function generateMetadata(props: LangParamPromiseType) {
   const params = await props.params;
-  const metadata = await getMetadata('resume');
+  const metadata = getMetadata('resume');
 
   return metadata[params.lang];
 }

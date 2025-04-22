@@ -1,15 +1,12 @@
 // Configs
-import { apiRoutes } from '@/configs/routes';
+import { resume } from '@/data/pages/resume/data';
 
 // Utils
-import fetcher from './fetcher';
 import type { ResumeType } from '@/types';
 
-const getResume = async () => {
+const getResume = (): ResumeType => {
   try {
-    const data: ResumeType = await fetcher(`${process.env.API_URL}/${apiRoutes.pages.resume.root}`);
-
-    return data;
+    return resume;
   } catch (error) {
     console.error('Error fetching default metadata:', error);
     throw error;

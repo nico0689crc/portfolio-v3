@@ -32,16 +32,11 @@ const Illustrations = (props: IllustrationsProps) => {
       <Typography variant="subtitle1" component="p" gutterBottom sx={{ textAlign: 'center' }}>
         {description}
       </Typography>
-      <Stack
-        direction="row"
-        spacing={2}
-        justifyContent="center"
-        alignItems="center"
-      >
+      <Stack direction="row" spacing={2} justifyContent="center" alignItems="center">
         <Button
-          component={Link} 
-          href={href} 
-          rel="noopener noreferrer" 
+          component={Link}
+          href={href}
+          rel="noopener noreferrer"
           variant="contained"
           color="primary"
         >

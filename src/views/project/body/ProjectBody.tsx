@@ -12,9 +12,10 @@ import IconButton from '@/components/ui/IconButton';
 import type { DictionaryType, LangParamType, ProjectType } from '@/types';
 
 // Props Type
-type ProjectBodyProps = DictionaryType & LangParamType & {
-  project: ProjectType;
-};
+type ProjectBodyProps = DictionaryType &
+  LangParamType & {
+    project: ProjectType;
+  };
 
 // Main Component
 const ProjectBody = (props: ProjectBodyProps) => {
@@ -34,13 +35,7 @@ const ProjectBody = (props: ProjectBodyProps) => {
           }}
         >
           {project.tags.map((tag, index) => (
-            <Chip
-              key={`tag-${index}`}
-              variant="filled"
-              color="primary"
-              size="small"
-              label={tag}
-            />
+            <Chip key={`tag-${index}`} variant="filled" color="primary" size="small" label={tag} />
           ))}
         </Stack>
       )}

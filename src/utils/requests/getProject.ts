@@ -1,13 +1,17 @@
 // Configs
-import { apiRoutes } from '@/configs/routes';
+import { portfolio } from '@/data/pages/portfolio/data';
 
 // Utils
-import fetcher from './fetcher';
 import type { ProjectType } from '@/types';
+import { notFound } from 'next/navigation';
 
-const getProject = async (slug: string): Promise<ProjectType> => {
+const getProject = (slug: string): ProjectType => {
   try {
-    const data: ProjectType = await fetcher(`${process.env.API_URL}/${apiRoutes.pages.portfolio.root}/${slug}`);
+    const data = portfolio.find((project) => project.slug === slug);
+
+    if (!data) {
+      notFound();
+    }
 
     return data;
   } catch (error) {

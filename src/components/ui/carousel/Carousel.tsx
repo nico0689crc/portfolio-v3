@@ -1,14 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import {
-  Box,
-  Stack,
-  IconButton,
-  useTheme,
-  styled,
-  keyframes,
-} from '@mui/material';
+import { Box, Stack, IconButton, useTheme, styled, keyframes } from '@mui/material';
 import Iconify from '@/components/ui/Icon';
 import { CldImage } from 'next-cloudinary';
 import type { CarouselSlide } from '@/types';
@@ -16,7 +9,7 @@ import SlideImage from './SlideImage';
 
 interface Props {
   slides: CarouselSlide[];
-  height?: number;       // alto en px – útil para el layout shift
+  height?: number; // alto en px – útil para el layout shift
 }
 
 const slideIn = keyframes`
@@ -64,13 +57,13 @@ export default function Carousel({ slides, height = 480 }: Props) {
   };
 
   return (
-    <Box 
-      width="100%" 
+    <Box
+      width="100%"
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        gap: 5, 
-        userSelect: 'none' 
+        gap: 5,
+        userSelect: 'none',
       }}
     >
       {/* carrusel principal */}
@@ -84,16 +77,14 @@ export default function Carousel({ slides, height = 480 }: Props) {
         }}
       >
         <Track>
-          {slides.map((slide, i) => (
-            i === index && (
-              <SlideBox key={i} active direction={dir}>
-                <SlideImage
-                  slide={slide}
-                  sizes="(max-width:768px) 100vw, 60vw"
-                />
-              </SlideBox>
-            )
-          ))}
+          {slides.map(
+            (slide, i) =>
+              i === index && (
+                <SlideBox key={i} active direction={dir}>
+                  <SlideImage slide={slide} sizes="(max-width:768px) 100vw, 60vw" />
+                </SlideBox>
+              )
+          )}
         </Track>
 
         {/* controles */}

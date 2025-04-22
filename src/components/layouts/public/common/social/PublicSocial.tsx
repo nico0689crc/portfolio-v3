@@ -14,8 +14,8 @@ type PublicSocialProps = LinkProps & {
   lang: Locale;
 };
 
-const PublicSocial = async ({ lang, sx }: PublicSocialProps) => {
-  const socialLinks: PublicSocialLinkType[] = await getSocialLinks();
+const PublicSocial = ({ lang, sx }: PublicSocialProps) => {
+  const socialLinks: PublicSocialLinkType[] = getSocialLinks();
 
   return (
     <PublicSocialWrapper>

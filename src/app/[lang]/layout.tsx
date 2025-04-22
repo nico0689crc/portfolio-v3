@@ -21,14 +21,12 @@ import BackToTopButton from '@/components/ui/BackToTopButton';
 
 export async function generateMetadata(props: LangParamPromiseType) {
   const params = await props.params;
-  const metadata = await getMetadata('default');
+  const metadata = getMetadata('default');
 
   return metadata[params.lang];
 }
 
 const RootLayout = async (props: ChildrenType & LangParamPromiseType) => {
-
-
   const params = await props.params;
   const { children } = props;
 
@@ -43,7 +41,7 @@ const RootLayout = async (props: ChildrenType & LangParamPromiseType) => {
         <body>
           <Providers>
             <InitColorSchemeScript attribute="data" defaultMode={systemMode} />
-              {children}
+            {children}
             <BackToTopButton />
           </Providers>
         </body>

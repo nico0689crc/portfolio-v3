@@ -1,15 +1,12 @@
 // Configs
-import { apiRoutes } from '@/configs/routes';
+import { portfolio } from '@/data/pages/portfolio/data';
 
 // Utils
-import fetcher from './fetcher';
 import type { ProjectType } from '@/types';
 
-const getPortfolio = async (): Promise<ProjectType[]> => {
+const getPortfolio = (): ProjectType[] => {
   try {
-    const data: ProjectType[] = await fetcher(`${process.env.API_URL}/${apiRoutes.pages.portfolio.root}`);
-
-    return data;
+    return portfolio;
   } catch (error) {
     console.error('Error fetching default metadata:', error);
     throw error;

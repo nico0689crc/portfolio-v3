@@ -2,25 +2,13 @@
 import type { Locale } from '@/configs/i18n';
 import type { Metadata } from 'next';
 
-// Configs
-import { apiRoutes } from '@/configs/routes';
+import metadatas from '@/data/pages/metadatas';
 
-// Utils
-import fetcher from './fetcher';
+type PageType = 'default' | 'home' | 'aboutMe' | 'resume' | 'portfolio' | 'contact';
 
-type PageType = keyof typeof apiRoutes.pages;
-
-const getMetadata = async (page: PageType) => {
+const getMetadata = (page: PageType): { [key in Locale]: Metadata } => {
   try {
-    const pageRoute = apiRoutes.pages[page];
-    if (!pageRoute) {
-      throw new Error(`Page route for "${page}" does not exist.`);
-    }
-    const data: { [key in Locale]: Metadata } = await fetcher(
-      `${process.env.API_URL}/${pageRoute.metadata}`
-    );
-
-    return data;
+    return metadatas[page];
   } catch (error) {
     console.error('Error fetching default metadata:', error);
     throw error;

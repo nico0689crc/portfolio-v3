@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react'; // React imports
 import { CldImage } from 'next-cloudinary';
@@ -17,9 +17,10 @@ import type { DictionaryType, LangParamType, ProjectType } from '@/types';
 import { getLocalizedUrl } from '@/utils/i18n';
 import routes from '@/configs/routes';
 
-type ProjectCardContentProps = LangParamType & DictionaryType & {
-  project: ProjectType;
-};
+type ProjectCardContentProps = LangParamType &
+  DictionaryType & {
+    project: ProjectType;
+  };
 
 const ProjectCardContent = (props: ProjectCardContentProps) => {
   const { project, lang, dictionary } = props;
@@ -106,7 +107,7 @@ const ProjectCardContent = (props: ProjectCardContentProps) => {
           </Stack>
         )}
         <LinkMUI
-          variant='button'
+          variant="button"
           component={Link}
           href={getLocalizedUrl(`${routes.pages.public.portfolio}/${project.slug}`, lang)}
           className="MuiLink-with-hover-effect"

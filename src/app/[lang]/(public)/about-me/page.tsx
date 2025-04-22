@@ -12,7 +12,7 @@ import AboutMeView from '@/views/about-me/AboutMeView';
 // Page Metadata
 export async function generateMetadata(props: LangParamPromiseType) {
   const params = await props.params;
-  const metadata = await getMetadata('aboutMe');
+  const metadata = getMetadata('aboutMe');
 
   return metadata[params.lang];
 }
