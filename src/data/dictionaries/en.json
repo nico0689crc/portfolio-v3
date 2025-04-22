@@ -58,7 +58,15 @@
       "title": "Project"
     },
     "contact": {
-      "title": "Contact"
+      "title": "Contact",
+      "sub_title": "Let's get in touch",
+      "body": "If you have any questions, comments, or would like to discuss a potential project, feel free to reach out. I am always open to new opportunities and collaborations. You can contact me through the form below or via my social media channels.",
+      "form": {
+        "email": "Email me",
+        "linkedin": "Contact me on LinkedIn",
+        "github": "Check out my GitHub",
+        "zoom_google": "Book a Zoom or Google meeting"
+      }
     },
     "not_found": {
       "title": "Oops! Page Not Found",

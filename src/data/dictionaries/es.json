@@ -58,7 +58,15 @@
       "title": "Proyecto"
     },
     "contact": {
-      "title": "Contacto"
+      "title": "Contacto",
+      "sub_title": "Pongámonos en contacto",
+      "body": "Si tienes alguna pregunta, comentario o te gustaría discutir un proyecto potencial, no dudes en comunicarte. Siempre estoy abierto a nuevas oportunidades y colaboraciones. Puedes contactarme a través del formulario a continuación o mediante mis redes sociales.",
+      "form": {
+        "email": "Envíame un correo",
+        "linkedin": "Contáctame en LinkedIn",
+        "github": "Visita mi GitHub",
+        "zoom_google": "Agenda una reunión por Zoom o Google"
+      }
     },
     "not_found": {
       "title": "¡Oops! Página No Encontrada",

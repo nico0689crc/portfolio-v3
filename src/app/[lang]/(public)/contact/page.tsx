@@ -5,6 +5,7 @@ import type { LangParamPromiseType } from '@/types';
 // Utilities
 import { getDictionary } from '@/utils/getDictionary';
 import getMetadata from '@/utils/requests/getMetadata';
+import ContactView from '@/views/contact/ContactView';
 import WorkInProgressView from '@/views/work-in-progress/WorkInProgressView';
 
 // Page Metadata
@@ -21,7 +22,7 @@ const ContactPage = async (props: { params: Promise<{ lang: Locale }> }) => {
   const dictionary = await getDictionary(params.lang);
 
   return (
-    <WorkInProgressView
+    <ContactView
       dictionary={dictionary}
       lang={params.lang}
     />

@@ -56,7 +56,7 @@ const ProjectCardContent = (props: ProjectCardContentProps) => {
           }}
         >
           <Typography
-            variant="subtitle1"
+            variant="h5"
             component="h1"
             color="text.primary"
             fontWeight={500}
@@ -106,6 +106,7 @@ const ProjectCardContent = (props: ProjectCardContentProps) => {
           </Stack>
         )}
         <LinkMUI
+          variant='button'
           component={Link}
           href={getLocalizedUrl(`${routes.pages.public.portfolio}/${project.slug}`, lang)}
           className="MuiLink-with-hover-effect"
