@@ -43,9 +43,13 @@ COPY --chown=node:node --from=development /app/node_modules ./node_modules
 COPY --chown=node:node . .
 
 ARG NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+ARG NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
+ARG NEXT_PUBLIC_API_URL
 
 RUN touch .env.production
 RUN echo "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=$NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME" >> .env.production
+RUN echo "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=$NEXT_PUBLIC_GOOGLE_ANALYTICS_ID" >> .env.production
+RUN echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL" >> .env.production
 RUN cat .env.production
 
 RUN npm run build

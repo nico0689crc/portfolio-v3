@@ -1,6 +1,7 @@
 // Third-party Imports
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { headers } from 'next/headers';
 
 // Config Imports
@@ -45,6 +46,7 @@ const RootLayout = async (props: ChildrenType & LangParamPromiseType) => {
             <BackToTopButton />
           </Providers>
         </body>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string} />
       </html>
     </TranslationWrapper>
   );

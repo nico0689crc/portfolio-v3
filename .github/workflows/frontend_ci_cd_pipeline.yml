@@ -32,10 +32,11 @@ env:
   GOOGLE_CLIENT_ID: ${{ vars.GOOGLE_CLIENT_ID }}
   GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
   API_URL: ${{ vars.API_URL }}
-  NEXT_PUBLIC_API_URL: ${{ vars.NEXT_PUBLIC_API_URL }}
   API_URL_EXTERNAL: ${{ vars.API_URL_EXTERNAL }}
-  NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}}
-
+  
+  NEXT_PUBLIC_API_URL: ${{ vars.NEXT_PUBLIC_API_URL }}
+  NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
+  NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
 jobs:
   retrieve-environment-variable:
     name: Retrieve Environment Variable
@@ -56,6 +57,8 @@ jobs:
         run: |
           docker build -t ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }} \
           --build-arg NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}} \
+          --build-arg NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=${{env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}} \
+          --build-arg NEXT_PUBLIC_API_URL=${{env.NEXT_PUBLIC_API_URL}} \
           .
 
       - name: Login to Docker Hub
@@ -92,7 +95,6 @@ jobs:
             -e GOOGLE_CLIENT_ID=${{ env.GOOGLE_CLIENT_ID }} \
             -e GOOGLE_CLIENT_SECRET=${{ env.GOOGLE_CLIENT_SECRET }} \
             -e API_URL=${{ env.API_URL }} \
-            -e NEXT_PUBLIC_API_URL=${{ env.NEXT_PUBLIC_API_URL }} \
             -e API_URL_EXTERNAL=${{ env.API_URL_EXTERNAL }} \
             --name ${{ env.DOCKER_CONTAINER_NAME }} \
             ${{ env.DOCKER_IMAGE }}:${{ env.DOCKER_IMAGE_VERSION }}
