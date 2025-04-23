@@ -9,7 +9,7 @@ const colorSchemes = (): Theme['colorSchemes'] =>
           main: '#8C57FF',
           light: '#A379FF',
           dark: '#7E4EE6',
-          lighterOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.08)',
+          lighterOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.8)',
           lightOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.16)',
           mainOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.24)',
           darkOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.32)',

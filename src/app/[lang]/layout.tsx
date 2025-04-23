@@ -1,7 +1,7 @@
 // Third-party Imports
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
-import { GoogleAnalytics } from '@next/third-parties/google'
+
 import { headers } from 'next/headers';
 
 // Config Imports
@@ -39,6 +39,21 @@ const RootLayout = async (props: ChildrenType & LangParamPromiseType) => {
   return (
     <TranslationWrapper headersList={headersList} lang={params.lang}>
       <html id="__next" lang={params.lang} dir={direction} suppressHydrationWarning>
+        <head>
+          {/* ✅ Consent Mode v2 Script */}
+          <script
+            suppressHydrationWarning
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('consent', 'default', {
+                  analytics_storage: 'denied'
+                });
+              `,
+            }}
+          />
+        </head>
         <body>
           <Providers>
             <InitColorSchemeScript attribute="data" defaultMode={systemMode} />
@@ -46,7 +61,6 @@ const RootLayout = async (props: ChildrenType & LangParamPromiseType) => {
             <BackToTopButton />
           </Providers>
         </body>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string} />
       </html>
     </TranslationWrapper>
   );

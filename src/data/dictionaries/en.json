@@ -150,5 +150,11 @@
     "remote": "Remote",
     "on_site": "On site",
     "view_more": "View more"
+  },
+  "cookies_banner": {
+    "description": "We use cookies to enhance your experience on our website. By continuing to browse, you agree to the use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learn_more": "Learn more"
   }
 }
