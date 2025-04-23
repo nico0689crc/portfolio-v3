@@ -30,6 +30,10 @@ export default function CookieBanner({ dictionary, lang }: CookieBannerProps) {
       });
     }
     setShow(false);
+
+    if(value === 'granted') {
+      window.location.reload();
+    }
   };
 
   if (!show) return null;
