@@ -57,6 +57,32 @@
     "project": {
       "title": "Proyecto"
     },
+    "cookies_policy": {
+      "title": "Política de Cookies",
+      "description": "Esta política explica qué son las cookies, cómo las utilizamos en este sitio web y tus opciones respecto a su uso.",
+      "whatAreCookiesTitle": "¿Qué son las cookies?",
+      "whatAreCookiesDescription": "Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Se utilizan ampliamente para hacer que los sitios web funcionen, o funcionen de manera más eficiente, así como para proporcionar información a los propietarios del sitio.",
+      "typesOfCookiesTitle": "¿Qué tipos de cookies utilizamos?",
+      "necessaryCookies": "<strong>Cookies necesarias:</strong> Estas son esenciales para que el sitio funcione correctamente.",
+      "analyticsCookies": "<strong>Cookies analíticas:</strong> Utilizamos Google Analytics para recopilar información anónima sobre cómo se utiliza el sitio y para mejorarlo. Estas cookies solo se activan si das tu consentimiento.",
+      "cookiesUsedTitle": "Cookies utilizadas",
+      "cookieName": "Nombre",
+      "cookiePurpose": "Propósito",
+      "cookieDuration": "Duración",
+      "cookieConsentName": "cookie_consent",
+      "cookieConsentPurpose": "Almacena tus preferencias de cookies",
+      "cookieConsentDuration": "1 año",
+      "gaName": "_ga (Google Analytics)",
+      "gaPurpose": "Distingue usuarios únicos",
+      "gaDuration": "2 años",
+      "gidName": "_gid (Google Analytics)",
+      "gidPurpose": "Registra la sesión de navegación",
+      "gidDuration": "24 horas",
+      "controlCookiesTitle": "¿Cómo puedes controlar las cookies?",
+      "controlCookiesDescription": "Puedes aceptar o rechazar las cookies analíticas desde el banner que se muestra al ingresar al sitio. También puedes eliminar o bloquear cookies desde la configuración de tu navegador.",
+      "changeChoiceDescription": "Si deseas cambiar tu elección actual, puedes hacerlo utilizando el botón a continuación:",
+      "changeCookiesButton": "Cambiar configuración de cookies"
+    },
     "contact": {
       "title": "Contacto",
       "sub_title": "Pongámonos en contacto",

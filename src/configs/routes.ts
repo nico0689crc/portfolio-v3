@@ -6,6 +6,7 @@ const routes = {
       resume: '/resume',
       portfolio: '/portfolio',
       contact: '/contact',
+      cookiesPolicy: '/cookies-policy',
       auth: {
         login: '/login',
         register: '/register',

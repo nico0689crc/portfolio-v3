@@ -57,6 +57,32 @@
     "project": {
       "title": "Project"
     },
+    "cookies_policy": {
+      "title": "Cookies Policy",
+      "description": "This policy explains what cookies are, how we use them on this website, and your options regarding their use.",
+      "whatAreCookiesTitle": "What are cookies?",
+      "whatAreCookiesDescription": "Cookies are small text files stored on your device when you visit a website. They are widely used to make websites work, or work more efficiently, as well as to provide information to the site owners.",
+      "typesOfCookiesTitle": "What types of cookies do we use?",
+      "necessaryCookies": "<strong>Necessary cookies:</strong> These are essential for the website to function properly.",
+      "analyticsCookies": "<strong>Analytics cookies:</strong> We use Google Analytics to collect anonymous information about how the site is used to improve it. These cookies are only activated if you give your consent.",
+      "cookiesUsedTitle": "Cookies used",
+      "cookieName": "Name",
+      "cookiePurpose": "Purpose",
+      "cookieDuration": "Duration",
+      "cookieConsentName": "cookie_consent",
+      "cookieConsentPurpose": "Stores your cookie preference",
+      "cookieConsentDuration": "1 year",
+      "gaName": "_ga (Google Analytics)",
+      "gaPurpose": "Distinguishes unique users",
+      "gaDuration": "2 years",
+      "gidName": "_gid (Google Analytics)",
+      "gidPurpose": "Records browsing session",
+      "gidDuration": "24 hours",
+      "controlCookiesTitle": "How can you control cookies?",
+      "controlCookiesDescription": "You can accept or reject analytics cookies from the banner displayed when you enter the site. You can also delete or block cookies from your browser settings.",
+      "changeChoiceDescription": "If you want to change your current choice, you can do so using the following button:",
+      "changeCookiesButton": "Change cookie settings"
+    },
     "contact": {
       "title": "Contact",
       "sub_title": "Let's get in touch",

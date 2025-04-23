@@ -14,6 +14,7 @@ import type { Locale } from '@/configs/i18n';
 // Utils imports
 import { getDictionary } from '@/utils/getDictionary';
 import { getLocalizedUrl } from '@/utils/i18n';
+import routes from '@/configs/routes';
 
 type PublicFooterTopNavigationProps = {
   lang: Locale;
@@ -77,6 +78,14 @@ const PublicFooterTopNavigation = async ({ lang }: PublicFooterTopNavigationProp
             {dictionary.pages[item.name].title}
           </LinkMUI>
         ))}
+        <LinkMUI
+          component={Link}
+          href={getLocalizedUrl(routes.pages.public.cookiesPolicy, lang)}
+          className="MuiLink-with-hover-effect"
+          sx={{ color: 'white' }}
+        >
+          {dictionary.pages['cookies_policy'].title}
+        </LinkMUI>
       </Stack>
     </Stack>
   );

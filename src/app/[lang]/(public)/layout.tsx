@@ -29,7 +29,7 @@ const Layout = async ({ params, children }: Props) => {
         main={<PublicMain>{children}</PublicMain>}
         footer={<PublicFooter lang={lang} />}
       />
-      <CookieBanner dictionary={dictionary}/>
+      <CookieBanner dictionary={dictionary} lang={lang}/>
       {consent === 'granted' && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string} />
       )}

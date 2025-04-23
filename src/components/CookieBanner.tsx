@@ -1,15 +1,17 @@
 'use client';
 
-import type { DictionaryType } from '@/types';
+import type { DictionaryType, LangParamType } from '@/types';
 
 import { useState, useEffect } from 'react';
 import { Box, Button, Typography, Link as LinkMUI } from '@mui/material';
 import Link from 'next/link';
 import themeConfig from '@/configs/themeConfig';
+import { getLocalizedUrl } from '@/utils/i18n';
+import routes from '@/configs/routes';
 
-type CookieBannerProps = DictionaryType;
+type CookieBannerProps = DictionaryType & LangParamType;
 
-export default function CookieBanner({ dictionary }: CookieBannerProps) {
+export default function CookieBanner({ dictionary, lang }: CookieBannerProps) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -70,7 +72,7 @@ export default function CookieBanner({ dictionary }: CookieBannerProps) {
         </Typography>
         <LinkMUI 
           component={Link} 
-          href="/politica-cookies" 
+          href={getLocalizedUrl(routes.pages.public.cookiesPolicy, lang)}
           sx={{ 
             fontWeight: 600,
             width: 'fit-content', 
@@ -86,18 +88,7 @@ export default function CookieBanner({ dictionary }: CookieBannerProps) {
           {dictionary.cookies_banner.learn_more}
         </LinkMUI>
       </Box>
-      <Box sx={{ display: 'flex', gap: 2 }}>
-        <Button
-          variant="contained"
-          color='primary'
-          size='small'
-          onClick={() => handleConsent('granted')}
-          sx={{
-            border: '1px solid #000000',
-          }}
-        >
-          {dictionary.cookies_banner.accept}
-        </Button>
+      <Box sx={{ display: 'flex', gap: 5 }}>
         <Button
           variant="contained"
           size='small'
@@ -108,6 +99,17 @@ export default function CookieBanner({ dictionary }: CookieBannerProps) {
           }}
         >
           {dictionary.cookies_banner.decline}
+        </Button>
+        <Button
+          variant="contained"
+          color='primary'
+          size='small'
+          onClick={() => handleConsent('granted')}
+          sx={{
+            border: '1px solid #000000',
+          }}
+        >
+          {dictionary.cookies_banner.accept}
         </Button>
       </Box>
     </Box>
