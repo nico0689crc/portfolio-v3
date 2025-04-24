@@ -19,14 +19,13 @@ export type Config = {
     md: string;
     lg: string;
     xl: string;
-    xxl: string;
   };
 };
 
 const themeConfig: Config = {
   templateName: 'NextJs App MUI Base',
   settingsCookieName: 'nicolas-fernandez-portfolio-settings',
-  mode: 'dark', // 'system', 'light', 'dark'
+  mode: 'light', // 'system', 'light', 'dark'
   headerHeight: '70px',
   layoutPadding: 24,
   breakpointToChangeLayout: 'lg',
@@ -36,7 +35,6 @@ const themeConfig: Config = {
     md: '1020px',
     lg: '1260px',
     xl: '1340px',
-    xxl: '1620px',
   },
   toastPosition: 'top-right',
 };
