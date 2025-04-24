@@ -9,7 +9,7 @@ import PublicHeader from '@/components/layouts/public/header/PublicHeader';
 import PublicMain from '@/components/layouts/public/main/PublicMain';
 import CookieBanner from '@/components/CookieBanner';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { getCookieConsent } from '@/utils/cookies';
+// import { getCookieConsent } from '@/utils/cookies';
 import { getDictionary } from '@/utils/getDictionary';
 
 type Props = ChildrenType & {
@@ -18,7 +18,7 @@ type Props = ChildrenType & {
 
 // Layout Component
 const Layout = async ({ params, children }: Props) => {
-  const consent = await getCookieConsent();
+  // const consent = await getCookieConsent();
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
@@ -30,9 +30,10 @@ const Layout = async ({ params, children }: Props) => {
         footer={<PublicFooter lang={lang} />}
       />
       <CookieBanner dictionary={dictionary} lang={lang}/>
-      {consent === 'granted' && (
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string} />
+      {/* {consent === 'granted' && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string} />
-      )}
+      )} */}
     </>
   );
 };
