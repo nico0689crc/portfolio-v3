@@ -38,7 +38,6 @@ const ContainerCommon = ({ children, ...props }: ContainerCommonProps): React.Re
           md: themeConfig.compactContentWidth.md,
           lg: themeConfig.compactContentWidth.lg,
           xl: themeConfig.compactContentWidth.xl,
-          xxl: themeConfig.compactContentWidth.xxl,
         },
         ...sx,
       }}
